@@ -16,6 +16,22 @@ Running list. Each item: what he said → what I did.
 | 8 | 11/41 | Use `disney-abu-dhabi-high-quality.png` for the Disney panel | **FIXED** — 1023×1537 asset swapped in |
 | 9 | 12/41 | Background too boring — wanted texture variations to pick from | **FIXED** — 6 variants shown, he chose **B (gold+blue radial glow)**; added as reusable `.glow` class in theme.css, applied to slide 12 |
 
+| 10 | deck-wide | Design brief received (seminar in JP, DAMAC conference, projector) | see `docs/DESIGN-BRIEF.md` |
+| 11 | deck-wide | Spotlight glow on blue slides only, position varies per slide | **DONE** — `.spot` with `--sx/--sy`, 17 slides, no two neighbours share a corner |
+| 12 | deck-wide | Monogram inside the glow, topical per slide, skip on dense slides | **DONE** — 13 motifs; 22/23/7/21 get glow only |
+| 13 | deck-wide | Projector font floor | **DONE** — 15px floor, 19 rules lifted; citations exempt |
+| 14 | deck-wide | Running headers don't match chapters | **DONE** — re-derived from divider positions (6/27/35); 20 headers corrected |
+| 15 | deck-wide | TOC page refs stale | **DONE** — P.05/26/34 → P.06/27/35 |
+| 16 | 7 | red→amber→yellow descent ramp, 96% dominant | **DONE** |
+| 17 | 25 | Remove the boxes | **DONE** — thin rules, figures up to 112px |
+| 18 | 21 | `#1` → plain numerals, graded bars | **DONE** |
+| 19 | 22 | Stronger Dubai treatment + independent-ranking note | **DONE** — solid accent band across all 3 tables |
+| 20 | 23 | Visa table should dominate; clean rank markers | **DONE** |
+| 21 | 20 | Overlaps, stray rule, off-plan vs secondary caveat, +77% leads | **DONE** |
+| 22 | 10 | Recentre 2040, new metro image, Creek Tower asset, align text, implication lines | **DONE** — all 4 |
+| 23 | 11 | 3 image cards + freehold as a policy strip, implication lines | **DONE** |
+| 24 | 27 | Distinct divider image | **DONE** |
+
 ## Standing rules (apply to every slide, don't re-ask)
 
 - No gold rail across the top of any slide.

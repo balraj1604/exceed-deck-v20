@@ -520,8 +520,15 @@ def build():
             k = m.group(1); e = exts.get(k)
             return f'src="img/{k}{e}"' if e else 'src="" data-missing="1"'
         return re.sub(r'src="img/([0-9a-f]{16})"', r, b)
+    # TOC_FIX — the 目次 page refs are baked into the source deck and went stale when
+    # slides were inserted/reordered. Chapter dividers now sit at 6 / 27 / 35.
+    TOC_FIX = {"P.05": "P.06", "P.26": "P.27", "P.34": "P.35"}
+
     names = []
     for i, oid, body, bg in pages:
+        if i == 5:
+            for old, new in TOC_FIX.items():
+                body = body.replace(old, new)
         body = fix(body)
         name = f"slide-{i:02d}.html"
         open(os.path.join(OUT, name), "w", encoding="utf-8").write(

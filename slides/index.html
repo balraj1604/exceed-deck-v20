@@ -270,13 +270,17 @@ body{padding:28px 0}
 #s7 .urule{top:214px;width:700px}
 #s7 .sub{top:238px}
 
-#s7 .left{position:absolute;left:64px;top:318px;width:540px}
+#s7 .left{position:absolute;left:64px;top:306px;width:560px}
+#s7 .left>.lab{font-size:19px}
+#s7 .left>.fig{font-size:146px;letter-spacing:-.03em}
+#s7 .left>.fig small{font-size:.34em}
+#s7 .left>.meter{height:20px}
 #s7 .body{margin-top:34px;font:400 17px/1.8 'Noto Sans JP',sans-serif;
   color:rgba(255,255,255,.70)}
 /* the two summary figures now sit under the 96% block, per feedback */
 #s7 .sub2{margin-top:44px;padding-top:38px;border-top:1px solid rgba(255,255,255,.14)}
 #s7 .sub2 .stat+.stat{margin-top:36px}
-#s7 .sub2 .fig{font-size:62px;margin-top:14px}
+#s7 .sub2 .fig{font-size:46px;margin-top:12px;color:rgba(255,255,255,.82)}
 #s7 .sub2 .meter{margin-top:16px;height:11px}
 #s7 .sub2 .lab{font-size:16px}
 
@@ -287,15 +291,25 @@ body{padding:28px 0}
   border-collapse:collapse;width:calc(100% - 748px)}
 #s7 td{padding:30px 0;border-top:1px solid rgba(201,168,76,.26);
   font:700 26px/1 'Noto Sans JP',sans-serif;color:#fff;text-align:center}
+/* de-escalation ramp: red -> amber -> yellow as the volley collapses */
+#s7 tr.r1 td:not(.m){color:#E8705F}
+#s7 tr.r2 td:not(.m){color:#E0A64B}
+#s7 tr.r3 td:not(.m){color:#EBD77E}
+#s7 tr.r3 td:not(.m){font-size:30px}
+#s7 .rampkey{position:absolute;left:684px;right:64px;top:868px;display:flex;
+  align-items:center;gap:14px;font:400 15px/1 'Noto Sans JP',sans-serif;color:var(--mut-2)}
+#s7 .rampkey i{width:66px;height:8px;display:block;
+  background:linear-gradient(90deg,#E8705F,#E0A64B,#EBD77E)}
 #s7 tr:last-child td{border-bottom:1px solid rgba(201,168,76,.26)}
 #s7 td.m{text-align:left;width:130px;color:var(--gold);font-size:22px}
 
 #s7 .src{left:64px;bottom:44px;width:520px}
+#s7 .spot{--sx:14%;--sy:76%}
 </style>
 
-<div class="dk">
+<div class="dk spot">
 
-<div class="eyebrow">02 · なぜドバイか</div>
+<div class="eyebrow">01 · なぜ今、海外不動産か</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1">イラン・アメリカ中東戦争<br>鉄壁の防空体制：イラン情勢下での迎撃実績</div>
 <div class="urule"></div>
@@ -328,10 +342,11 @@ body{padding:28px 0}
 </div>
 
 <table>
-  <tr><td class="m">3月</td><td>425発</td><td>15発</td><td>1,941発</td></tr>
-  <tr><td class="m">4月</td><td>104発</td><td>7発</td><td>279発</td></tr>
-  <tr><td class="m">5月</td><td>11発</td><td>0発</td><td>27発</td></tr>
+  <tr class="r1"><td class="m">3月</td><td>425発</td><td>15発</td><td>1,941発</td></tr>
+  <tr class="r2"><td class="m">4月</td><td>104発</td><td>7発</td><td>279発</td></tr>
+  <tr class="r3"><td class="m">5月</td><td>11発</td><td>0発</td><td>27発</td></tr>
 </table>
+<div class="rampkey"><i></i>3月 → 5月にかけて飛来数は急減（425 → 104 → 11）</div>
 
 <div class="note src">※出典：UAE国防省（2026年5月10日発表データ等）に基づき作成。</div>
 </div>
@@ -346,7 +361,7 @@ body{padding:28px 0}
 #s8 .map img{width:100%;height:100%;object-fit:contain;display:block;opacity:.96}
 #s8 .mapfoot{position:absolute;left:74px;top:846px;width:680px;
   display:grid;grid-template-columns:repeat(3,1fr);column-gap:24px}
-#s8 .mapfoot .l{font:700 14px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.10em}
+#s8 .mapfoot .l{font:700 15px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.10em}
 #s8 .mapfoot .v{margin-top:14px;font:700 30px/1 'Noto Sans JP',sans-serif;color:#fff}
 
 #s8 .grid{position:absolute;left:812px;right:56px;top:252px;bottom:96px;
@@ -359,11 +374,12 @@ body{padding:28px 0}
 #s8 .num.sm{font-size:38px}
 #s8 .lab{margin-top:18px;font:700 16px/1 'Noto Sans JP',sans-serif;
   color:var(--gold);letter-spacing:.08em}
-#s8 .cap{margin-top:9px;font:400 13px/1.5 'Noto Sans JP',sans-serif;color:var(--mut-2)}
+#s8 .cap{margin-top:9px;font:400 15px/1.5 'Noto Sans JP',sans-serif;color:var(--mut-2)}
+#s8 .spot{--sx:88%;--sy:22%}
 </style>
 
-<div class="dk">
-<div class="eyebrow">02 · なぜドバイか</div>
+<div class="dk spot mono">
+<div class="eyebrow">01 · なぜ今、海外不動産か</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1 one">ドバイ概要｜中東の金融・観光・物流ハブ</div>
 <div class="urule"></div>
@@ -430,11 +446,11 @@ body{padding:28px 0}
 #s9 .num{font:700 56px/1 'Noto Sans JP',sans-serif;color:#fff;letter-spacing:-.01em}
 #s9 .lab{margin-top:18px;font:700 17px/1 'Noto Sans JP',sans-serif;
   color:var(--gold);letter-spacing:.08em}
-#s9 .cap{margin-top:10px;font:400 14px/1.55 'Noto Sans JP',sans-serif;color:var(--mut-2)}
+#s9 .cap{margin-top:10px;font:400 15px/1.55 'Noto Sans JP',sans-serif;color:var(--mut-2)}
 </style>
 
 <div class="dk">
-<div class="eyebrow">02 · なぜドバイか</div>
+<div class="eyebrow">01 · なぜ今、海外不動産か</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1 one">半世紀で砂漠から世界都市へ。次の計画が「2040マスタープラン」</div>
 <div class="urule"></div>
@@ -466,19 +482,19 @@ body{padding:28px 0}
 #s10 .pan+.pan{box-shadow:inset 1px 0 0 rgba(255,255,255,.16)}
 #s10 .pan>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 #s10 .p1 img{object-position:50% 42%}
-#s10 .p2 img{object-position:52% 55%}
+#s10 .p2 img{object-position:50% 50%}
 #s10 .p3 img{object-position:50% 46%}
-#s10 .band{position:absolute;left:0;right:0;bottom:0;height:300px;
+#s10 .band{position:absolute;left:0;right:0;bottom:0;height:400px;
   background:linear-gradient(180deg,rgba(8,14,22,0) 0%,rgba(8,14,22,.66) 14%,
     rgba(8,14,22,.86) 42%,rgba(8,14,22,.93) 100%)}
-#s10 .cap{position:absolute;left:38px;right:32px;bottom:56px}
-#s10 .cap h3{font:700 32px/1.24 'Noto Sans JP',sans-serif;color:#fff;letter-spacing:.01em}
+#s10 .cap{position:absolute;left:38px;right:32px;bottom:46px}
+#s10 .cap h3{font:700 32px/1.24 'Noto Sans JP',sans-serif;color:#fff;letter-spacing:.01em;
+  min-height:80px;display:flex;align-items:flex-end}
 #s10 .cap ul{margin-top:20px;list-style:none}
 #s10 .cap li{font:400 17px/1.75 'Noto Sans JP',sans-serif;color:rgba(255,255,255,.82)}
-/* the 4th story has no photo yet — keep the slot legible rather than blank */
-#s10 .p4{background:linear-gradient(160deg,#1b2838 0%,#131d2a 60%,#0F1826 100%)}
-#s10 .p4 .mark{position:absolute;left:38px;top:64px;
-  font:700 13px/1 'Noto Sans JP',sans-serif;color:rgba(201,168,76,.75);letter-spacing:.22em}
+#s10 .cap .imp{margin-top:18px;padding-top:15px;border-top:1px solid rgba(201,168,76,.45);
+  font:700 17px/1.5 'Noto Sans JP',sans-serif;color:var(--gold-lt)}
+#s10 .p4 img{object-position:50% 44%}
 
 #s10 .head{position:absolute;left:44px;top:34px;right:44px;z-index:4}
 #s10 .head .k{font:700 15px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.24em}
@@ -495,28 +511,27 @@ body{padding:28px 0}
   <div class="pan p1"><img src="assets/s10-dubai2040-hq.png" alt="">
     <div class="band"></div>
     <div class="cap"><h3>Dubai 2040計画</h3>
-      <ul><li>緑地2倍 / 都市面積170倍</li><li>ホテル+134% / 人口580万人</li></ul></div>
+      <ul><li>緑地2倍 / 都市面積170倍</li><li>ホテル+134% / 人口580万人</li></ul><div class="imp">→ 計画エリアは中長期で値上がりしやすい</div></div>
   </div>
-  <div class="pan p2"><img src="assets/s10-metro.jpg" alt="">
+  <div class="pan p2"><img src="assets/s10-metro-hq.png" alt="">
     <div class="band"></div>
     <div class="cap"><h3>メトロ拡張（2路線）</h3>
-      <ul><li>Blue Line 2029 / Gold Line 2032</li><li>投資340億AED・駅徒歩圏+25%</li></ul></div>
+      <ul><li>Blue Line 2029 / Gold Line 2032</li><li>投資340億AED</li></ul><div class="imp">→ 駅徒歩圏は賃料・価格が +25%</div></div>
   </div>
   <div class="pan p3"><img src="assets/s10-airport.jpg" alt="">
     <div class="band"></div>
     <div class="cap"><h3>Al Maktoum新空港</h3>
-      <ul><li>総事業費 約1,280億AED</li><li>旅客年2.6億人で世界最大規模</li></ul></div>
+      <ul><li>総事業費 約1,280億AED</li><li>旅客年2.6億人で世界最大規模</li></ul><div class="imp">→ 南ドバイの住宅需要が先行して立ち上がる</div></div>
   </div>
-  <div class="pan p4">
-    <div class="mark">IMAGE PENDING</div>
+  <div class="pan p4"><img src="assets/s10-creektower.png" alt="">
     <div class="band"></div>
     <div class="cap"><h3>クリークタワー＆<br>ドバイスクエア</h3>
-      <ul><li>世界最大級モール構想</li><li>新タワー＋パーム再開発</li></ul></div>
+      <ul><li>世界最大級モール構想</li><li>新タワー＋パーム再開発</li></ul><div class="imp">→ 新しい目的地が周辺の賃貸需要をつくる</div></div>
   </div>
 </div>
 
 <div class="head">
-  <div class="k">01 · WHY NOW</div>
+  <div class="k">01 · なぜ今、海外不動産か</div>
   <div class="t">国家計画レベルの開発｜ドバイ</div>
   <div class="s">都市インフラと新しい目的地が、次の住宅需要をつくる。</div>
   <div class="r"></div>
@@ -526,21 +541,42 @@ body{padding:28px 0}
 </div></div><div class="wrap"><div class="num">11 / 41 &nbsp;·&nbsp; p22</div><div class="slide" id="s11" style="background:#0B1522"><!--bg: #0B1522 -->
 <style>
 @import url("theme.css");
-#s11 .panels{position:absolute;inset:0;display:grid;grid-template-columns:repeat(4,1fr)}
+/* Three photographable places on top; the policy point gets its own band below.
+   Forcing "freehold + SWF" into a photo card is why it read weak (brief, s11). */
+#s11 .panels{position:absolute;left:0;right:0;top:0;height:762px;
+  display:grid;grid-template-columns:repeat(3,1fr)}
 #s11 .pan{position:relative;overflow:hidden;background:#16212f}
 #s11 .pan+.pan{box-shadow:inset 1px 0 0 rgba(255,255,255,.16)}
 #s11 .pan>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 #s11 .p1 img{object-position:50% 46%}
-#s11 .p2 img{object-position:50% 50%}
+#s11 .p2 img{object-position:50% 56%}
 #s11 .p3 img{object-position:50% 48%}
-#s11 .p4 img{object-position:50% 44%;filter:grayscale(1) contrast(1.05)}
-#s11 .band{position:absolute;left:0;right:0;bottom:0;height:300px;
-  background:linear-gradient(180deg,rgba(8,14,22,0) 0%,rgba(8,14,22,.66) 14%,
-    rgba(8,14,22,.86) 42%,rgba(8,14,22,.93) 100%)}
-#s11 .cap{position:absolute;left:38px;right:32px;bottom:56px}
-#s11 .cap h3{font:700 32px/1.24 'Noto Sans JP',sans-serif;color:#fff;letter-spacing:.01em}
-#s11 .cap ul{margin-top:20px;list-style:none}
-#s11 .cap li{font:400 17px/1.75 'Noto Sans JP',sans-serif;color:rgba(255,255,255,.82)}
+#s11 .band{position:absolute;left:0;right:0;bottom:0;height:400px;
+  background:linear-gradient(180deg,rgba(8,14,22,0) 0%,rgba(8,14,22,.62) 16%,
+    rgba(8,14,22,.86) 46%,rgba(8,14,22,.94) 100%)}
+#s11 .cap{position:absolute;left:38px;right:32px;bottom:34px}
+#s11 .cap h3{font:700 31px/1.24 'Noto Sans JP',sans-serif;color:#fff;letter-spacing:.01em;
+  min-height:78px;display:flex;align-items:flex-end}
+#s11 .cap ul{margin-top:16px;list-style:none}
+#s11 .cap li{font:400 17px/1.7 'Noto Sans JP',sans-serif;color:rgba(255,255,255,.82)}
+#s11 .cap .imp{margin-top:16px;padding-top:14px;border-top:1px solid rgba(201,168,76,.45);
+  font:700 17px/1.5 'Noto Sans JP',sans-serif;color:var(--gold-lt)}
+
+/* ---- policy / data strip (replaces the 4th photo card) ---- */
+#s11 .strip{position:absolute;left:0;right:0;bottom:0;height:318px;
+  background:#0A1523;border-top:2px solid var(--gold);
+  display:grid;grid-template-columns:250px 1fr 1fr 1fr;align-items:center;
+  column-gap:40px;padding:0 56px}
+#s11 .strip .mark{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+#s11 .strip .ico2{width:76px;height:76px;border:2px solid rgba(201,168,76,.5);
+  border-radius:50%;display:flex;align-items:center;justify-content:center}
+#s11 .strip .ico2 svg{width:40px;height:40px}
+#s11 .strip .mark b{font:700 22px/1.35 'Noto Sans JP',sans-serif;color:var(--gold-lt)}
+#s11 .sc{border-left:1px solid rgba(255,255,255,.15);padding-left:34px}
+#s11 .sc .k{font:700 16px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.10em}
+#s11 .sc .v{margin-top:16px;font:700 44px/1 'Noto Sans JP',sans-serif;color:#fff}
+#s11 .sc .v small{font-size:.44em}
+#s11 .sc .d{margin-top:14px;font:400 16px/1.55 'Noto Sans JP',sans-serif;color:var(--mut)}
 
 #s11 .head{position:absolute;left:44px;top:34px;right:44px;z-index:4}
 #s11 .head .k{font:700 15px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.24em}
@@ -557,27 +593,54 @@ body{padding:28px 0}
   <div class="pan p1"><img src="assets/s11-disney-hq.png" alt="">
     <div class="band"></div>
     <div class="cap"><h3>ディズニー・アブダビ</h3>
-      <ul><li>ヤス島・中東初のディズニー</li><li>約125ha・雇用3万人規模</li></ul></div>
+      <ul><li>ヤス島・中東初のディズニー</li><li>約125ha・雇用3万人規模</li></ul>
+      <div class="imp">→ ヤス島の賃貸需要が構造的に増える</div></div>
   </div>
-  <div class="pan p2"><img src="assets/s11-saadiyat.jpg" alt="">
+  <div class="pan p2"><img src="assets/s11-saadiyat-hq.png" alt="">
     <div class="band"></div>
     <div class="cap"><h3>サディヤット文化地区</h3>
-      <ul><li>国立博物館・グッゲンハイム</li><li>ルーブルに続く美術館集積</li></ul></div>
+      <ul><li>ルーブル・国立博物館・グッゲンハイム</li><li>世界水準の美術館が集積</li></ul>
+      <div class="imp">→ ブランド立地として長期で定着</div></div>
   </div>
   <div class="pan p3"><img src="assets/s11-sphere-hq.png" alt="">
     <div class="band"></div>
     <div class="cap"><h3>スフィア・アブダビ</h3>
-      <ul><li>ラスベガスに次ぐ世界2例目</li><li>約17億ドル・滞在型観光強化</li></ul></div>
+      <ul><li>ラスベガスに次ぐ世界2例目</li><li>約17億ドル・滞在型観光強化</li></ul>
+      <div class="imp">→ 滞在日数が伸び、短期賃貸の稼働が上がる</div></div>
   </div>
-  <div class="pan p4"><img src="assets/s11-freehold.png" alt="">
-    <div class="band"></div>
-    <div class="cap"><h3>フリーホールド解禁 × SWF</h3>
-      <ul><li>2019年 フリーホールド解禁</li><li>供給不足継続＋SWFが下支え</li></ul></div>
+</div>
+
+<div class="strip">
+  <div class="mark">
+    <!-- PLACEHOLDER MOTIF: title-deed + seal. Baru to pick the final visual — see options in chat. -->
+    <div class="ico2">
+      <svg viewBox="0 0 48 48" fill="none" stroke="#C9A84C" stroke-width="2.4"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11,6 L30,6 L38,14 L38,42 L11,42 Z M30,6 L30,14 L38,14"/>
+        <path d="M17,25 L27,25 M17,32 L31,32"/><circle cx="22" cy="17" r="3"/>
+      </svg>
+    </div>
+    <b>制度が支える市場</b>
+  </div>
+  <div class="sc">
+    <div class="k">フリーホールド解禁</div>
+    <div class="v">2019<small>年</small></div>
+    <div class="d">外国人が指定エリアで完全所有可能に。<br>解禁以降、買い手層が一気に広がった。</div>
+  </div>
+  <div class="sc">
+    <div class="k">政府系ファンド（SWF）</div>
+    <div class="v">市場を下支え</div>
+    <div class="d">ADIA・ムバダラ等が長期保有。<br>短期の投機で崩れにくい構造。</div>
+  </div>
+  <div class="sc">
+    <div class="k">需給</div>
+    <div class="v">供給不足<small>が継続</small></div>
+    <div class="d">需要増に供給が追いつかず、<br>価格上昇圧力が続いている。</div>
   </div>
 </div>
 
 <div class="head">
-  <div class="k">01 · WHY NOW</div>
+  <div class="k">01 · なぜ今、海外不動産か</div>
   <div class="t">国家計画レベルの開発｜アブダビ</div>
   <div class="s">政府系ファンドが、文化・観光・居住需要を長期で支える。</div>
   <div class="r"></div>
@@ -609,15 +672,16 @@ body{padding:28px 0}
 #s12 .rail .v{font:700 68px/1 'Noto Sans JP',sans-serif;color:#fff}
 #s12 .rail .b1 .v{color:var(--gold-lt)} #s12 .rail .b3 .v{color:var(--gold-lt)}
 #s12 .rail .l{margin-top:14px;font:700 16px/1 'Noto Sans JP',sans-serif;color:#fff}
-#s12 .rail .d{margin-top:9px;font:400 14px/1 'Noto Sans JP',sans-serif;color:var(--mut-2)}
+#s12 .rail .d{margin-top:9px;font:400 15px/1 'Noto Sans JP',sans-serif;color:var(--mut-2)}
 
 #s12 .concl{position:absolute;left:64px;bottom:52px;
   font:700 30px/1 'Noto Sans JP',sans-serif;color:#fff;letter-spacing:.01em}
 #s12 .concl b{color:var(--gold-lt)}
+#s12 .spot{--sx:22%;--sy:26%}
 </style>
 
-<div class="dk glow">
-<div class="eyebrow">01 · WHY NOW</div>
+<div class="dk spot mono">
+<div class="eyebrow">01 · なぜ今、海外不動産か</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1 one">人口は10年で1.6倍。2040年に580万人へ</div>
 <div class="urule"></div>
@@ -714,10 +778,11 @@ body{padding:28px 0}
   border-left:3px solid var(--gold);padding:10px 0 10px 26px}
 #s13 .cc b{display:block;font:700 30px/1.35 'Noto Sans JP',sans-serif;color:#fff}
 #s13 .cc span{display:block;margin-top:12px;font:400 17px/1.6 'Noto Sans JP',sans-serif;color:var(--mut)}
+#s13 .spot{--sx:80%;--sy:70%}
 </style>
 
-<div class="dk">
-<div class="eyebrow">01 · WHY NOW</div>
+<div class="dk spot mono">
+<div class="eyebrow">01 · なぜ今、海外不動産か</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1 one">円だけで持ち続けることが、最大のリスクになっている</div>
 <div class="urule"></div>
@@ -792,7 +857,7 @@ body{padding:28px 0}
 #s14 .row.tot{margin-top:46px;padding-top:46px;border-top:1px solid rgba(201,168,76,.4)}
 #s14 .row.tot .l{font-weight:700;color:#fff;font-size:22px}
 #s14 .row.tot .v{color:var(--gold-lt);font-size:42px}
-#s14 .row .note2{font:400 13px/1.4 'Noto Sans JP',sans-serif;color:var(--mut-2);margin-top:5px}
+#s14 .row .note2{font:400 15px/1.4 'Noto Sans JP',sans-serif;color:var(--mut-2);margin-top:5px}
 
 /* the payoff: 10M JPY invested */
 #s14 .comp{position:absolute;right:64px;top:296px;width:700px;z-index:2}
@@ -808,13 +873,14 @@ body{padding:28px 0}
 #s14 .delta b{display:block;font:700 36px/1.3 'Noto Sans JP',sans-serif;color:#fff}
 #s14 .delta span{display:block;margin-top:10px;font:400 16px/1 'Noto Sans JP',sans-serif;color:var(--mut)}
 #s14 .src{left:64px;bottom:40px;z-index:2}
+#s14 .spot{--sx:18%;--sy:58%}
 </style>
 
-<div class="dk">
+<div class="dk spot mono">
 <div class="bg"><img src="assets/tokyo-ginza.png" alt=""></div>
 <div class="veil"></div>
 
-<div class="eyebrow">01 · WHY NOW</div>
+<div class="eyebrow">01 · なぜ今、海外不動産か</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1 one">東京ワンルームの実質利回りは、もはや1〜2%台</div>
 <div class="urule"></div>
@@ -887,10 +953,11 @@ body{padding:28px 0}
 #s15 .src{left:64px;bottom:44px}
 
 .fl{display:inline-block;width:1.45em;margin-right:.42em;font-family:'Apple Color Emoji';font-size:.94em;line-height:1;vertical-align:-0.06em}
+#s15 .spot{--sx:50%;--sy:88%}
 </style>
 
-<div class="dk">
-<div class="eyebrow">01 · WHY NOW</div>
+<div class="dk spot mono">
+<div class="eyebrow">01 · なぜ今、海外不動産か</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1 one">世界の主要都市と比較しても、ドバイの単価はまだ割安</div>
 <div class="urule"></div>
@@ -949,7 +1016,7 @@ body{padding:28px 0}
 #s16 .r.dxb .n,#s16 .r.dxb .v{color:var(--gold-lt);font-weight:700}
 #s16 .key{margin-top:22px;display:flex;gap:26px;align-items:center}
 #s16 .key span{display:flex;align-items:center;gap:9px;
-  font:400 13px/1 'Noto Sans JP',sans-serif;color:var(--mut-2)}
+  font:400 15px/1 'Noto Sans JP',sans-serif;color:var(--mut-2)}
 #s16 .key i{width:22px;height:11px;display:block}
 
 #s16 .right{position:absolute;right:64px;top:262px;width:760px}
@@ -957,7 +1024,7 @@ body{padding:28px 0}
 #s16 .mkc{border:1px solid rgba(255,255,255,.16);padding:26px 28px}
 #s16 .mkc.gold{border-color:rgba(201,168,76,.5);background:rgba(201,168,76,.07)}
 #s16 .mkc h4{font:700 18px/1.3 'Noto Sans JP',sans-serif;color:var(--gold-lt)}
-#s16 .mkc .l{margin-top:20px;font:400 14px/1 'Noto Sans JP',sans-serif;color:var(--mut)}
+#s16 .mkc .l{margin-top:20px;font:400 15px/1 'Noto Sans JP',sans-serif;color:var(--mut)}
 #s16 .mkc .v{margin-top:9px;display:flex;align-items:baseline;gap:12px}
 #s16 .mkc .v b{font:700 34px/1 'Noto Sans JP',sans-serif;color:#fff}
 #s16 .mkc .v em{font:700 19px/1 'Noto Sans JP',sans-serif;color:var(--gold-lt);font-style:normal}
@@ -970,10 +1037,11 @@ body{padding:28px 0}
 #s16 .src{left:64px;bottom:40px}
 
 .fl{display:inline-block;width:1.45em;margin-right:.42em;font-family:'Apple Color Emoji';font-size:.94em;line-height:1;vertical-align:-0.06em}
+#s16 .spot{--sx:92%;--sy:60%}
 </style>
 
-<div class="dk">
-<div class="eyebrow">01 · WHY NOW</div>
+<div class="dk spot mono">
+<div class="eyebrow">01 · なぜ今、海外不動産か</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1 one">UBS指数でドバイは「適正圏」。足元の取引は2桁成長</div>
 <div class="urule"></div>
@@ -1064,10 +1132,11 @@ body{padding:28px 0}
 #s17 .ratio b em{color:var(--gold-lt);font-style:normal}
 #s17 .ratio span{display:block;margin-top:12px;font:400 17px/1.5 'Noto Sans JP',sans-serif;color:var(--mut)}
 #s17 .src{left:64px;bottom:44px;right:64px}
+#s17 .spot{--sx:26%;--sy:84%}
 </style>
 
-<div class="dk">
-<div class="eyebrow">02 · なぜドバイか</div>
+<div class="dk spot mono">
+<div class="eyebrow">01 · なぜ今、海外不動産か</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1 one">不動産取引高は5年で大幅成長。日本の3倍以上の市場</div>
 <div class="urule"></div>
@@ -1130,10 +1199,11 @@ body{padding:28px 0}
   font:700 24px/1 'Noto Sans JP',sans-serif;color:#fff}
 #s18 .lead em{color:var(--gold-lt);font-style:normal}
 #s18 .src{left:64px;bottom:44px;right:64px}
+#s18 .spot{--sx:84%;--sy:30%}
 </style>
 
-<div class="dk">
-<div class="eyebrow">02 · なぜドバイか</div>
+<div class="dk spot mono">
+<div class="eyebrow">01 · なぜ今、海外不動産か</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1 one">取引件数も右肩上がり。2025年は合計21.5万件</div>
 <div class="urule"></div>
@@ -1187,7 +1257,7 @@ body{padding:28px 0}
 #s19 .li{display:grid;grid-template-columns:26px 1fr auto;align-items:center;
   padding:13px 0;border-bottom:1px solid rgba(255,255,255,.13)}
 #s19 .li:first-of-type{border-top:1px solid rgba(255,255,255,.13)}
-#s19 .lists .rk{font:700 14px/1 'Noto Sans JP',sans-serif;color:var(--mut-2)}
+#s19 .lists .rk{font:700 15px/1 'Noto Sans JP',sans-serif;color:var(--mut-2)}
 #s19 .lists .cy{font:400 18px/1 'Noto Sans JP',sans-serif;color:#fff}
 #s19 .lists .nm{font:700 19px/1 'Noto Sans JP',sans-serif;font-variant-numeric:tabular-nums}
 #s19 .up .nm{color:var(--gold-lt)} #s19 .dn .nm{color:#E08A80}
@@ -1199,10 +1269,11 @@ body{padding:28px 0}
 #s19 .insight span{display:block;margin-top:12px;
   font:400 16px/1.65 'Noto Sans JP',sans-serif;color:var(--mut)}
 #s19 .src{left:64px;bottom:44px}
+#s19 .spot{--sx:62%;--sy:18%}
 </style>
 
-<div class="dk">
-<div class="eyebrow">01 · WHY NOW</div>
+<div class="dk spot mono">
+<div class="eyebrow">01 · なぜ今、海外不動産か</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1 one">世界の富裕層は、UAEへ移動している</div>
 <div class="urule"></div>
@@ -1251,25 +1322,28 @@ body{padding:28px 0}
 </div></div><div class="wrap"><div class="num">20 / 41 &nbsp;·&nbsp; p18</div><div class="slide" id="s20" style="background:#0B1522"><!--bg: #0B1522 -->
 <style>
 @import url("theme.css");
-#s20 .h1{top:82px;width:1500px} #s20 .urule{top:158px;width:600px} #s20 .sub{top:182px}
+#s20 .h1{top:78px;width:1500px;line-height:1.34}
+#s20 .urule{top:196px;width:600px} #s20 .sub{top:222px}
+#s20 .h1 br{line-height:1.5}
 
-#s20 .pair{position:absolute;left:64px;top:320px;width:1000px;
+#s20 .pair{position:absolute;left:64px;top:520px;width:1000px;
   display:grid;grid-template-columns:1fr 1fr;column-gap:64px}
 #s20 .pc{border-top:2px solid var(--gold);padding-top:32px}
-#s20 .pc .k{font:700 18px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.08em}
+#s20 .pc .k{font:700 18px/1.45 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.08em}
 #s20 .pc .v{margin-top:26px;display:flex;align-items:baseline;gap:10px}
-#s20 .pc .v b{font:700 96px/1 'Noto Sans JP',sans-serif;color:#fff;letter-spacing:-.02em}
+#s20 .pc .v b{font:700 78px/1 'Noto Sans JP',sans-serif;color:#fff;letter-spacing:-.02em}
 #s20 .pc .v em{font:700 28px/1 'Noto Sans JP',sans-serif;color:#fff;font-style:normal}
 #s20 .pc.hi .v b,#s20 .pc.hi .v em{color:var(--gold-lt)}
 #s20 .pc .d{margin-top:22px;font:400 17px/1.6 'Noto Sans JP',sans-serif;color:var(--mut)}
 
-#s20 .growth{position:absolute;right:64px;top:320px;width:720px;
-  border-left:1px solid rgba(255,255,255,.16);padding-left:50px}
+#s20 .growth{position:absolute;left:64px;top:300px;right:64px;width:auto;
+  border-left:none;padding-left:0}
 #s20 .growth .k{font:700 18px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.08em}
-#s20 .growth .big{margin-top:24px;font:700 132px/1 'Noto Sans JP',sans-serif;
-  color:var(--gold-lt);letter-spacing:-.03em}
-#s20 .growth .bl{margin-top:14px;font:700 22px/1.5 'Noto Sans JP',sans-serif;color:#fff}
-#s20 .arrow{margin-top:46px}
+#s20 .growth .big{margin-top:10px;font:700 118px/1 'Noto Sans JP',sans-serif;
+  color:var(--gold-lt);letter-spacing:-.03em;display:inline-block;vertical-align:middle}
+#s20 .growth .bl{display:inline-block;margin-left:30px;vertical-align:middle;
+  font:700 24px/1.5 'Noto Sans JP',sans-serif;color:#fff}
+#s20 .arrow{display:inline-block;margin:0 0 0 46px;vertical-align:middle}
 #s20 .arrow .row{display:flex;align-items:center;gap:22px}
 #s20 .arrow .p{font:700 30px/1 'Noto Sans JP',sans-serif;color:#fff;
   font-variant-numeric:tabular-nums}
@@ -1281,12 +1355,15 @@ body{padding:28px 0}
 
 #s20 .concl{position:absolute;left:64px;right:64px;bottom:104px;
   background:rgba(201,168,76,.11);border-left:3px solid var(--gold);padding:26px 34px}
-#s20 .concl b{font:700 30px/1.3 'Noto Sans JP',sans-serif;color:#fff}
+#s20 .concl b{font:700 28px/1.3 'Noto Sans JP',sans-serif;color:#fff}
+#s20 .concl .cav{display:block;margin-top:14px;
+  font:400 16px/1.6 'Noto Sans JP',sans-serif;color:var(--mut)}
 #s20 .src{left:64px;bottom:44px}
+#s20 .spot{--sx:16%;--sy:34%}
 </style>
 
-<div class="dk">
-<div class="eyebrow">02 · なぜドバイか</div>
+<div class="dk spot mono">
+<div class="eyebrow">01 · なぜ今、海外不動産か</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1">ダウンタウン平米単価は過去最高 171万円。<br>ドバイ平均は5年で +77%</div>
 <div class="urule"></div>
@@ -1294,12 +1371,12 @@ body{padding:28px 0}
 
 <div class="pair">
   <div class="pc hi">
-    <div class="k">ダウンタウン｜オフプラン</div>
+    <div class="k">ダウンタウン｜オフプラン（建設中・将来引渡し）</div>
     <div class="v"><b>171</b><em>万円 / ㎡</em></div>
     <div class="d">2025年・過去最高水準</div>
   </div>
   <div class="pc">
-    <div class="k">ダウンタウン｜セカンダリー</div>
+    <div class="k">ダウンタウン｜セカンダリー（完成済み・現物）</div>
     <div class="v"><b>126</b><em>万円 / ㎡</em></div>
     <div class="d">2025年・完成物件</div>
   </div>
@@ -1317,7 +1394,8 @@ body{padding:28px 0}
   </div>
 </div>
 
-<div class="concl"><b>特定物件ではなく市場全体が上昇 — 「たまたま当たった」ではない構造的な値上がり</b></div>
+<div class="concl"><b>特定物件ではなく市場全体が上昇 — 「たまたま当たった」ではない構造的な値上がり</b>
+  <span class="cav">※ ダウンタウンのオフプランが高いのは、最新・希少立地の新規分譲が中心のため。一般にオフプランは同一物件では完成物件より安く入れます（→ P.33）。</span></div>
 <div class="note src">出典：Dxbinteract</div>
 </div>
 </div></div><div class="wrap"><div class="num">21 / 41 &nbsp;·&nbsp; p23</div><div class="slide" id="s21" style="background:#0B1522"><!--bg: #0B1522 -->
@@ -1328,25 +1406,30 @@ body{padding:28px 0}
 #s21 .tbl th{font-size:15px;padding:14px 14px}
 #s21 .tbl td{font-size:16px;padding:12px 14px}
 #s21 .tbl td.c{text-align:center}
-#s21 .rank{display:inline-block;min-width:46px;padding:5px 9px;text-align:center;
-  border:1px solid rgba(255,255,255,.26);font:700 13px/1 'Noto Sans JP',sans-serif;
-  color:rgba(255,255,255,.80)}
+#s21 .rank{display:inline-block;min-width:38px;text-align:center;
+  font:700 20px/1 'Noto Sans JP',sans-serif;color:rgba(255,255,255,.72)}
 #s21 tr.hi .rank{border-color:var(--gold);color:var(--gold-lt)}
 #s21 .city{font-weight:700}
 #s21 .ins{color:rgba(255,255,255,.66);font-size:15px}
 #s21 .scale{display:flex;align-items:center;gap:12px}
-#s21 .scale i{display:block;height:11px;background:#2C4A6B;flex:none}
-#s21 tr.hi .scale i{background:var(--gold)}
-#s21 .cap{font-weight:700}
+#s21 .scale i{display:block;height:13px;flex:none;
+  background:linear-gradient(90deg,#22364F,#3E6390)}
+#s21 tr.hi .scale i{background:linear-gradient(90deg,#8A6F2A,var(--gold-lt))}
+
+#s21 .cap{font-weight:700;display:inline-block;padding:6px 12px;border-radius:2px}
+#s21 .cap.up{background:rgba(127,201,168,.16)}
+#s21 .cap.mid{background:rgba(217,201,140,.14)}
+#s21 .cap.dn{background:rgba(224,138,128,.14)}
 #s21 .cap.up{color:#7FC9A8} #s21 .cap.mid{color:#D9C98C} #s21 .cap.dn{color:#E08A80}
-#s21 .cap small{display:block;font-weight:400;font-size:12px;color:var(--mut-2);margin-top:4px}
+#s21 .cap small{display:block;font-weight:400;font-size:15px;color:var(--mut-2);margin-top:4px}
 #s21 .src{left:56px;bottom:34px;right:56px}
 
 .fl{display:inline-block;width:1.45em;margin-right:.42em;font-family:'Apple Color Emoji';font-size:.94em;line-height:1;vertical-align:-0.06em}
+#s21 .spot{--sx:90%;--sy:86%}
 </style>
 
-<div class="dk">
-<div class="eyebrow">02 · なぜドバイか</div>
+<div class="dk spot">
+<div class="eyebrow">01 · なぜ今、海外不動産か</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1 one">主要11都市の市場規模・インカム・キャピタル推移</div>
 <div class="urule"></div>
@@ -1360,37 +1443,37 @@ body{padding:28px 0}
     <th style="width:130px">インカム</th><th style="width:150px">キャピタル</th>
   </tr></thead>
   <tbody>
-  <tr class="hi"><td><span class="rank">#9</span></td><td class="city"><span class="fl">🇦🇪</span>ドバイ (UAE)</td><td class="ins">非課税と人口流入。圧倒的な取引規模。</td>
+  <tr class="hi"><td><span class="rank">9</span></td><td class="city"><span class="fl">🇦🇪</span>ドバイ (UAE)</td><td class="ins">非課税と人口流入。圧倒的な取引規模。</td>
     <td><div class="scale"><i style="width:100%"></i><span class="n">185,000+</span></div></td>
     <td class="n">$105.0B（16.6兆円）</td><td class="n">6.0–8.0%</td><td class="cap up">高<small>年 +8.0%〜</small></td></tr>
-  <tr><td><span class="rank">#8</span></td><td class="city"><span class="fl">🇨🇳</span>上海 (CN)</td><td class="ins">巨大な内需。現在は価格調整局面。</td>
+  <tr><td><span class="rank">8</span></td><td class="city"><span class="fl">🇨🇳</span>上海 (CN)</td><td class="ins">巨大な内需。現在は価格調整局面。</td>
     <td><div class="scale"><i style="width:64.9%"></i><span class="n">120,000</span></div></td>
     <td class="n">$58.0B（9.2兆円）</td><td class="n">1.5–2.5%</td><td class="cap dn">低<small>調整中</small></td></tr>
-  <tr><td><span class="rank">#3</span></td><td class="city"><span class="fl">🇺🇸</span>ニューヨーク (US)</td><td class="ins">経済力と流動性は世界屈指。</td>
+  <tr><td><span class="rank">3</span></td><td class="city"><span class="fl">🇺🇸</span>ニューヨーク (US)</td><td class="ins">経済力と流動性は世界屈指。</td>
     <td><div class="scale"><i style="width:31.4%"></i><span class="n">58,000</span></div></td>
     <td class="n">$48.0B（7.6兆円）</td><td class="n">4.0–5.5%</td><td class="cap mid">中<small>年 +2.0%〜</small></td></tr>
-  <tr><td><span class="rank">#1</span></td><td class="city"><span class="fl">🇬🇧</span>ロンドン (UK)</td><td class="ins">金融ハブの地位不変。割安感あり。</td>
+  <tr><td><span class="rank">1</span></td><td class="city"><span class="fl">🇬🇧</span>ロンドン (UK)</td><td class="ins">金融ハブの地位不変。割安感あり。</td>
     <td><div class="scale"><i style="width:49.7%"></i><span class="n">92,000</span></div></td>
     <td class="n">$42.0B（6.6兆円）</td><td class="n">3.5–5.0%</td><td class="cap mid">中<small>年 +2.0%〜</small></td></tr>
   <tr><td><span class="rank">NEXT</span></td><td class="city"><span class="fl">🇦🇪</span>アブダビ (UAE)</td><td class="ins">ドバイに次ぐ急成長。外国人投資急増。</td>
     <td><div class="scale"><i style="width:24.3%"></i><span class="n">45,000</span></div></td>
     <td class="n">$42.0B（6.6兆円）</td><td class="n">6.0–7.5%</td><td class="cap up">高<small>年 +6.0%〜</small></td></tr>
-  <tr><td><span class="rank">#2</span></td><td class="city"><span class="fl">🇯🇵</span>東京 (JP)</td><td class="ins">NYを抜き2位。円安と低金利が魅力。</td>
+  <tr><td><span class="rank">2</span></td><td class="city"><span class="fl">🇯🇵</span>東京 (JP)</td><td class="ins">NYを抜き2位。円安と低金利が魅力。</td>
     <td><div class="scale"><i style="width:42.2%"></i><span class="n">78,000</span></div></td>
     <td class="n">$35.0B（5.5兆円）</td><td class="n">3.5–4.5%</td><td class="cap up">高<small>年 +5.0%〜</small></td></tr>
-  <tr><td><span class="rank">#5</span></td><td class="city"><span class="fl">🇸🇬</span>シンガポール (SG)</td><td class="ins">アジアのハブ。富裕層流入が継続。</td>
+  <tr><td><span class="rank">5</span></td><td class="city"><span class="fl">🇸🇬</span>シンガポール (SG)</td><td class="ins">アジアのハブ。富裕層流入が継続。</td>
     <td><div class="scale"><i style="width:17.3%"></i><span class="n">32,000</span></div></td>
     <td class="n">$28.0B（4.4兆円）</td><td class="n">3.0–4.0%</td><td class="cap mid">中<small>年 +3.0%〜</small></td></tr>
-  <tr><td><span class="rank">#6</span></td><td class="city"><span class="fl">🇰🇷</span>ソウル (KR)</td><td class="ins">オフィス需要が堅調。主要投資先。</td>
+  <tr><td><span class="rank">6</span></td><td class="city"><span class="fl">🇰🇷</span>ソウル (KR)</td><td class="ins">オフィス需要が堅調。主要投資先。</td>
     <td><div class="scale"><i style="width:35.1%"></i><span class="n">65,000</span></div></td>
     <td class="n">$25.0B（4.0兆円）</td><td class="n">3.0–4.0%</td><td class="cap mid">中<small>年 +2.0%〜</small></td></tr>
-  <tr><td><span class="rank">#4</span></td><td class="city"><span class="fl">🇫🇷</span>パリ (FR)</td><td class="ins">五輪後の整備効果。底堅い需要。</td>
+  <tr><td><span class="rank">4</span></td><td class="city"><span class="fl">🇫🇷</span>パリ (FR)</td><td class="ins">五輪後の整備効果。底堅い需要。</td>
     <td><div class="scale"><i style="width:22.7%"></i><span class="n">42,000</span></div></td>
     <td class="n">$22.0B（3.5兆円）</td><td class="n">3.0–4.0%</td><td class="cap dn">低<small>横ばい</small></td></tr>
-  <tr><td><span class="rank">#10</span></td><td class="city"><span class="fl">🇩🇪</span>ベルリン (DE)</td><td class="ins">供給不足。スタートアップの拠点。</td>
+  <tr><td><span class="rank">10</span></td><td class="city"><span class="fl">🇩🇪</span>ベルリン (DE)</td><td class="ins">供給不足。スタートアップの拠点。</td>
     <td><div class="scale"><i style="width:15.1%"></i><span class="n">28,000</span></div></td>
     <td class="n">$18.0B（2.8兆円）</td><td class="n">3.0–4.0%</td><td class="cap mid">中<small>年 +3.0%〜</small></td></tr>
-  <tr><td><span class="rank">#7</span></td><td class="city"><span class="fl">🇳🇱</span>アムステルダム (NL)</td><td class="ins">欧州の戦略拠点。高い居住性。</td>
+  <tr><td><span class="rank">7</span></td><td class="city"><span class="fl">🇳🇱</span>アムステルダム (NL)</td><td class="ins">欧州の戦略拠点。高い居住性。</td>
     <td><div class="scale"><i style="width:11.9%"></i><span class="n">22,000</span></div></td>
     <td class="n">$15.0B（2.4兆円）</td><td class="n">3.5–4.5%</td><td class="cap mid">中<small>年 +3.0%〜</small></td></tr>
   </tbody>
@@ -1407,17 +1490,22 @@ body{padding:28px 0}
   display:grid;grid-template-columns:1fr 1.25fr 1.1fr;column-gap:44px}
 #s22 .ct{font:700 20px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.06em;
   margin-bottom:20px}
-#s22 .tbl th{font-size:14px;padding:12px 14px}
+#s22 .tbl th{font-size:15px;padding:12px 14px}
 #s22 .tbl td{font-size:16px;padding:11px 14px}
 #s22 .tbl td.r{text-align:right;font-variant-numeric:tabular-nums}
-#s22 .tbl tr.hi td{font-size:17px}
+#s22 .tbl tr.hi td{font-size:18px;background:rgba(201,168,76,.20);
+  border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);color:#fff}
+#s22 .tbl tr.hi td:first-child{box-shadow:inset 4px 0 0 var(--gold)}
+#s22 .rank-note{position:absolute;left:56px;right:56px;bottom:74px;
+  font:700 19px/1 'Noto Sans JP',sans-serif;color:var(--gold-lt)}
 #s22 .src{left:56px;bottom:36px;right:56px}
 
 .fl{display:inline-block;width:1.45em;margin-right:.42em;font-family:'Apple Color Emoji';font-size:.94em;line-height:1;vertical-align:-0.06em}
+#s22 .spot{--sx:34%;--sy:16%}
 </style>
 
-<div class="dk">
-<div class="eyebrow">02 · なぜドバイか</div>
+<div class="dk spot">
+<div class="eyebrow">01 · なぜ今、海外不動産か</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1 one">10都市フラット比較｜利回り・税制・所有権</div>
 <div class="urule"></div>
@@ -1482,6 +1570,7 @@ body{padding:28px 0}
   </div>
 </div>
 
+<div class="rank-note">各表はそれぞれ独立に順位付け — ドバイは3項目すべてで1位。</div>
 <div class="note src">出典：各国税務当局 / 各国不動産統計。利回りは市場平均のグロス目安、税率は2025年時点。</div>
 </div>
 </div></div><div class="wrap"><div class="num">23 / 41 &nbsp;·&nbsp; p25</div><div class="slide" id="s23" style="background:#0B1522"><!--bg: #0B1522 -->
@@ -1489,23 +1578,32 @@ body{padding:28px 0}
 @import url("theme.css");
 #s23 .h1{top:82px} #s23 .urule{top:152px;width:520px} #s23 .sub{top:176px}
 #s23 .cols{position:absolute;left:56px;right:56px;top:256px;
-  display:grid;grid-template-columns:1fr 1.35fr;column-gap:56px}
+  display:grid;grid-template-columns:0.82fr 1.6fr;column-gap:64px}
 #s23 .ct{font:700 20px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.06em}
 #s23 .cs{margin-top:9px;font:400 14px/1 'Noto Sans JP',sans-serif;color:var(--mut-2);
   margin-bottom:20px}
-#s23 .tbl th{font-size:14px;padding:12px 14px}
+#s23 .tbl th{font-size:15px;padding:12px 14px}
 #s23 .tbl td{font-size:16px;padding:11px 14px}
+/* the visa comparison is the strongest asset on this slide — let it dominate */
+#s23 .cols>div:last-child .tbl td{font-size:19px;padding:15px 16px}
+#s23 .cols>div:last-child .tbl th{font-size:16px;padding:15px 16px}
+#s23 .cols>div:last-child .ct{font-size:24px}
+#s23 .cols>div:last-child .tbl tr.hi td{background:rgba(201,168,76,.20);
+  border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);font-size:21px}
+#s23 .cols>div:last-child .tbl tr.hi td:first-child{box-shadow:inset 4px 0 0 var(--gold)}
+#s23 .cols>div:first-child{opacity:.88}
 #s23 .tbl td.r{text-align:right;font-variant-numeric:tabular-nums}
 #s23 .tbl td.k{color:rgba(255,255,255,.62);font-size:15px}
-#s23 .rk{display:inline-block;width:24px;color:var(--mut-2);font-weight:700;font-size:14px}
+#s23 .rk{display:inline-block;width:30px;color:var(--mut-2);font-weight:700;font-size:17px}
 #s23 tr.hi .rk{color:var(--gold-lt)}
 #s23 .src{left:56px;bottom:36px;right:56px}
 
 .fl{display:inline-block;width:1.45em;margin-right:.42em;font-family:'Apple Color Emoji';font-size:.94em;line-height:1;vertical-align:-0.06em}
+#s23 .spot{--sx:70%;--sy:88%}
 </style>
 
-<div class="dk">
-<div class="eyebrow">02 · なぜドバイか</div>
+<div class="dk spot">
+<div class="eyebrow">01 · なぜ今、海外不動産か</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1 one">10都市フラット比較｜中古市場の流動性・ビザ</div>
 <div class="urule"></div>
@@ -1518,7 +1616,7 @@ body{padding:28px 0}
     <table class="tbl">
       <thead><tr><th>都市</th><th>根拠</th></tr></thead>
       <tbody>
-        <tr class="hi"><td><span class="fl">🇦🇪</span><span class="rk">1</span><span class="star">★</span> ドバイ</td><td>年間18万件超・世界TOP</td></tr>
+        <tr class="hi"><td><span class="fl">🇦🇪</span><span class="rk">1</span>ドバイ</td><td>年間18万件超・世界TOP</td></tr>
         <tr><td><span class="fl">🇺🇸</span><span class="rk">2</span>ホノルル</td><td class="k">世界最大・MLS完備</td></tr>
         <tr><td><span class="fl">🇯🇵</span><span class="rk">3</span>東京</td><td class="k">REINS流通網</td></tr>
         <tr><td><span class="fl">🇬🇧</span><span class="rk">4</span>ロンドン</td><td class="k">Land Registry完備</td></tr>
@@ -1574,7 +1672,7 @@ body{padding:28px 0}
   text-align:center}
 #s24 .fbox.esc{border-color:var(--gold);background:rgba(201,168,76,.10)}
 #s24 .fbox b{display:block;font:700 22px/1.35 'Noto Sans JP',sans-serif;color:#fff}
-#s24 .fbox span{display:block;margin-top:9px;font:400 14px/1.5 'Noto Sans JP',sans-serif;color:var(--mut)}
+#s24 .fbox span{display:block;margin-top:9px;font:400 15px/1.5 'Noto Sans JP',sans-serif;color:var(--mut)}
 #s24 .fbox.esc b{color:var(--gold-lt)}
 #s24 .fa{text-align:center;margin:14px 0;font:700 17px/1 'Noto Sans JP',sans-serif;
   color:var(--gold)}
@@ -1587,10 +1685,11 @@ body{padding:28px 0}
   background:rgba(201,168,76,.11);border-left:3px solid var(--gold);padding:24px 32px}
 #s24 .concl b{font:700 27px/1.4 'Noto Sans JP',sans-serif;color:#fff}
 #s24 .src{left:56px;bottom:40px}
+#s24 .spot{--sx:20%;--sy:20%}
 </style>
 
-<div class="dk">
-<div class="eyebrow">02 · なぜドバイか</div>
+<div class="dk spot mono">
+<div class="eyebrow">01 · なぜ今、海外不動産か</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1 one">エスクロー制度｜購入代金は政府監督下で保全される</div>
 <div class="urule"></div>
@@ -1627,19 +1726,20 @@ body{padding:28px 0}
 #s25 .h1{top:82px} #s25 .urule{top:152px;width:600px} #s25 .sub{top:176px}
 
 #s25 .three{position:absolute;left:56px;right:56px;top:266px;
-  display:grid;grid-template-columns:repeat(3,1fr);column-gap:38px}
-#s25 .c{border:1px solid rgba(201,168,76,.42);background:rgba(201,168,76,.07);
-  padding:38px 36px 40px}
+  display:grid;grid-template-columns:repeat(3,1fr);column-gap:0}
+#s25 .c{padding:8px 40px 40px}
+#s25 .three>.c+.c{border-left:1px solid rgba(201,168,76,.30)}
 #s25 .c .tag{font:700 15px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.24em}
 #s25 .c .nm{margin-top:20px;font:700 28px/1 'Noto Sans JP',sans-serif;color:#fff}
-#s25 .c .v{margin-top:28px;font:700 96px/1 'Noto Sans JP',sans-serif;color:var(--gold-lt);
+#s25 .c .v{margin-top:30px;font:700 112px/1 'Noto Sans JP',sans-serif;color:var(--gold-lt);
   letter-spacing:-.02em}
 #s25 .c .v small{font-size:.36em}
 #s25 .c .d{margin-top:26px;font:400 17px/1.6 'Noto Sans JP',sans-serif;color:#fff}
 #s25 .c .o{margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.16);
   font:400 15px/1.5 'Noto Sans JP',sans-serif;color:var(--mut-2)}
 
-#s25 .tax{position:absolute;left:56px;right:56px;top:660px}
+#s25 .tax{position:absolute;left:56px;right:56px;top:648px;
+  background:rgba(255,255,255,.045);padding:30px 36px 34px}
 #s25 .tax .t{font:700 19px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.06em}
 #s25 .bars{margin-top:26px;--lw:230px;--vw:210px}
 #s25 .bar .bl{font-size:17px} #s25 .bar .bv{font-size:19px} #s25 .bar .bt{height:20px}
@@ -1649,10 +1749,11 @@ body{padding:28px 0}
 #s25 .concl em{color:var(--gold-lt);font-style:normal}
 
 .fl{display:inline-block;width:1.45em;margin-right:.42em;font-family:'Apple Color Emoji';font-size:.94em;line-height:1;vertical-align:-0.06em}
+#s25 .spot{--sx:86%;--sy:42%}
 </style>
 
-<div class="dk">
-<div class="eyebrow">02 · なぜドバイか</div>
+<div class="dk spot mono">
+<div class="eyebrow">01 · なぜ今、海外不動産か</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1 one">節税 × 高利回り × ビザ、3つ全て揃うのはドバイだけ</div>
 <div class="urule"></div>
@@ -1720,10 +1821,11 @@ body{padding:28px 0}
 #s26 .src{left:56px;bottom:38px;right:56px}
 
 .fl{display:inline-block;width:1.45em;margin-right:.42em;font-family:'Apple Color Emoji';font-size:.94em;line-height:1;vertical-align:-0.06em}
+#s26 .spot{--sx:40%;--sy:24%}
 </style>
 
-<div class="dk">
-<div class="eyebrow">03 · どう選ぶか</div>
+<div class="dk spot mono">
+<div class="eyebrow">01 · なぜ今、海外不動産か</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1 one">同じ5,000万円で、5年後の手取りはここまで違う</div>
 <div class="urule"></div>
@@ -1782,7 +1884,7 @@ body{padding:28px 0}
     <div class="rule"></div>
     <div class="lead">エリア・買い方・出口。<br>出口を先に設計してから買う。</div>
   </div>
-  <div class="r"><img src="assets/biz-brokerage.webp" alt=""></div>
+  <div class="r"><img src="assets/s27-divider.png" alt=""></div>
 </div>
 </div>
 </div></div><div class="wrap"><div class="num">28 / 41 &nbsp;·&nbsp; p32</div><div class="slide" id="s28" style="background:#F4F1EA"><!--bg: #F4F1EA -->
@@ -2199,7 +2301,7 @@ body{padding:28px 0}
 #s33 .tag.a{background:var(--gold);color:#fff}
 #s33 .tw{position:absolute;right:56px;top:262px;width:880px}
 #s33 .tbl th{font-size:16px;padding:16px 18px;text-align:center}
-#s33 .tbl th.mid{background:transparent;color:var(--mut);font-size:14px;width:180px}
+#s33 .tbl th.mid{background:transparent;color:var(--mut);font-size:15px;width:180px}
 #s33 .tbl th.tk{background:var(--gold);color:#fff}
 #s33 .tbl td{font-size:19px;padding:18px 18px;text-align:center;font-variant-numeric:tabular-nums}
 #s33 .tbl td.mid{font-size:15px;font-weight:700;color:var(--mut);background:rgba(11,21,34,.04)}
@@ -2373,7 +2475,7 @@ body{padding:28px 0}
 #s36 .col.goal .yr{color:var(--gold-lt)}
 #s36 .base{margin-top:66px;height:1px;background:rgba(255,255,255,.20)}
 #s36 .flag{position:absolute;left:56px;bottom:44px;right:56px;
-  font:400 13px/1.6 'Noto Sans JP',sans-serif;color:rgba(255,255,255,.42)}
+  font:400 15px/1.6 'Noto Sans JP',sans-serif;color:rgba(255,255,255,.42)}
 </style>
 
 <div class="tl">
@@ -2498,7 +2600,7 @@ body{padding:28px 0}
 #s38 .nm{font:700 30px/1.2 'Noto Sans JP',sans-serif;color:#fff}
 #s38 .dv{margin-top:10px;font:400 16px/1 'Noto Sans JP',sans-serif;color:var(--gold-lt)}
 #s38 .grid{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;column-gap:24px;row-gap:22px}
-#s38 .cell .k{font:400 14px/1 'Noto Sans JP',sans-serif;color:var(--mut-2)}
+#s38 .cell .k{font:400 15px/1 'Noto Sans JP',sans-serif;color:var(--mut-2)}
 #s38 .cell .a{margin-top:11px;font:700 24px/1 'Noto Sans JP',sans-serif;color:#fff;
   font-variant-numeric:tabular-nums}
 #s38 .cell .j{margin-top:8px;font:400 16px/1 'Noto Sans JP',sans-serif;color:var(--mut)}
@@ -2680,7 +2782,7 @@ body{padding:28px 0}
 #s41 .slot{width:200px;height:168px;border:2px dashed rgba(216,184,99,.55);
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
 #s41 .slot b{font:700 17px/1 'Noto Sans JP',sans-serif;color:var(--gold)}
-#s41 .slot span{font:400 13px/1 'Noto Sans JP',sans-serif;color:var(--mut-2)}
+#s41 .slot span{font:400 15px/1 'Noto Sans JP',sans-serif;color:var(--mut-2)}
 </style>
 
 <div class="tl">

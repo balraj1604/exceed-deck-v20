@@ -29,21 +29,42 @@ html,body{height:100%;overflow:hidden}
 <div id="stage"><div id="fitbox"><div class="slide" id="s11" style="background:#0B1522"><!--bg: #0B1522 -->
 <style>
 @import url("theme.css");
-#s11 .panels{position:absolute;inset:0;display:grid;grid-template-columns:repeat(4,1fr)}
+/* Three photographable places on top; the policy point gets its own band below.
+   Forcing "freehold + SWF" into a photo card is why it read weak (brief, s11). */
+#s11 .panels{position:absolute;left:0;right:0;top:0;height:762px;
+  display:grid;grid-template-columns:repeat(3,1fr)}
 #s11 .pan{position:relative;overflow:hidden;background:#16212f}
 #s11 .pan+.pan{box-shadow:inset 1px 0 0 rgba(255,255,255,.16)}
 #s11 .pan>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 #s11 .p1 img{object-position:50% 46%}
-#s11 .p2 img{object-position:50% 50%}
+#s11 .p2 img{object-position:50% 56%}
 #s11 .p3 img{object-position:50% 48%}
-#s11 .p4 img{object-position:50% 44%;filter:grayscale(1) contrast(1.05)}
-#s11 .band{position:absolute;left:0;right:0;bottom:0;height:300px;
-  background:linear-gradient(180deg,rgba(8,14,22,0) 0%,rgba(8,14,22,.66) 14%,
-    rgba(8,14,22,.86) 42%,rgba(8,14,22,.93) 100%)}
-#s11 .cap{position:absolute;left:38px;right:32px;bottom:56px}
-#s11 .cap h3{font:700 32px/1.24 'Noto Sans JP',sans-serif;color:#fff;letter-spacing:.01em}
-#s11 .cap ul{margin-top:20px;list-style:none}
-#s11 .cap li{font:400 17px/1.75 'Noto Sans JP',sans-serif;color:rgba(255,255,255,.82)}
+#s11 .band{position:absolute;left:0;right:0;bottom:0;height:400px;
+  background:linear-gradient(180deg,rgba(8,14,22,0) 0%,rgba(8,14,22,.62) 16%,
+    rgba(8,14,22,.86) 46%,rgba(8,14,22,.94) 100%)}
+#s11 .cap{position:absolute;left:38px;right:32px;bottom:34px}
+#s11 .cap h3{font:700 31px/1.24 'Noto Sans JP',sans-serif;color:#fff;letter-spacing:.01em;
+  min-height:78px;display:flex;align-items:flex-end}
+#s11 .cap ul{margin-top:16px;list-style:none}
+#s11 .cap li{font:400 17px/1.7 'Noto Sans JP',sans-serif;color:rgba(255,255,255,.82)}
+#s11 .cap .imp{margin-top:16px;padding-top:14px;border-top:1px solid rgba(201,168,76,.45);
+  font:700 17px/1.5 'Noto Sans JP',sans-serif;color:var(--gold-lt)}
+
+/* ---- policy / data strip (replaces the 4th photo card) ---- */
+#s11 .strip{position:absolute;left:0;right:0;bottom:0;height:318px;
+  background:#0A1523;border-top:2px solid var(--gold);
+  display:grid;grid-template-columns:250px 1fr 1fr 1fr;align-items:center;
+  column-gap:40px;padding:0 56px}
+#s11 .strip .mark{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+#s11 .strip .ico2{width:76px;height:76px;border:2px solid rgba(201,168,76,.5);
+  border-radius:50%;display:flex;align-items:center;justify-content:center}
+#s11 .strip .ico2 svg{width:40px;height:40px}
+#s11 .strip .mark b{font:700 22px/1.35 'Noto Sans JP',sans-serif;color:var(--gold-lt)}
+#s11 .sc{border-left:1px solid rgba(255,255,255,.15);padding-left:34px}
+#s11 .sc .k{font:700 16px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.10em}
+#s11 .sc .v{margin-top:16px;font:700 44px/1 'Noto Sans JP',sans-serif;color:#fff}
+#s11 .sc .v small{font-size:.44em}
+#s11 .sc .d{margin-top:14px;font:400 16px/1.55 'Noto Sans JP',sans-serif;color:var(--mut)}
 
 #s11 .head{position:absolute;left:44px;top:34px;right:44px;z-index:4}
 #s11 .head .k{font:700 15px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.24em}
@@ -60,27 +81,54 @@ html,body{height:100%;overflow:hidden}
   <div class="pan p1"><img src="assets/s11-disney-hq.png" alt="">
     <div class="band"></div>
     <div class="cap"><h3>ディズニー・アブダビ</h3>
-      <ul><li>ヤス島・中東初のディズニー</li><li>約125ha・雇用3万人規模</li></ul></div>
+      <ul><li>ヤス島・中東初のディズニー</li><li>約125ha・雇用3万人規模</li></ul>
+      <div class="imp">→ ヤス島の賃貸需要が構造的に増える</div></div>
   </div>
-  <div class="pan p2"><img src="assets/s11-saadiyat.jpg" alt="">
+  <div class="pan p2"><img src="assets/s11-saadiyat-hq.png" alt="">
     <div class="band"></div>
     <div class="cap"><h3>サディヤット文化地区</h3>
-      <ul><li>国立博物館・グッゲンハイム</li><li>ルーブルに続く美術館集積</li></ul></div>
+      <ul><li>ルーブル・国立博物館・グッゲンハイム</li><li>世界水準の美術館が集積</li></ul>
+      <div class="imp">→ ブランド立地として長期で定着</div></div>
   </div>
   <div class="pan p3"><img src="assets/s11-sphere-hq.png" alt="">
     <div class="band"></div>
     <div class="cap"><h3>スフィア・アブダビ</h3>
-      <ul><li>ラスベガスに次ぐ世界2例目</li><li>約17億ドル・滞在型観光強化</li></ul></div>
+      <ul><li>ラスベガスに次ぐ世界2例目</li><li>約17億ドル・滞在型観光強化</li></ul>
+      <div class="imp">→ 滞在日数が伸び、短期賃貸の稼働が上がる</div></div>
   </div>
-  <div class="pan p4"><img src="assets/s11-freehold.png" alt="">
-    <div class="band"></div>
-    <div class="cap"><h3>フリーホールド解禁 × SWF</h3>
-      <ul><li>2019年 フリーホールド解禁</li><li>供給不足継続＋SWFが下支え</li></ul></div>
+</div>
+
+<div class="strip">
+  <div class="mark">
+    <!-- PLACEHOLDER MOTIF: title-deed + seal. Baru to pick the final visual — see options in chat. -->
+    <div class="ico2">
+      <svg viewBox="0 0 48 48" fill="none" stroke="#C9A84C" stroke-width="2.4"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11,6 L30,6 L38,14 L38,42 L11,42 Z M30,6 L30,14 L38,14"/>
+        <path d="M17,25 L27,25 M17,32 L31,32"/><circle cx="22" cy="17" r="3"/>
+      </svg>
+    </div>
+    <b>制度が支える市場</b>
+  </div>
+  <div class="sc">
+    <div class="k">フリーホールド解禁</div>
+    <div class="v">2019<small>年</small></div>
+    <div class="d">外国人が指定エリアで完全所有可能に。<br>解禁以降、買い手層が一気に広がった。</div>
+  </div>
+  <div class="sc">
+    <div class="k">政府系ファンド（SWF）</div>
+    <div class="v">市場を下支え</div>
+    <div class="d">ADIA・ムバダラ等が長期保有。<br>短期の投機で崩れにくい構造。</div>
+  </div>
+  <div class="sc">
+    <div class="k">需給</div>
+    <div class="v">供給不足<small>が継続</small></div>
+    <div class="d">需要増に供給が追いつかず、<br>価格上昇圧力が続いている。</div>
   </div>
 </div>
 
 <div class="head">
-  <div class="k">01 · WHY NOW</div>
+  <div class="k">01 · なぜ今、海外不動産か</div>
   <div class="t">国家計画レベルの開発｜アブダビ</div>
   <div class="s">政府系ファンドが、文化・観光・居住需要を長期で支える。</div>
   <div class="r"></div>

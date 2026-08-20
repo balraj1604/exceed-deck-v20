@@ -31,23 +31,32 @@ html,body{height:100%;overflow:hidden}
 @import url("theme.css");
 #s23 .h1{top:82px} #s23 .urule{top:152px;width:520px} #s23 .sub{top:176px}
 #s23 .cols{position:absolute;left:56px;right:56px;top:256px;
-  display:grid;grid-template-columns:1fr 1.35fr;column-gap:56px}
+  display:grid;grid-template-columns:0.82fr 1.6fr;column-gap:64px}
 #s23 .ct{font:700 20px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.06em}
 #s23 .cs{margin-top:9px;font:400 14px/1 'Noto Sans JP',sans-serif;color:var(--mut-2);
   margin-bottom:20px}
-#s23 .tbl th{font-size:14px;padding:12px 14px}
+#s23 .tbl th{font-size:15px;padding:12px 14px}
 #s23 .tbl td{font-size:16px;padding:11px 14px}
+/* the visa comparison is the strongest asset on this slide — let it dominate */
+#s23 .cols>div:last-child .tbl td{font-size:19px;padding:15px 16px}
+#s23 .cols>div:last-child .tbl th{font-size:16px;padding:15px 16px}
+#s23 .cols>div:last-child .ct{font-size:24px}
+#s23 .cols>div:last-child .tbl tr.hi td{background:rgba(201,168,76,.20);
+  border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);font-size:21px}
+#s23 .cols>div:last-child .tbl tr.hi td:first-child{box-shadow:inset 4px 0 0 var(--gold)}
+#s23 .cols>div:first-child{opacity:.88}
 #s23 .tbl td.r{text-align:right;font-variant-numeric:tabular-nums}
 #s23 .tbl td.k{color:rgba(255,255,255,.62);font-size:15px}
-#s23 .rk{display:inline-block;width:24px;color:var(--mut-2);font-weight:700;font-size:14px}
+#s23 .rk{display:inline-block;width:30px;color:var(--mut-2);font-weight:700;font-size:17px}
 #s23 tr.hi .rk{color:var(--gold-lt)}
 #s23 .src{left:56px;bottom:36px;right:56px}
 
 .fl{display:inline-block;width:1.45em;margin-right:.42em;font-family:'Apple Color Emoji';font-size:.94em;line-height:1;vertical-align:-0.06em}
+#s23 .spot{--sx:70%;--sy:88%}
 </style>
 
-<div class="dk">
-<div class="eyebrow">02 · なぜドバイか</div>
+<div class="dk spot">
+<div class="eyebrow">01 · なぜ今、海外不動産か</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1 one">10都市フラット比較｜中古市場の流動性・ビザ</div>
 <div class="urule"></div>
@@ -60,7 +69,7 @@ html,body{height:100%;overflow:hidden}
     <table class="tbl">
       <thead><tr><th>都市</th><th>根拠</th></tr></thead>
       <tbody>
-        <tr class="hi"><td><span class="fl">🇦🇪</span><span class="rk">1</span><span class="star">★</span> ドバイ</td><td>年間18万件超・世界TOP</td></tr>
+        <tr class="hi"><td><span class="fl">🇦🇪</span><span class="rk">1</span>ドバイ</td><td>年間18万件超・世界TOP</td></tr>
         <tr><td><span class="fl">🇺🇸</span><span class="rk">2</span>ホノルル</td><td class="k">世界最大・MLS完備</td></tr>
         <tr><td><span class="fl">🇯🇵</span><span class="rk">3</span>東京</td><td class="k">REINS流通網</td></tr>
         <tr><td><span class="fl">🇬🇧</span><span class="rk">4</span>ロンドン</td><td class="k">Land Registry完備</td></tr>

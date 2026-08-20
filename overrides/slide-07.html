@@ -5,13 +5,17 @@
 #s7 .urule{top:214px;width:700px}
 #s7 .sub{top:238px}
 
-#s7 .left{position:absolute;left:64px;top:318px;width:540px}
+#s7 .left{position:absolute;left:64px;top:306px;width:560px}
+#s7 .left>.lab{font-size:19px}
+#s7 .left>.fig{font-size:146px;letter-spacing:-.03em}
+#s7 .left>.fig small{font-size:.34em}
+#s7 .left>.meter{height:20px}
 #s7 .body{margin-top:34px;font:400 17px/1.8 'Noto Sans JP',sans-serif;
   color:rgba(255,255,255,.70)}
 /* the two summary figures now sit under the 96% block, per feedback */
 #s7 .sub2{margin-top:44px;padding-top:38px;border-top:1px solid rgba(255,255,255,.14)}
 #s7 .sub2 .stat+.stat{margin-top:36px}
-#s7 .sub2 .fig{font-size:62px;margin-top:14px}
+#s7 .sub2 .fig{font-size:46px;margin-top:12px;color:rgba(255,255,255,.82)}
 #s7 .sub2 .meter{margin-top:16px;height:11px}
 #s7 .sub2 .lab{font-size:16px}
 
@@ -22,15 +26,25 @@
   border-collapse:collapse;width:calc(100% - 748px)}
 #s7 td{padding:30px 0;border-top:1px solid rgba(201,168,76,.26);
   font:700 26px/1 'Noto Sans JP',sans-serif;color:#fff;text-align:center}
+/* de-escalation ramp: red -> amber -> yellow as the volley collapses */
+#s7 tr.r1 td:not(.m){color:#E8705F}
+#s7 tr.r2 td:not(.m){color:#E0A64B}
+#s7 tr.r3 td:not(.m){color:#EBD77E}
+#s7 tr.r3 td:not(.m){font-size:30px}
+#s7 .rampkey{position:absolute;left:684px;right:64px;top:868px;display:flex;
+  align-items:center;gap:14px;font:400 15px/1 'Noto Sans JP',sans-serif;color:var(--mut-2)}
+#s7 .rampkey i{width:66px;height:8px;display:block;
+  background:linear-gradient(90deg,#E8705F,#E0A64B,#EBD77E)}
 #s7 tr:last-child td{border-bottom:1px solid rgba(201,168,76,.26)}
 #s7 td.m{text-align:left;width:130px;color:var(--gold);font-size:22px}
 
 #s7 .src{left:64px;bottom:44px;width:520px}
+#s7 .spot{--sx:14%;--sy:76%}
 </style>
 
-<div class="dk">
+<div class="dk spot">
 
-<div class="eyebrow">02 · なぜドバイか</div>
+<div class="eyebrow">01 · なぜ今、海外不動産か</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1">イラン・アメリカ中東戦争<br>鉄壁の防空体制：イラン情勢下での迎撃実績</div>
 <div class="urule"></div>
@@ -63,10 +77,11 @@
 </div>
 
 <table>
-  <tr><td class="m">3月</td><td>425発</td><td>15発</td><td>1,941発</td></tr>
-  <tr><td class="m">4月</td><td>104発</td><td>7発</td><td>279発</td></tr>
-  <tr><td class="m">5月</td><td>11発</td><td>0発</td><td>27発</td></tr>
+  <tr class="r1"><td class="m">3月</td><td>425発</td><td>15発</td><td>1,941発</td></tr>
+  <tr class="r2"><td class="m">4月</td><td>104発</td><td>7発</td><td>279発</td></tr>
+  <tr class="r3"><td class="m">5月</td><td>11発</td><td>0発</td><td>27発</td></tr>
 </table>
+<div class="rampkey"><i></i>3月 → 5月にかけて飛来数は急減（425 → 104 → 11）</div>
 
 <div class="note src">※出典：UAE国防省（2026年5月10日発表データ等）に基づき作成。</div>
 </div>
