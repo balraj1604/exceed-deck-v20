@@ -41,6 +41,15 @@ Running list. Each item: what he said → what I did.
 | 31 | 21 | Text overlay on 年間取引総額; nothing may overflow the slide | doing |
 | 32 | 28 | Remove the JVC row highlight | doing |
 
+| 33 | assets | TAKUMI mark supplied (screenshot) | **DONE** — extracted to transparent white + dark variants |
+| 34 | assets | EXCEED logo supplied (vault `04-Renders-Images/exceed_company_logo.jpg`) | **DONE** — knocked out of navy, 4x upscaled, white + dark variants |
+| 35 | 3 | Logos into the three reserved mark slots | **DONE** — EXCEED on panels 1+2, TAKUMI on panel 3 |
+| 36 | 33 | TAKUMI logo on the slide | **DONE** |
+| 37 | 11 | Lower the caption labelling | **DONE** — bottom 342 → 250, gradient follows |
+| 38 | 36 | Add 2026 as a reference | queued |
+| 39 | 39 | Airbnb logo; EXCEED in boxes 1+4; TAKUMI in box 3 | queued (logos now in hand) |
+| 40 | 40 | Add visuals | queued |
+
 ## Standing rules (apply to every slide, don't re-ask)
 
 - No gold rail across the top of any slide.
