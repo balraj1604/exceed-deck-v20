@@ -16,7 +16,9 @@
   background:linear-gradient(90deg,#22364F,#3E6390)}
 #s21 tr.hi .scale i{background:linear-gradient(90deg,#8A6F2A,var(--gold-lt))}
 
-#s21 .cap{font-weight:700;display:inline-block;padding:6px 12px;border-radius:2px}
+/* chips shrink-wrapped their text, so every row was a different width — fill the cell */
+#s21 .cap{font-weight:700;display:block;width:100%;box-sizing:border-box;
+  padding:9px 12px;border-radius:2px;text-align:center}
 #s21 .cap.up{background:rgba(127,201,168,.16)}
 #s21 .cap.mid{background:rgba(217,201,140,.14)}
 #s21 .cap.dn{background:rgba(224,138,128,.14)}
@@ -40,7 +42,7 @@
   <thead><tr>
     <th style="width:66px">GPCI</th><th style="width:190px">都市</th><th>市場動向インサイト</th>
     <th style="width:250px">年間取引件数</th><th style="width:210px">年間取引総額</th>
-    <th style="width:130px">インカム</th><th style="width:150px">キャピタル</th>
+    <th style="width:130px">インカム</th><th style="width:172px">キャピタル</th>
   </tr></thead>
   <tbody>
   <tr class="hi"><td><span class="rank">9</span></td><td class="city"><span class="fl">🇦🇪</span>ドバイ (UAE)</td><td class="ins">非課税と人口流入。圧倒的な取引規模。</td>
