@@ -152,19 +152,27 @@ body{padding:28px 0}
 </div></div><div class="wrap"><div class="num">4 / 41 &nbsp;·&nbsp; p3</div><div class="slide" id="s4" style="background:#F4F1EA"><!--bg: #F4F1EA -->
 <style>
 #s4{--gold:#C9A84C;--navy:#0B1A2E}
-#s4 .L{position:absolute;left:0;top:0;width:902px;height:100%;background:var(--navy);overflow:hidden}
-#s4 .R{position:absolute;left:902px;top:0;right:0;height:100%;background:#F4F1EA}
+#s4 .L{position:absolute;left:0;top:0;width:1010px;height:100%;background:var(--navy);
+  overflow:hidden}
+/* texture on the navy side */
+#s4 .L::before{content:'';position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(760px 620px at 18% 24%,rgba(201,168,76,.14),transparent 64%),
+    repeating-linear-gradient(135deg,rgba(255,255,255,.030) 0 1px,transparent 1px 13px)}
+/* the blue/white divide dissolves instead of butting */
+#s4 .L::after{content:'';position:absolute;top:0;bottom:0;right:0;width:230px;pointer-events:none;
+  background:linear-gradient(90deg,rgba(11,26,46,0) 0%,rgba(11,26,46,.55) 42%,#F4F1EA 100%)}
+#s4 .R{position:absolute;left:902px;top:0;right:0;height:100%;background:#F4F1EA;z-index:2}
 
 /* ---- left: header ---- */
-#s4 .kick{position:absolute;left:64px;top:44px;
+#s4 .kick{position:absolute;left:64px;top:44px;z-index:3;
   font:700 17px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.22em}
-#s4 .ttl{position:absolute;left:64px;top:72px;
+#s4 .ttl{position:absolute;left:64px;top:72px;z-index:3;
   font:700 44px/1.12 'Noto Sans JP',sans-serif;color:#fff;letter-spacing:.02em}
-#s4 .hr{position:absolute;left:64px;width:764px;top:152px;height:1px;
+#s4 .hr{position:absolute;left:64px;width:764px;top:152px;height:1px;z-index:3;
   background:rgba(255,255,255,.30)}
 
 /* ---- left: people ---- */
-#s4 .who{position:absolute;top:186px;width:230px;text-align:center}
+#s4 .who{position:absolute;top:186px;width:230px;text-align:center;z-index:3}
 #s4 .who.a{left:72px}  #s4 .who.b{left:336px}  #s4 .who.c{left:600px}
 #s4 .who img{width:186px;height:186px;border-radius:50%;object-fit:cover;
   object-position:50% 20%;display:block;margin:0 auto;
@@ -176,9 +184,9 @@ body{padding:28px 0}
   color:rgba(255,255,255,.60)}
 
 /* ---- left: book ---- */
-#s4 .book{position:absolute;left:26px;top:612px;width:286px;height:394px;
+#s4 .book{position:absolute;left:26px;top:612px;width:286px;height:394px;z-index:3;
   object-fit:cover;display:block;box-shadow:0 12px 34px rgba(0,0,0,.42)}
-#s4 .bk{position:absolute;left:348px;right:56px;top:640px}
+#s4 .bk{position:absolute;left:348px;width:500px;top:640px;z-index:3}
 #s4 .bk .lab{font:700 15px/1 'Noto Sans JP',sans-serif;color:var(--gold);
   letter-spacing:.16em}
 #s4 .bk .bt{margin-top:52px;font:700 37px/1.42 'Noto Sans JP',sans-serif;
@@ -366,7 +374,14 @@ body{padding:28px 0}
 
 #s8 .grid{position:absolute;left:812px;right:56px;top:252px;bottom:96px;
   display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr)}
-#s8 .c{display:flex;flex-direction:column;justify-content:center;padding:0 26px}
+#s8 .c{display:flex;flex-direction:column;justify-content:center;padding:0 26px;position:relative}
+/* 0% tax and 92% foreigners are the argument; area and median age are context */
+#s8 .c.hero{background:rgba(201,168,76,.10)}
+#s8 .c.hero::before{content:'';position:absolute;left:0;right:0;top:0;height:3px;background:var(--gold)}
+#s8 .c.hero .num{color:var(--gold-lt);font-size:56px}
+#s8 .c.hero .lab{color:var(--gold-lt)}
+#s8 .c.hero .cap{color:rgba(255,255,255,.72)}
+#s8 .c.hero .ico-ring{border-color:rgba(201,168,76,.75)}
 #s8 .c:nth-child(3n+2),#s8 .c:nth-child(3n){border-left:1px solid rgba(201,168,76,.26)}
 #s8 .c:nth-child(n+4){border-top:1px solid rgba(201,168,76,.26)}
 #s8 .top{display:flex;align-items:center;gap:20px}
@@ -399,7 +414,7 @@ body{padding:28px 0}
   <div class="c"><div class="top"><div class="ico-ring"><img class="ico" src="assets/ico/ae998c9a4cac8bf8.png" alt=""></div><div class="num">400万</div></div>
     <div class="lab">ドバイ人口</div><div class="cap">商業の中心都市</div></div>
 
-  <div class="c"><div class="top"><div class="ico-ring"><img class="ico" src="assets/ico/c0fcd99467bf2324.png" alt=""></div><div class="num">92%</div></div>
+  <div class="c hero"><div class="top"><div class="ico-ring"><img class="ico" src="assets/ico/c0fcd99467bf2324.png" alt=""></div><div class="num">92%</div></div>
     <div class="lab">外国人比率</div><div class="cap">世界中から人材が集積</div></div>
 
   <div class="c"><div class="top"><div class="ico-ring"><img class="ico" src="assets/ico/130f3070f20dd3a0.png" alt=""></div><div class="num">4,114</div></div>
@@ -411,7 +426,7 @@ body{padding:28px 0}
   <div class="c"><div class="top"><div class="ico-ring"><img class="ico" src="assets/ico/cd83994bdf389603.png" alt=""></div><div class="num">3.67</div></div>
     <div class="lab">通貨ペッグ（AED／USD）</div><div class="cap">1USD固定で為替安定</div></div>
 
-  <div class="c"><div class="top"><div class="ico-ring"><img class="ico" src="assets/ico/476e9d08a4c04e3c.png" alt=""></div><div class="num">0%</div></div>
+  <div class="c hero"><div class="top"><div class="ico-ring"><img class="ico" src="assets/ico/476e9d08a4c04e3c.png" alt=""></div><div class="num">0%</div></div>
     <div class="lab">所得税・住民税</div><div class="cap">給与も売却益も非課税</div></div>
 
   <div class="c"><div class="top"><div class="ico-ring"><img class="ico" src="assets/ico/16537c35a3a21c68.png" alt=""></div><div class="num">80%</div></div>
@@ -945,6 +960,11 @@ body{padding:28px 0}
 #s15 .ct{font:700 19px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.08em}
 #s15 .bars{margin-top:30px;--lw:180px;--vw:126px}
 #s15 .bar .bl{font-size:17px}
+/* two ten-city lists is far too much for a room — let two cities carry the point */
+#s15 .bar{opacity:.42}
+#s15 .bar.on,#s15 .bar.jp{opacity:1}
+#s15 .bar.jp .bt i{background:#5B7CA6}
+#s15 .bar.jp .bl,#s15 .bar.jp .bv{color:#BBD2EE}
 #s15 .bar .bv{font-size:19px}
 #s15 .bar .bt{height:22px}
 #s15 .concl{position:absolute;left:64px;right:64px;bottom:110px;
@@ -969,7 +989,7 @@ body{padding:28px 0}
     <div class="bar"><div class="bl"><span class="fl">🇭🇰</span>香港</div><div class="bt"><i style="width:100%"></i></div><div class="bv">$3,860</div></div>
     <div class="bar"><div class="bl"><span class="fl">🇬🇧</span>ロンドン</div><div class="bt"><i style="width:62.2%"></i></div><div class="bv">$2,400</div></div>
     <div class="bar"><div class="bl"><span class="fl">🇺🇸</span>ニューヨーク</div><div class="bt"><i style="width:57.0%"></i></div><div class="bv">$2,200</div></div>
-    <div class="bar"><div class="bl"><span class="fl">🇯🇵</span>東京</div><div class="bt"><i style="width:51.8%"></i></div><div class="bv">$2,000</div></div>
+    <div class="bar jp"><div class="bl"><span class="fl">🇯🇵</span>東京</div><div class="bt"><i style="width:51.8%"></i></div><div class="bv">$2,000</div></div>
     <div class="bar"><div class="bl"><span class="fl">🇸🇬</span>シンガポール</div><div class="bt"><i style="width:44.0%"></i></div><div class="bv">$1,700</div></div>
     <div class="bar"><div class="bl"><span class="fl">🇫🇷</span>パリ</div><div class="bt"><i style="width:36.3%"></i></div><div class="bv">$1,400</div></div>
     <div class="bar"><div class="bl"><span class="fl">🇦🇺</span>シドニー</div><div class="bt"><i style="width:33.7%"></i></div><div class="bv">$1,300</div></div>
@@ -985,7 +1005,7 @@ body{padding:28px 0}
     <div class="bar"><div class="bl"><span class="fl">🇭🇰</span>香港</div><div class="bt"><i style="width:18.0%"></i></div><div class="bv">24㎡</div></div>
     <div class="bar"><div class="bl"><span class="fl">🇬🇧</span>ロンドン</div><div class="bt"><i style="width:29.3%"></i></div><div class="bv">39㎡</div></div>
     <div class="bar"><div class="bl"><span class="fl">🇺🇸</span>ニューヨーク</div><div class="bt"><i style="width:31.6%"></i></div><div class="bv">42㎡</div></div>
-    <div class="bar"><div class="bl"><span class="fl">🇯🇵</span>東京</div><div class="bt"><i style="width:35.3%"></i></div><div class="bv">47㎡</div></div>
+    <div class="bar jp"><div class="bl"><span class="fl">🇯🇵</span>東京</div><div class="bt"><i style="width:35.3%"></i></div><div class="bv">47㎡</div></div>
     <div class="bar"><div class="bl"><span class="fl">🇸🇬</span>シンガポール</div><div class="bt"><i style="width:41.4%"></i></div><div class="bv">55㎡</div></div>
     <div class="bar"><div class="bl"><span class="fl">🇫🇷</span>パリ</div><div class="bt"><i style="width:49.6%"></i></div><div class="bv">66㎡</div></div>
     <div class="bar"><div class="bl"><span class="fl">🇦🇺</span>シドニー</div><div class="bt"><i style="width:53.4%"></i></div><div class="bv">71㎡</div></div>
@@ -1801,22 +1821,32 @@ body{padding:28px 0}
 <style>
 @import url("theme.css");
 #s26 .h1{top:82px} #s26 .urule{top:152px;width:560px} #s26 .sub{top:176px}
-#s26 .tw{position:absolute;left:56px;right:56px;top:256px}
+#s26 .tw{position:absolute;left:56px;right:56px;top:230px}
 #s26 .tbl th{font-size:17px;padding:18px 16px;text-align:center}
 #s26 .tbl th:first-child{text-align:left;width:230px}
 #s26 .tbl th.dxb{background:rgba(201,168,76,.20);color:var(--gold-lt);font-size:19px}
-#s26 .tbl td{font-size:18px;padding:16px 16px;text-align:center;
+#s26 .tbl td{font-size:17px;padding:13px 16px;text-align:center;
   font-variant-numeric:tabular-nums}
 #s26 .tbl td:first-child{text-align:left;font-weight:700;font-size:16px;
   color:rgba(255,255,255,.80)}
 #s26 .tbl td.dxb{background:rgba(201,168,76,.10);font-weight:700;color:#fff}
 #s26 .tbl tr.tot td{border-top:2px solid rgba(201,168,76,.45);font-size:21px;font-weight:700}
 #s26 .tbl tr.tot td.dxb{color:var(--gold-lt);font-size:24px}
-#s26 .tbl tr.gain td{font-size:24px;font-weight:700}
+#s26 .tbl tr.gain{display:none}   /* the payoff is pulled out below as the hero */
 #s26 .tbl tr.gain td.dxb{color:var(--gold-lt);font-size:28px}
-#s26 .concl{position:absolute;left:56px;right:56px;bottom:118px;
-  background:rgba(201,168,76,.11);border-left:3px solid var(--gold);padding:22px 30px}
-#s26 .concl b{font:700 27px/1.35 'Noto Sans JP',sans-serif;color:#fff}
+#s26 .hero{position:absolute;left:56px;right:56px;bottom:186px;
+  display:grid;grid-template-columns:1fr 1fr 1.15fr;column-gap:44px;align-items:end;
+  border-top:2px solid var(--gold);padding-top:26px}
+#s26 .hero .hl{font:700 17px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.10em}
+#s26 .hero .hv{margin-top:14px;font:700 68px/1 'Noto Sans JP',sans-serif;color:#fff;
+  letter-spacing:-.02em}
+#s26 .hero .hv small{font-size:.34em}
+#s26 .hero .dxb .hv{color:var(--gold-lt);font-size:88px}
+#s26 .hero .x{font:700 56px/1 'Noto Sans JP',sans-serif;color:var(--gold-lt);text-align:right}
+#s26 .hero .x span{display:block;margin-top:12px;font:700 20px/1.4 'Noto Sans JP',sans-serif;color:#fff}
+#s26 .concl{position:absolute;left:56px;right:56px;bottom:92px;
+  background:rgba(201,168,76,.11);border-left:3px solid var(--gold);padding:16px 26px}
+#s26 .concl b{font:700 19px/1.4 'Noto Sans JP',sans-serif;color:rgba(255,255,255,.88)}
 #s26 .concl b em{color:var(--gold-lt);font-style:normal}
 #s26 .src{left:56px;bottom:38px;right:56px}
 
@@ -1849,7 +1879,12 @@ body{padding:28px 0}
   </table>
 </div>
 
-<div class="concl"><b>結論：非課税＋高い利回り・値上がりで、5年後の利益はドバイが <em>東京の約6.4倍</em>。</b></div>
+<div class="hero">
+  <div><div class="hl">5年後の利益｜東京ワンルーム</div><div class="hv">+535<small>万円</small></div></div>
+  <div class="dxb"><div class="hl">5年後の利益｜ドバイ</div><div class="hv">+3,450<small>万円</small></div></div>
+  <div class="x">6.4倍<span>同じ5,000万円の元本で</span></div>
+</div>
+<div class="concl"><b>※ フィリピン・カンボジアも利回りは高いが、流動性・法整備・ビザで差が出る（→ P.24）。</b></div>
 <div class="note src">※ 税金は各国の賃貸所得課税・譲渡益課税を考慮した5年累計の概算（東京 約20%／フィリピン・カンボジア・アメリカ 現地源泉＋譲渡課税の目安）。ドバイは賃貸・譲渡ともに非課税。前提：投資額5,000万円を5年保有。利回りは各市場の最新グロス賃貸利回りの目安。ドバイは実質利回り7%＋年6%の価格上昇。</div>
 </div>
 </div></div><div class="wrap"><div class="num">27 / 41 &nbsp;·&nbsp; p29</div><div class="slide" id="s27" style="background:#F4F1EA"><!--bg: #F4F1EA -->

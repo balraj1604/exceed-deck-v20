@@ -29,19 +29,27 @@ html,body{height:100%;overflow:hidden}
 <div id="stage"><div id="fitbox"><div class="slide" id="s4" style="background:#F4F1EA"><!--bg: #F4F1EA -->
 <style>
 #s4{--gold:#C9A84C;--navy:#0B1A2E}
-#s4 .L{position:absolute;left:0;top:0;width:902px;height:100%;background:var(--navy);overflow:hidden}
-#s4 .R{position:absolute;left:902px;top:0;right:0;height:100%;background:#F4F1EA}
+#s4 .L{position:absolute;left:0;top:0;width:1010px;height:100%;background:var(--navy);
+  overflow:hidden}
+/* texture on the navy side */
+#s4 .L::before{content:'';position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(760px 620px at 18% 24%,rgba(201,168,76,.14),transparent 64%),
+    repeating-linear-gradient(135deg,rgba(255,255,255,.030) 0 1px,transparent 1px 13px)}
+/* the blue/white divide dissolves instead of butting */
+#s4 .L::after{content:'';position:absolute;top:0;bottom:0;right:0;width:230px;pointer-events:none;
+  background:linear-gradient(90deg,rgba(11,26,46,0) 0%,rgba(11,26,46,.55) 42%,#F4F1EA 100%)}
+#s4 .R{position:absolute;left:902px;top:0;right:0;height:100%;background:#F4F1EA;z-index:2}
 
 /* ---- left: header ---- */
-#s4 .kick{position:absolute;left:64px;top:44px;
+#s4 .kick{position:absolute;left:64px;top:44px;z-index:3;
   font:700 17px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.22em}
-#s4 .ttl{position:absolute;left:64px;top:72px;
+#s4 .ttl{position:absolute;left:64px;top:72px;z-index:3;
   font:700 44px/1.12 'Noto Sans JP',sans-serif;color:#fff;letter-spacing:.02em}
-#s4 .hr{position:absolute;left:64px;width:764px;top:152px;height:1px;
+#s4 .hr{position:absolute;left:64px;width:764px;top:152px;height:1px;z-index:3;
   background:rgba(255,255,255,.30)}
 
 /* ---- left: people ---- */
-#s4 .who{position:absolute;top:186px;width:230px;text-align:center}
+#s4 .who{position:absolute;top:186px;width:230px;text-align:center;z-index:3}
 #s4 .who.a{left:72px}  #s4 .who.b{left:336px}  #s4 .who.c{left:600px}
 #s4 .who img{width:186px;height:186px;border-radius:50%;object-fit:cover;
   object-position:50% 20%;display:block;margin:0 auto;
@@ -53,9 +61,9 @@ html,body{height:100%;overflow:hidden}
   color:rgba(255,255,255,.60)}
 
 /* ---- left: book ---- */
-#s4 .book{position:absolute;left:26px;top:612px;width:286px;height:394px;
+#s4 .book{position:absolute;left:26px;top:612px;width:286px;height:394px;z-index:3;
   object-fit:cover;display:block;box-shadow:0 12px 34px rgba(0,0,0,.42)}
-#s4 .bk{position:absolute;left:348px;right:56px;top:640px}
+#s4 .bk{position:absolute;left:348px;width:500px;top:640px;z-index:3}
 #s4 .bk .lab{font:700 15px/1 'Noto Sans JP',sans-serif;color:var(--gold);
   letter-spacing:.16em}
 #s4 .bk .bt{margin-top:52px;font:700 37px/1.42 'Noto Sans JP',sans-serif;

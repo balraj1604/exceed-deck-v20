@@ -42,7 +42,14 @@ html,body{height:100%;overflow:hidden}
 
 #s8 .grid{position:absolute;left:812px;right:56px;top:252px;bottom:96px;
   display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr)}
-#s8 .c{display:flex;flex-direction:column;justify-content:center;padding:0 26px}
+#s8 .c{display:flex;flex-direction:column;justify-content:center;padding:0 26px;position:relative}
+/* 0% tax and 92% foreigners are the argument; area and median age are context */
+#s8 .c.hero{background:rgba(201,168,76,.10)}
+#s8 .c.hero::before{content:'';position:absolute;left:0;right:0;top:0;height:3px;background:var(--gold)}
+#s8 .c.hero .num{color:var(--gold-lt);font-size:56px}
+#s8 .c.hero .lab{color:var(--gold-lt)}
+#s8 .c.hero .cap{color:rgba(255,255,255,.72)}
+#s8 .c.hero .ico-ring{border-color:rgba(201,168,76,.75)}
 #s8 .c:nth-child(3n+2),#s8 .c:nth-child(3n){border-left:1px solid rgba(201,168,76,.26)}
 #s8 .c:nth-child(n+4){border-top:1px solid rgba(201,168,76,.26)}
 #s8 .top{display:flex;align-items:center;gap:20px}
@@ -75,7 +82,7 @@ html,body{height:100%;overflow:hidden}
   <div class="c"><div class="top"><div class="ico-ring"><img class="ico" src="assets/ico/ae998c9a4cac8bf8.png" alt=""></div><div class="num">400万</div></div>
     <div class="lab">ドバイ人口</div><div class="cap">商業の中心都市</div></div>
 
-  <div class="c"><div class="top"><div class="ico-ring"><img class="ico" src="assets/ico/c0fcd99467bf2324.png" alt=""></div><div class="num">92%</div></div>
+  <div class="c hero"><div class="top"><div class="ico-ring"><img class="ico" src="assets/ico/c0fcd99467bf2324.png" alt=""></div><div class="num">92%</div></div>
     <div class="lab">外国人比率</div><div class="cap">世界中から人材が集積</div></div>
 
   <div class="c"><div class="top"><div class="ico-ring"><img class="ico" src="assets/ico/130f3070f20dd3a0.png" alt=""></div><div class="num">4,114</div></div>
@@ -87,7 +94,7 @@ html,body{height:100%;overflow:hidden}
   <div class="c"><div class="top"><div class="ico-ring"><img class="ico" src="assets/ico/cd83994bdf389603.png" alt=""></div><div class="num">3.67</div></div>
     <div class="lab">通貨ペッグ（AED／USD）</div><div class="cap">1USD固定で為替安定</div></div>
 
-  <div class="c"><div class="top"><div class="ico-ring"><img class="ico" src="assets/ico/476e9d08a4c04e3c.png" alt=""></div><div class="num">0%</div></div>
+  <div class="c hero"><div class="top"><div class="ico-ring"><img class="ico" src="assets/ico/476e9d08a4c04e3c.png" alt=""></div><div class="num">0%</div></div>
     <div class="lab">所得税・住民税</div><div class="cap">給与も売却益も非課税</div></div>
 
   <div class="c"><div class="top"><div class="ico-ring"><img class="ico" src="assets/ico/16537c35a3a21c68.png" alt=""></div><div class="num">80%</div></div>

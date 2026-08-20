@@ -30,22 +30,32 @@ html,body{height:100%;overflow:hidden}
 <style>
 @import url("theme.css");
 #s26 .h1{top:82px} #s26 .urule{top:152px;width:560px} #s26 .sub{top:176px}
-#s26 .tw{position:absolute;left:56px;right:56px;top:256px}
+#s26 .tw{position:absolute;left:56px;right:56px;top:230px}
 #s26 .tbl th{font-size:17px;padding:18px 16px;text-align:center}
 #s26 .tbl th:first-child{text-align:left;width:230px}
 #s26 .tbl th.dxb{background:rgba(201,168,76,.20);color:var(--gold-lt);font-size:19px}
-#s26 .tbl td{font-size:18px;padding:16px 16px;text-align:center;
+#s26 .tbl td{font-size:17px;padding:13px 16px;text-align:center;
   font-variant-numeric:tabular-nums}
 #s26 .tbl td:first-child{text-align:left;font-weight:700;font-size:16px;
   color:rgba(255,255,255,.80)}
 #s26 .tbl td.dxb{background:rgba(201,168,76,.10);font-weight:700;color:#fff}
 #s26 .tbl tr.tot td{border-top:2px solid rgba(201,168,76,.45);font-size:21px;font-weight:700}
 #s26 .tbl tr.tot td.dxb{color:var(--gold-lt);font-size:24px}
-#s26 .tbl tr.gain td{font-size:24px;font-weight:700}
+#s26 .tbl tr.gain{display:none}   /* the payoff is pulled out below as the hero */
 #s26 .tbl tr.gain td.dxb{color:var(--gold-lt);font-size:28px}
-#s26 .concl{position:absolute;left:56px;right:56px;bottom:118px;
-  background:rgba(201,168,76,.11);border-left:3px solid var(--gold);padding:22px 30px}
-#s26 .concl b{font:700 27px/1.35 'Noto Sans JP',sans-serif;color:#fff}
+#s26 .hero{position:absolute;left:56px;right:56px;bottom:186px;
+  display:grid;grid-template-columns:1fr 1fr 1.15fr;column-gap:44px;align-items:end;
+  border-top:2px solid var(--gold);padding-top:26px}
+#s26 .hero .hl{font:700 17px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.10em}
+#s26 .hero .hv{margin-top:14px;font:700 68px/1 'Noto Sans JP',sans-serif;color:#fff;
+  letter-spacing:-.02em}
+#s26 .hero .hv small{font-size:.34em}
+#s26 .hero .dxb .hv{color:var(--gold-lt);font-size:88px}
+#s26 .hero .x{font:700 56px/1 'Noto Sans JP',sans-serif;color:var(--gold-lt);text-align:right}
+#s26 .hero .x span{display:block;margin-top:12px;font:700 20px/1.4 'Noto Sans JP',sans-serif;color:#fff}
+#s26 .concl{position:absolute;left:56px;right:56px;bottom:92px;
+  background:rgba(201,168,76,.11);border-left:3px solid var(--gold);padding:16px 26px}
+#s26 .concl b{font:700 19px/1.4 'Noto Sans JP',sans-serif;color:rgba(255,255,255,.88)}
 #s26 .concl b em{color:var(--gold-lt);font-style:normal}
 #s26 .src{left:56px;bottom:38px;right:56px}
 
@@ -78,7 +88,12 @@ html,body{height:100%;overflow:hidden}
   </table>
 </div>
 
-<div class="concl"><b>結論：非課税＋高い利回り・値上がりで、5年後の利益はドバイが <em>東京の約6.4倍</em>。</b></div>
+<div class="hero">
+  <div><div class="hl">5年後の利益｜東京ワンルーム</div><div class="hv">+535<small>万円</small></div></div>
+  <div class="dxb"><div class="hl">5年後の利益｜ドバイ</div><div class="hv">+3,450<small>万円</small></div></div>
+  <div class="x">6.4倍<span>同じ5,000万円の元本で</span></div>
+</div>
+<div class="concl"><b>※ フィリピン・カンボジアも利回りは高いが、流動性・法整備・ビザで差が出る（→ P.24）。</b></div>
 <div class="note src">※ 税金は各国の賃貸所得課税・譲渡益課税を考慮した5年累計の概算（東京 約20%／フィリピン・カンボジア・アメリカ 現地源泉＋譲渡課税の目安）。ドバイは賃貸・譲渡ともに非課税。前提：投資額5,000万円を5年保有。利回りは各市場の最新グロス賃貸利回りの目安。ドバイは実質利回り7%＋年6%の価格上昇。</div>
 </div>
 </div></div></div>
