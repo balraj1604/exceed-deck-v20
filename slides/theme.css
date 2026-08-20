@@ -210,3 +210,37 @@
 .cr .chapnav .cn-n{color:rgba(11,21,34,.40)}
 .cr .chapnav .cn-ln{background:rgba(11,21,34,.20)}
 .cr .chapnav .cn-st.done .cn-dot{background:rgba(11,21,34,.30);border-color:rgba(11,21,34,.30)}
+
+/* ============================================================
+   MAP SLIDES 28–31  (addendum §B)
+   Map bleeds off the left edge; a cream wash carries the table on the right.
+   Outlines are dotted and follow real geography. No monogram on these slides.
+   ============================================================ */
+.mapbg{position:absolute;inset:0;overflow:hidden}
+/* img and svg share one pixel-exact frame so the overlay can never drift.
+   Each slide sets --mw / --mx / --my to frame the region it needs. */
+.mapbg .frame{position:absolute;left:var(--mx,-300px);top:var(--my,-13px);
+  width:var(--mw,1900px);height:var(--mh,1106px)}
+.mapbg .frame>img,.mapbg .frame>svg{position:absolute;inset:0;
+  width:100%;height:100%;display:block}
+.mapbg .frame>svg{overflow:visible}
+.mapwash{position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,
+    rgba(244,241,234,0) 0%, rgba(244,241,234,0) 46%,
+    rgba(244,241,234,.45) 50%, rgba(244,241,234,.90) 53%,
+    #F4F1EA 55%, #F4F1EA 100%)}
+/* dotted geography */
+.zn{fill:rgba(168,133,59,.16);stroke:#A8853B;stroke-width:2.2;
+  stroke-dasharray:7 6;stroke-linejoin:round;stroke-linecap:round}
+.zn.acc{fill:rgba(28,107,90,.20);stroke:#1C6B5A;stroke-width:2.8;stroke-dasharray:8 5}
+.zn.hq{fill:rgba(11,21,34,.16);stroke:rgba(11,21,34,.62);stroke-dasharray:5 5}
+.znl{font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:19px;fill:#0B1522;
+  paint-order:stroke;stroke:rgba(244,241,234,.94);stroke-width:5px}
+.znl.acc{fill:#14574A} .znl.hq{fill:rgba(11,21,34,.72)}
+/* leader line out to a landmark */
+.lead-ln{stroke:#A8853B;stroke-width:1.8;stroke-dasharray:5 5;fill:none;opacity:.85}
+.lmk{position:absolute;transform:translate(-50%,-50%);text-align:center;z-index:2}
+.lmk img{display:block;width:100%;height:auto;
+  filter:drop-shadow(0 6px 18px rgba(11,21,34,.30))}
+.lmk b{display:block;margin-top:8px;font:700 15px/1.3 'Noto Sans JP',sans-serif;
+  color:#0B1522;white-space:nowrap;text-shadow:0 0 6px #F4F1EA,0 0 6px #F4F1EA}

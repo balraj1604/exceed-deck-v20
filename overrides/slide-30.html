@@ -1,69 +1,94 @@
 <!--bg: #F4F1EA -->
 <style>
 @import url("theme.css");
-#s30 .h1{top:82px} #s30 .urule{top:152px;width:430px} #s30 .sub{top:176px}
-#s30 .map{position:absolute;left:56px;top:246px;width:1040px;height:604px;
-  overflow:hidden;border:1px solid rgba(11,21,34,.14)}
-#s30 .map img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-#s30 .ov{position:absolute;inset:0;width:100%;height:100%}
-  #s30 .ov .zone{fill:rgba(168,133,59,.17);stroke:#A8853B;stroke-width:1.8;
-    stroke-linejoin:round;stroke-linecap:round}
-  #s30 .ov .zone.hq{fill:rgba(11,21,34,.20);stroke:#0B1522;stroke-width:2}
-  #s30 .ov .zone.top{fill:rgba(28,107,90,.20);stroke:#1C6B5A;stroke-width:2.4}
-  #s30 .ov .dot{fill:#A8853B;stroke:#fff;stroke-width:2}
-  #s30 .ov .dot.hq{fill:#0B1522}
-  #s30 .ov .dot.top{fill:#1C6B5A}
-  #s30 .ov text{font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:18px;
-    fill:#0B1522;paint-order:stroke;stroke:rgba(244,241,234,.94);stroke-width:5px}
-#s30 .key{position:absolute;left:56px;top:866px;display:flex;gap:34px;align-items:center}
-#s30 .key span{display:flex;align-items:center;gap:10px;font:400 15px/1 'Noto Sans JP',sans-serif;color:var(--mut)}
-#s30 .key i{width:22px;height:14px;display:block;border:2px solid #A8853B;background:rgba(168,133,59,.20)}
-#s30 .tw{position:absolute;right:56px;top:246px;width:740px}
+#s30 .h1{top:82px;z-index:3} #s30 .urule{top:152px;width:430px;z-index:3}
+#s30 .sub{top:176px;z-index:3} #s30 .eyebrow,#s30 .brand{z-index:3}
+
+#s30 .tw{position:absolute;right:56px;top:262px;width:820px;z-index:3}
 #s30 .tbl th{font-size:15px;padding:15px 16px}
 #s30 .tbl th.r,#s30 .tbl td.r{text-align:right;font-variant-numeric:tabular-nums}
 #s30 .tbl td{font-size:17px;padding:17px 16px}
 #s30 .tbl td.a{font-weight:700}
-#s30 .concl{position:absolute;right:56px;top:660px;width:740px;
+#s30 .tbl tr.acc td{background:rgba(28,107,90,.14);
+  border-top:1px solid #1C6B5A;border-bottom:1px solid #1C6B5A}
+#s30 .tbl tr.acc td:first-child{box-shadow:inset 4px 0 0 #1C6B5A;color:#14574A}
+#s30 .concl{position:absolute;right:56px;top:672px;width:820px;z-index:3;
   background:rgba(168,133,59,.16);border-left:3px solid var(--gold);padding:22px 28px}
 #s30 .concl b{font:700 23px/1.5 'Noto Sans JP',sans-serif;color:var(--ink)}
-#s30 .src{left:56px;bottom:36px;right:56px}
+#s30 .key{position:absolute;left:56px;bottom:78px;display:flex;gap:30px;align-items:center;z-index:3}
+#s30 .key span{display:flex;align-items:center;gap:10px;
+  font:400 15px/1 'Noto Sans JP',sans-serif;color:var(--mut)}
+#s30 .key i{width:22px;height:14px;display:block;border:2px dashed #A8853B;
+  background:rgba(168,133,59,.16)}
+#s30 .key i.acc{border-color:#1C6B5A;background:rgba(28,107,90,.20)}
+#s30 .src{left:56px;bottom:36px;right:56px;z-index:3}
+
+/* landmarks, sized off the map layer */
+#s30 .mapbg{--mw:1420px;--mh:826px;--mx:-120px;--my:127px}
+/* placed in frame coordinates, so they track the map if the frame moves */
+#s30 .lmk{position:absolute}
+#s30 .lmk.louvre {left:300px; top:150px; width:118px}
+#s30 .lmk.ferrari{left:876px; top:180px; width:94px}
+#s30 .lmk.sphere {left:986px; top:306px; width:78px}
+#s30 .lmk.disney {left:936px; top:634px; width:78px}
 </style>
 
 <div class="cr">
+<div class="mapbg">
+  <div class="frame">
+  <img src="img/ed99cffb6a014ef0.png" alt="アブダビ主要投資エリア">
+  <svg viewBox="0 0 1600 931" preserveAspectRatio="none">
+    <!-- island geography, dotted -->
+    <path class="zn" d="M400,238 L470,232 L560,238 L640,254 L662,300 L652,352 L596,388
+      L510,392 L438,376 L400,332 L392,286 Z"/>
+    <text class="znl" x="530" y="228" text-anchor="middle">サディヤット島</text>
+
+    <path class="zn" d="M366,406 L420,402 L474,410 L496,436 L490,472 L456,490
+      L400,486 L366,464 L358,434 Z"/>
+    <text class="znl" x="430" y="512" text-anchor="middle">アルリーム島</text>
+
+    <path class="zn" d="M298,468 L332,464 L360,474 L366,498 L356,520 L322,526 L296,512 L290,488 Z"/>
+    <text class="znl" x="326" y="556" text-anchor="middle">アルマリヤ島</text>
+
+    <!-- Yas: the +22% story and the Disney anchor -> accent, mirroring JVC on s28 -->
+    <path class="zn acc" d="M998,402 L1074,396 L1160,406 L1212,432 L1216,494 L1188,542
+      L1108,556 L1030,542 L988,498 L984,444 Z"/>
+    <text class="znl acc" x="1104" y="386" text-anchor="middle">ヤス島</text>
+
+    <path class="zn" d="M944,592 L1024,588 L1112,596 L1172,610 L1178,644 L1150,668
+      L1052,674 L968,664 L936,634 Z"/>
+    <text class="znl" x="1058" y="696" text-anchor="middle">アルラハ・ビーチ</text>
+
+    <!-- leader lines out to the landmarks -->
+    <path class="lead-ln" d="M430,242 Q400,220 372,200"/>
+    <path class="lead-ln" d="M1050,400 Q1010,320 990,232"/>
+    <path class="lead-ln" d="M1180,452 Q1140,404 1116,362"/>
+    <path class="lead-ln" d="M1080,552 Q1072,610 1060,674"/>
+    <g fill="#A8853B">
+      <circle cx="430" cy="242" r="5"/><circle cx="1050" cy="400" r="5"/>
+      <circle cx="1180" cy="452" r="5"/><circle cx="1080" cy="552" r="5"/>
+    </g>
+  </svg>
+
+  <div class="lmk louvre"><img src="assets/lm/louvre.png" alt=""><b>ルーブル</b></div>
+  <div class="lmk ferrari"><img src="assets/lm/ferrari.png" alt=""><b>フェラーリ・ワールド</b></div>
+  <div class="lmk sphere"><img src="assets/lm/sphere.png" alt=""><b>スフィア</b></div>
+  <div class="lmk disney"><img src="assets/lm/disney.png" alt=""><b>ディズニー</b></div>
+  </div>
+</div>
+<div class="mapwash"></div>
+
 <div class="eyebrow">02 · どう選ぶか</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1 one">エリアガイド｜アブダビ版</div>
 <div class="urule"></div>
 <div class="sub">ドバイ比で単価は割安・利回りは高め。政府系ファンド（SWF）が市場を下支えする。</div>
 
-<div class="map">
-  <img src="img/ed99cffb6a014ef0.png" alt="アブダビ主要投資エリア">
-  <svg class="ov" viewBox="0 0 1600 931" preserveAspectRatio="xMidYMid slice">
-    <path class="zone" d="M402,246 L470,232 L560,238 L640,254 L662,300 L652,352 L596,388 L510,392 L438,376 L400,332 L392,286 Z"/>
-    <text x="530" y="228" text-anchor="middle">サディヤット島</text>
-    <path class="zone" d="M366,410 L420,402 L474,410 L496,436 L490,472 L456,490 L400,486 L366,464 L358,434 Z"/>
-    <text x="430" y="510" text-anchor="middle">アルリーム島</text>
-    <path class="zone" d="M298,470 L332,464 L360,474 L366,498 L356,520 L322,526 L296,512 L290,488 Z"/>
-    <text x="252" y="500" text-anchor="middle">アルマリヤ島</text>
-    <path class="zone" d="M998,406 L1074,396 L1160,406 L1212,432 L1216,494 L1188,542 L1108,556 L1030,542 L988,498 L984,444 Z"/>
-    <text x="1104" y="392" text-anchor="middle">ヤス島</text>
-    <path class="zone" d="M944,596 L1024,588 L1112,596 L1172,610 L1178,644 L1150,668 L1052,674 L968,664 L936,634 Z"/>
-    <text x="1058" y="694" text-anchor="middle">アルラハ・ビーチ</text>
-
-    <circle class="dot" cx="526" cy="312" r="6"/>
-    <circle class="dot" cx="428" cy="446" r="6"/>
-    <circle class="dot" cx="328" cy="494" r="6"/>
-    <circle class="dot" cx="1100" cy="474" r="6"/>
-    <circle class="dot" cx="1056" cy="630" r="6"/>
-  </svg>
-</div>
-<div class="key"><span><i></i>主要投資エリア（フリーホールド）</span><span>※ 境界は概略表示</span></div>
-
 <div class="tw">
   <table class="tbl">
     <thead><tr><th>エリア</th><th class="r">単価（万円/㎡）</th><th class="r">利回り</th></tr></thead>
     <tbody>
-      <tr><td class="a">ヤス島</td><td class="r">60〜80万</td><td class="r">6.5〜7.5%</td></tr>
+      <tr class="acc"><td class="a">ヤス島</td><td class="r">60〜80万</td><td class="r">6.5〜7.5%</td></tr>
       <tr><td class="a">サディヤット島</td><td class="r">95〜135万</td><td class="r">5〜6%</td></tr>
       <tr class="hi"><td class="a">アルリーム島</td><td class="r">45〜60万</td><td class="r">7〜8%</td></tr>
       <tr><td class="a">アルマリヤ島</td><td class="r">55〜75万</td><td class="r">6〜7%</td></tr>
@@ -73,5 +98,10 @@
 </div>
 
 <div class="concl"><b>供給不足で価格上昇が継続。ディズニー・文化地区の開発で実需が拡大している。</b></div>
+<div class="key">
+  <span><i></i>主要投資エリア（フリーホールド）</span>
+  <span><i class="acc"></i>ヤス島（開発集中エリア）</span>
+  <span>※ 境界は概略表示</span>
+</div>
 <div class="note src">出典：Bayut / Abu Dhabi Real Estate Centre　※ 単価・利回りは市場平均の目安。地図上の境界は概略表示です。</div>
 </div>
