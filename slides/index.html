@@ -314,18 +314,20 @@ body{padding:28px 0}
 #s7 .sub{top:238px}
 
 #s7 .left{position:absolute;left:64px;top:306px;width:560px}
-#s7 .left>.lab{font-size:19px}
-#s7 .left>.fig{font-size:146px;letter-spacing:-.03em}
-#s7 .left>.fig small{font-size:.34em}
-#s7 .left>.meter{height:20px}
+/* all three read at the same weight — no single hero */
+#s7 .left>.lab{font-size:17px}
+#s7 .left>.fig{font-size:66px;letter-spacing:-.01em}
+#s7 .left>.fig small{font-size:.40em}
+#s7 .left>.meter{height:13px}
+#s7 .left>.body{margin-top:26px}
 #s7 .body{margin-top:34px;font:400 17px/1.8 'Noto Sans JP',sans-serif;
   color:rgba(255,255,255,.70)}
 /* the two summary figures now sit under the 96% block, per feedback */
-#s7 .sub2{margin-top:44px;padding-top:38px;border-top:1px solid rgba(255,255,255,.14)}
+#s7 .sub2{margin-top:38px;padding-top:34px;border-top:1px solid rgba(255,255,255,.14)}
 #s7 .sub2 .stat+.stat{margin-top:36px}
-#s7 .sub2 .fig{font-size:46px;margin-top:12px;color:rgba(255,255,255,.82)}
-#s7 .sub2 .meter{margin-top:16px;height:11px}
-#s7 .sub2 .lab{font-size:16px}
+#s7 .sub2 .fig{font-size:66px;margin-top:14px;color:#fff}
+#s7 .sub2 .meter{margin-top:16px;height:13px}
+#s7 .sub2 .lab{font-size:17px}
 
 #s7 .mets{position:absolute;left:684px;right:64px;top:318px;
   display:grid;grid-template-columns:repeat(3,1fr);column-gap:40px}
@@ -726,12 +728,11 @@ body{padding:28px 0}
 #s12 .rail .l{margin-top:14px;font:700 16px/1 'Noto Sans JP',sans-serif;color:#fff}
 #s12 .rail .d{margin-top:9px;font:400 15px/1 'Noto Sans JP',sans-serif;color:var(--mut-2)}
 
-#s12 .concl{position:absolute;left:64px;bottom:118px;
+#s12 .concl{position:absolute;left:64px;bottom:126px;
   font:700 28px/1 'Noto Sans JP',sans-serif;color:#fff;letter-spacing:.01em}
-#s12 .gap{position:absolute;left:64px;bottom:44px;right:560px;
-  border-left:3px solid #4E7FB5;padding:8px 0 8px 22px}
-#s12 .gap b{font:700 30px/1.3 'Noto Sans JP',sans-serif;color:#9FC0E4}
-#s12 .gap span{display:block;margin-top:8px;
+#s12 .gap{position:absolute;left:64px;bottom:44px;right:560px;padding:0}
+#s12 .gap b{display:block;font:700 28px/1 'Noto Sans JP',sans-serif;color:#9FC0E4}
+#s12 .gap span{display:block;margin-top:14px;
   font:400 15px/1.5 'Noto Sans JP',sans-serif;color:var(--mut-2)}
 #s12 .concl b{color:var(--gold-lt)}
 #s12 .spot{--sx:22%;--sy:26%}
@@ -1200,14 +1201,28 @@ body{padding:28px 0}
 @import url("theme.css");
 #s17 .h1{top:82px} #s17 .urule{top:152px;width:560px} #s17 .sub{top:176px}
 
-#s17 .hero{position:absolute;left:64px;top:300px;width:800px}
+#s17 .hero{position:absolute;left:64px;top:250px;width:800px}
 #s17 .hero .k{font:700 17px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.12em}
 #s17 .hero .v{margin-top:24px;display:flex;align-items:baseline;gap:18px}
-#s17 .hero .v b{font:700 190px/.86 'Noto Sans JP',sans-serif;color:#fff;letter-spacing:-.02em}
-#s17 .hero .v em{font:700 46px/1 'Noto Sans JP',sans-serif;color:var(--gold-lt);font-style:normal}
-#s17 .hero .y{margin-top:22px;font:400 19px/1 'Noto Sans JP',sans-serif;color:var(--mut)}
+#s17 .hero .v b{font:700 140px/.86 'Noto Sans JP',sans-serif;color:#fff;letter-spacing:-.02em}
+#s17 .hero .v em{font:700 38px/1 'Noto Sans JP',sans-serif;color:var(--gold-lt);font-style:normal}
+#s17 .hero .y{margin-top:18px;font:400 19px/1 'Noto Sans JP',sans-serif;color:var(--mut)}
+/* the 5-year climb behind the headline number */
+#s17 .tsc{margin-top:44px;width:780px}
+#s17 .tsk{font:700 16px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.10em}
+#s17 .tscols{margin-top:26px;height:300px;display:grid;grid-template-columns:repeat(6,1fr);
+  column-gap:26px;align-items:end}
+#s17 .bc{position:relative;text-align:center}
+#s17 .bv{font:700 20px/1 'Noto Sans JP',sans-serif;color:rgba(255,255,255,.80);margin-bottom:12px}
+#s17 .bb{background:#2C4A6B;width:100%}
+#s17 .bc.on .bb{background:var(--gold)}
+#s17 .bc.on .bv{color:var(--gold-lt);font-size:24px}
+#s17 .by{position:absolute;left:0;right:0;bottom:-34px;
+  font:400 16px/1 'Noto Sans JP',sans-serif;color:rgba(255,255,255,.55)}
+#s17 .bc.on .by{color:var(--gold-lt);font-weight:700}
+#s17 .tsbase{margin-top:34px;height:1px;background:rgba(255,255,255,.20)}
 
-#s17 .cmp{position:absolute;right:64px;top:300px;width:900px}
+#s17 .cmp{position:absolute;right:64px;top:250px;width:860px}
 #s17 .cmp .k{font:700 17px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.12em}
 #s17 .cb{margin-top:38px}
 #s17 .cb .top{display:flex;justify-content:space-between;align-items:baseline}
@@ -1238,6 +1253,7 @@ body{padding:28px 0}
   <div class="k">ドバイ 年間不動産取引総額（2025年）</div>
   <div class="v"><b>35.2</b><em>兆円</em></div>
   <div class="y">2025年・売買／抵当／贈与等を含む総額</div>
+  <div class="tsc"><div class="tsk">年間取引総額の推移（兆円）</div><div class="tscols"><div class="bc"><div class="bv">6.7</div><div class="bb" style="height:42px"></div><div class="by">2020</div></div><div class="bc"><div class="bv">11.5</div><div class="bb" style="height:72px"></div><div class="by">2021</div></div><div class="bc"><div class="bv">20.3</div><div class="bb" style="height:127px"></div><div class="by">2022</div></div><div class="bc"><div class="bv">24.3</div><div class="bb" style="height:152px"></div><div class="by">2023</div></div><div class="bc"><div class="bv">29.2</div><div class="bb" style="height:182px"></div><div class="by">2024</div></div><div class="bc on"><div class="bv">35.2</div><div class="bb" style="height:220px"></div><div class="by">2025</div></div></div><div class="tsbase"></div></div>
 </div>
 
 <div class="cmp">
@@ -1265,7 +1281,7 @@ body{padding:28px 0}
 @import url("theme.css");
 #s18 .h1{top:82px} #s18 .urule{top:152px;width:520px} #s18 .sub{top:176px}
 
-#s18 .chart{position:absolute;left:64px;top:300px;width:1030px;height:540px}
+#s18 .chart{position:absolute;left:64px;top:300px;width:960px;height:540px}
 #s18 .cols{position:absolute;left:0;right:0;bottom:74px;height:430px;
   display:grid;grid-template-columns:repeat(3,1fr);column-gap:120px;align-items:end}
 #s18 .col{position:relative;text-align:center}
@@ -1278,7 +1294,7 @@ body{padding:28px 0}
 #s18 .col.on .yr{color:var(--gold-lt)}
 #s18 .base{position:absolute;left:0;right:0;bottom:66px;height:1px;background:rgba(255,255,255,.20)}
 
-#s18 .rail{position:absolute;right:64px;top:300px;width:660px;
+#s18 .rail{position:absolute;right:64px;top:300px;width:700px;
   border-left:1px solid rgba(255,255,255,.16);padding-left:46px}
 #s18 .rail .big{font:700 96px/1 'Noto Sans JP',sans-serif;color:var(--gold-lt)}
 #s18 .rail .bl{margin-top:16px;font:700 20px/1 'Noto Sans JP',sans-serif;color:#fff}
@@ -1305,7 +1321,7 @@ body{padding:28px 0}
   <div class="cols">
     <div class="col"><div class="v">約3.6万件</div><div class="bar" style="height:60px"></div><div class="yr">2020</div></div>
     <div class="col"><div class="v">18.1万件</div><div class="bar" style="height:295px"></div><div class="yr">2024</div></div>
-    <div class="col on"><div class="v">21.5万件</div><div class="bar" style="height:350px"></div><div class="yr">2025</div></div>
+    <div class="col on"><div class="v" style="visibility:hidden">21.5万件</div><div class="bar" style="height:350px"></div><div class="yr">2025</div></div>
   </div>
   <div class="base"></div>
 </div>
@@ -1486,6 +1502,16 @@ body{padding:28px 0}
   font:400 15px/1 'Noto Sans JP',sans-serif;color:var(--mut-2)}
 #s20 .arrow .yr span:first-child{min-width:150px}
 
+/* the 13-year climb, sitting behind the numbers */
+#s20 .bgchart{position:absolute;left:80px;right:80px;top:330px;height:430px;
+  opacity:.20;pointer-events:none;z-index:0}
+#s20 .bgkey{position:absolute;left:80px;bottom:186px;display:flex;gap:26px;align-items:center;
+  z-index:0;opacity:.75}
+#s20 .bgkey span{display:flex;align-items:center;gap:9px;
+  font:400 14px/1 'Noto Sans JP',sans-serif;color:var(--mut-2)}
+#s20 .bgkey i{width:22px;height:4px;display:block}
+#s20 .bgkey .yrs{margin-left:6px}
+#s20 .pair,#s20 .growth,#s20 .concl,#s20 .src{z-index:1}
 #s20 .concl{position:absolute;left:64px;right:64px;bottom:104px;
   background:rgba(201,168,76,.11);border-left:3px solid var(--gold);padding:26px 34px}
 #s20 .concl b{font:700 28px/1.3 'Noto Sans JP',sans-serif;color:#fff}
@@ -1496,6 +1522,15 @@ body{padding:28px 0}
 </style>
 
 <div class="dk spot mono">
+<svg class="bgchart" viewBox="0 0 1760 430" preserveAspectRatio="none">
+  <polyline points="0,267 220,197 440,179 660,242 880,238 1100,183 1320,167 1540,147 1760,43" fill="none" stroke="#C9A84C" stroke-width="5"
+            stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="0,272 220,210 440,231 660,267 880,292 1100,224 1320,190 1540,179 1760,145" fill="none" stroke="#4E7FB5" stroke-width="5"
+            stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<div class="bgkey"><span><i style="background:#C9A84C"></i>オフプラン</span>
+  <span><i style="background:#4E7FB5"></i>セカンダリー</span>
+  <span class="yrs">2012 → 2025（万円/㎡）</span></div>
 <div class="eyebrow">01 · なぜ今、海外不動産か</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1">ダウンタウン平米単価は過去最高 171万円。<br>ドバイ平均は5年で +77%</div>
@@ -1535,29 +1570,31 @@ body{padding:28px 0}
 <style>
 @import url("theme.css");
 #s21 .h1{top:82px} #s21 .urule{top:152px;width:640px} #s21 .sub{top:176px}
-#s21 .wrap2{position:absolute;left:56px;right:56px;top:250px}
-#s21 .tbl th{font-size:15px;padding:14px 14px}
-#s21 .tbl td{font-size:16px;padding:12px 14px}
+#s21 .wrap2{position:absolute;left:48px;right:48px;top:242px}
+#s21 .tbl th{font-size:15px;padding:11px 10px}
+#s21 .tbl td{font-size:15px;padding:8px 10px}
 #s21 .tbl td.c{text-align:center}
 #s21 .rank{display:inline-block;min-width:38px;text-align:center;
   font:700 20px/1 'Noto Sans JP',sans-serif;color:rgba(255,255,255,.72)}
 #s21 tr.hi .rank{border-color:var(--gold);color:var(--gold-lt)}
-#s21 .city{font-weight:700}
-#s21 .ins{color:rgba(255,255,255,.66);font-size:15px}
-#s21 .scale{display:flex;align-items:center;gap:12px}
-#s21 .scale i{display:block;height:13px;flex:none;
+#s21 .city{font-weight:700;white-space:nowrap}
+#s21 .ins{color:rgba(255,255,255,.62);font-size:15px;line-height:1.3;white-space:nowrap}
+#s21 .scale{display:grid;grid-template-columns:1fr 92px;align-items:center;column-gap:14px}
+#s21 .scale .tr{display:block;height:13px;background:rgba(255,255,255,.07)}
+#s21 .scale .n{text-align:right;font-size:15px;white-space:nowrap}
+#s21 .scale i{display:block;height:13px;
   background:linear-gradient(90deg,#22364F,#3E6390)}
 #s21 tr.hi .scale i{background:linear-gradient(90deg,#8A6F2A,var(--gold-lt))}
 
 /* chips shrink-wrapped their text, so every row was a different width — fill the cell */
 #s21 .cap{font-weight:700;display:block;width:100%;box-sizing:border-box;
-  padding:9px 12px;border-radius:2px;text-align:center}
+  padding:6px 10px;border-radius:2px;text-align:center}
 #s21 .cap.up{background:rgba(127,201,168,.16)}
 #s21 .cap.mid{background:rgba(217,201,140,.14)}
 #s21 .cap.dn{background:rgba(224,138,128,.14)}
 #s21 .cap.up{color:#7FC9A8} #s21 .cap.mid{color:#D9C98C} #s21 .cap.dn{color:#E08A80}
 #s21 .cap small{display:block;font-weight:400;font-size:15px;color:var(--mut-2);margin-top:4px}
-#s21 .src{left:56px;bottom:34px;right:56px}
+#s21 .src{left:48px;bottom:22px;right:48px}
 
 .fl{display:inline-block;width:1.45em;margin-right:.42em;font-family:'Apple Color Emoji';font-size:.94em;line-height:1;vertical-align:-0.06em}
 #s21 .spot{--sx:90%;--sy:86%}
@@ -1573,43 +1610,43 @@ body{padding:28px 0}
 <div class="wrap2">
 <table class="tbl">
   <thead><tr>
-    <th style="width:66px">GPCI</th><th style="width:190px">都市</th><th>市場動向インサイト</th>
-    <th style="width:250px">年間取引件数</th><th style="width:210px">年間取引総額</th>
-    <th style="width:130px">インカム</th><th style="width:172px">キャピタル</th>
+    <th style="width:58px">GPCI</th><th style="width:196px">都市</th><th>市場動向インサイト</th>
+    <th style="width:230px">年間取引件数</th><th style="width:196px">年間取引総額</th>
+    <th style="width:118px">インカム</th><th style="width:150px">キャピタル</th>
   </tr></thead>
   <tbody>
   <tr class="hi"><td><span class="rank">9</span></td><td class="city"><span class="fl">🇦🇪</span>ドバイ (UAE)</td><td class="ins">非課税と人口流入。圧倒的な取引規模。</td>
-    <td><div class="scale"><i style="width:100%"></i><span class="n">185,000+</span></div></td>
+    <td><div class="scale"><span class="tr"><i style="width:100%"></i></span><span class="n">185,000+</span></div></td>
     <td class="n">$105.0B（16.6兆円）</td><td class="n">6.0–8.0%</td><td class="cap up">高<small>年 +8.0%〜</small></td></tr>
   <tr><td><span class="rank">8</span></td><td class="city"><span class="fl">🇨🇳</span>上海 (CN)</td><td class="ins">巨大な内需。現在は価格調整局面。</td>
-    <td><div class="scale"><i style="width:64.9%"></i><span class="n">120,000</span></div></td>
+    <td><div class="scale"><span class="tr"><i style="width:64.9%"></i></span><span class="n">120,000</span></div></td>
     <td class="n">$58.0B（9.2兆円）</td><td class="n">1.5–2.5%</td><td class="cap dn">低<small>調整中</small></td></tr>
   <tr><td><span class="rank">3</span></td><td class="city"><span class="fl">🇺🇸</span>ニューヨーク (US)</td><td class="ins">経済力と流動性は世界屈指。</td>
-    <td><div class="scale"><i style="width:31.4%"></i><span class="n">58,000</span></div></td>
+    <td><div class="scale"><span class="tr"><i style="width:31.4%"></i></span><span class="n">58,000</span></div></td>
     <td class="n">$48.0B（7.6兆円）</td><td class="n">4.0–5.5%</td><td class="cap mid">中<small>年 +2.0%〜</small></td></tr>
   <tr><td><span class="rank">1</span></td><td class="city"><span class="fl">🇬🇧</span>ロンドン (UK)</td><td class="ins">金融ハブの地位不変。割安感あり。</td>
-    <td><div class="scale"><i style="width:49.7%"></i><span class="n">92,000</span></div></td>
+    <td><div class="scale"><span class="tr"><i style="width:49.7%"></i></span><span class="n">92,000</span></div></td>
     <td class="n">$42.0B（6.6兆円）</td><td class="n">3.5–5.0%</td><td class="cap mid">中<small>年 +2.0%〜</small></td></tr>
   <tr><td><span class="rank">NEXT</span></td><td class="city"><span class="fl">🇦🇪</span>アブダビ (UAE)</td><td class="ins">ドバイに次ぐ急成長。外国人投資急増。</td>
-    <td><div class="scale"><i style="width:24.3%"></i><span class="n">45,000</span></div></td>
+    <td><div class="scale"><span class="tr"><i style="width:24.3%"></i></span><span class="n">45,000</span></div></td>
     <td class="n">$42.0B（6.6兆円）</td><td class="n">6.0–7.5%</td><td class="cap up">高<small>年 +6.0%〜</small></td></tr>
   <tr><td><span class="rank">2</span></td><td class="city"><span class="fl">🇯🇵</span>東京 (JP)</td><td class="ins">NYを抜き2位。円安と低金利が魅力。</td>
-    <td><div class="scale"><i style="width:42.2%"></i><span class="n">78,000</span></div></td>
+    <td><div class="scale"><span class="tr"><i style="width:42.2%"></i></span><span class="n">78,000</span></div></td>
     <td class="n">$35.0B（5.5兆円）</td><td class="n">3.5–4.5%</td><td class="cap up">高<small>年 +5.0%〜</small></td></tr>
   <tr><td><span class="rank">5</span></td><td class="city"><span class="fl">🇸🇬</span>シンガポール (SG)</td><td class="ins">アジアのハブ。富裕層流入が継続。</td>
-    <td><div class="scale"><i style="width:17.3%"></i><span class="n">32,000</span></div></td>
+    <td><div class="scale"><span class="tr"><i style="width:17.3%"></i></span><span class="n">32,000</span></div></td>
     <td class="n">$28.0B（4.4兆円）</td><td class="n">3.0–4.0%</td><td class="cap mid">中<small>年 +3.0%〜</small></td></tr>
   <tr><td><span class="rank">6</span></td><td class="city"><span class="fl">🇰🇷</span>ソウル (KR)</td><td class="ins">オフィス需要が堅調。主要投資先。</td>
-    <td><div class="scale"><i style="width:35.1%"></i><span class="n">65,000</span></div></td>
+    <td><div class="scale"><span class="tr"><i style="width:35.1%"></i></span><span class="n">65,000</span></div></td>
     <td class="n">$25.0B（4.0兆円）</td><td class="n">3.0–4.0%</td><td class="cap mid">中<small>年 +2.0%〜</small></td></tr>
   <tr><td><span class="rank">4</span></td><td class="city"><span class="fl">🇫🇷</span>パリ (FR)</td><td class="ins">五輪後の整備効果。底堅い需要。</td>
-    <td><div class="scale"><i style="width:22.7%"></i><span class="n">42,000</span></div></td>
+    <td><div class="scale"><span class="tr"><i style="width:22.7%"></i></span><span class="n">42,000</span></div></td>
     <td class="n">$22.0B（3.5兆円）</td><td class="n">3.0–4.0%</td><td class="cap dn">低<small>横ばい</small></td></tr>
   <tr><td><span class="rank">10</span></td><td class="city"><span class="fl">🇩🇪</span>ベルリン (DE)</td><td class="ins">供給不足。スタートアップの拠点。</td>
-    <td><div class="scale"><i style="width:15.1%"></i><span class="n">28,000</span></div></td>
+    <td><div class="scale"><span class="tr"><i style="width:15.1%"></i></span><span class="n">28,000</span></div></td>
     <td class="n">$18.0B（2.8兆円）</td><td class="n">3.0–4.0%</td><td class="cap mid">中<small>年 +3.0%〜</small></td></tr>
   <tr><td><span class="rank">7</span></td><td class="city"><span class="fl">🇳🇱</span>アムステルダム (NL)</td><td class="ins">欧州の戦略拠点。高い居住性。</td>
-    <td><div class="scale"><i style="width:11.9%"></i><span class="n">22,000</span></div></td>
+    <td><div class="scale"><span class="tr"><i style="width:11.9%"></i></span><span class="n">22,000</span></div></td>
     <td class="n">$15.0B（2.4兆円）</td><td class="n">3.5–4.5%</td><td class="cap mid">中<small>年 +3.0%〜</small></td></tr>
   </tbody>
 </table>
@@ -2137,7 +2174,7 @@ body{padding:28px 0}
       <tr><td class="a">ダウンタウン</td><td class="r">126〜171万</td><td class="r">5〜6%</td></tr>
       <tr><td class="a">ドバイマリーナ</td><td class="r">100〜130万</td><td class="r">6〜7%</td></tr>
       <tr><td class="a">パームジュメイラ</td><td class="r">388〜468万</td><td class="r">4〜5%</td></tr>
-      <tr class="hi"><td class="a">JVC</td><td class="r">60〜80万</td><td class="r">7〜8%</td></tr>
+      <tr><td class="a">JVC</td><td class="r">60〜80万</td><td class="r">7〜8%</td></tr>
       <tr><td class="a">ドバイヒルズ</td><td class="r">80〜120万</td><td class="r">5〜7%</td></tr>
       <tr><td class="a">ビジネスベイ</td><td class="r">90〜120万</td><td class="r">6〜7%</td></tr>
       <tr><td class="a">クリークハーバー</td><td class="r">100〜140万</td><td class="r">5〜6%</td></tr>

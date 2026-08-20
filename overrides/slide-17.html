@@ -3,14 +3,28 @@
 @import url("theme.css");
 #s17 .h1{top:82px} #s17 .urule{top:152px;width:560px} #s17 .sub{top:176px}
 
-#s17 .hero{position:absolute;left:64px;top:300px;width:800px}
+#s17 .hero{position:absolute;left:64px;top:250px;width:800px}
 #s17 .hero .k{font:700 17px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.12em}
 #s17 .hero .v{margin-top:24px;display:flex;align-items:baseline;gap:18px}
-#s17 .hero .v b{font:700 190px/.86 'Noto Sans JP',sans-serif;color:#fff;letter-spacing:-.02em}
-#s17 .hero .v em{font:700 46px/1 'Noto Sans JP',sans-serif;color:var(--gold-lt);font-style:normal}
-#s17 .hero .y{margin-top:22px;font:400 19px/1 'Noto Sans JP',sans-serif;color:var(--mut)}
+#s17 .hero .v b{font:700 140px/.86 'Noto Sans JP',sans-serif;color:#fff;letter-spacing:-.02em}
+#s17 .hero .v em{font:700 38px/1 'Noto Sans JP',sans-serif;color:var(--gold-lt);font-style:normal}
+#s17 .hero .y{margin-top:18px;font:400 19px/1 'Noto Sans JP',sans-serif;color:var(--mut)}
+/* the 5-year climb behind the headline number */
+#s17 .tsc{margin-top:44px;width:780px}
+#s17 .tsk{font:700 16px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.10em}
+#s17 .tscols{margin-top:26px;height:300px;display:grid;grid-template-columns:repeat(6,1fr);
+  column-gap:26px;align-items:end}
+#s17 .bc{position:relative;text-align:center}
+#s17 .bv{font:700 20px/1 'Noto Sans JP',sans-serif;color:rgba(255,255,255,.80);margin-bottom:12px}
+#s17 .bb{background:#2C4A6B;width:100%}
+#s17 .bc.on .bb{background:var(--gold)}
+#s17 .bc.on .bv{color:var(--gold-lt);font-size:24px}
+#s17 .by{position:absolute;left:0;right:0;bottom:-34px;
+  font:400 16px/1 'Noto Sans JP',sans-serif;color:rgba(255,255,255,.55)}
+#s17 .bc.on .by{color:var(--gold-lt);font-weight:700}
+#s17 .tsbase{margin-top:34px;height:1px;background:rgba(255,255,255,.20)}
 
-#s17 .cmp{position:absolute;right:64px;top:300px;width:900px}
+#s17 .cmp{position:absolute;right:64px;top:250px;width:860px}
 #s17 .cmp .k{font:700 17px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.12em}
 #s17 .cb{margin-top:38px}
 #s17 .cb .top{display:flex;justify-content:space-between;align-items:baseline}
@@ -41,6 +55,7 @@
   <div class="k">ドバイ 年間不動産取引総額（2025年）</div>
   <div class="v"><b>35.2</b><em>兆円</em></div>
   <div class="y">2025年・売買／抵当／贈与等を含む総額</div>
+  <div class="tsc"><div class="tsk">年間取引総額の推移（兆円）</div><div class="tscols"><div class="bc"><div class="bv">6.7</div><div class="bb" style="height:42px"></div><div class="by">2020</div></div><div class="bc"><div class="bv">11.5</div><div class="bb" style="height:72px"></div><div class="by">2021</div></div><div class="bc"><div class="bv">20.3</div><div class="bb" style="height:127px"></div><div class="by">2022</div></div><div class="bc"><div class="bv">24.3</div><div class="bb" style="height:152px"></div><div class="by">2023</div></div><div class="bc"><div class="bv">29.2</div><div class="bb" style="height:182px"></div><div class="by">2024</div></div><div class="bc on"><div class="bv">35.2</div><div class="bb" style="height:220px"></div><div class="by">2025</div></div></div><div class="tsbase"></div></div>
 </div>
 
 <div class="cmp">

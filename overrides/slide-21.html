@@ -2,29 +2,31 @@
 <style>
 @import url("theme.css");
 #s21 .h1{top:82px} #s21 .urule{top:152px;width:640px} #s21 .sub{top:176px}
-#s21 .wrap2{position:absolute;left:56px;right:56px;top:250px}
-#s21 .tbl th{font-size:15px;padding:14px 14px}
-#s21 .tbl td{font-size:16px;padding:12px 14px}
+#s21 .wrap2{position:absolute;left:48px;right:48px;top:242px}
+#s21 .tbl th{font-size:15px;padding:11px 10px}
+#s21 .tbl td{font-size:15px;padding:8px 10px}
 #s21 .tbl td.c{text-align:center}
 #s21 .rank{display:inline-block;min-width:38px;text-align:center;
   font:700 20px/1 'Noto Sans JP',sans-serif;color:rgba(255,255,255,.72)}
 #s21 tr.hi .rank{border-color:var(--gold);color:var(--gold-lt)}
-#s21 .city{font-weight:700}
-#s21 .ins{color:rgba(255,255,255,.66);font-size:15px}
-#s21 .scale{display:flex;align-items:center;gap:12px}
-#s21 .scale i{display:block;height:13px;flex:none;
+#s21 .city{font-weight:700;white-space:nowrap}
+#s21 .ins{color:rgba(255,255,255,.62);font-size:15px;line-height:1.3;white-space:nowrap}
+#s21 .scale{display:grid;grid-template-columns:1fr 92px;align-items:center;column-gap:14px}
+#s21 .scale .tr{display:block;height:13px;background:rgba(255,255,255,.07)}
+#s21 .scale .n{text-align:right;font-size:15px;white-space:nowrap}
+#s21 .scale i{display:block;height:13px;
   background:linear-gradient(90deg,#22364F,#3E6390)}
 #s21 tr.hi .scale i{background:linear-gradient(90deg,#8A6F2A,var(--gold-lt))}
 
 /* chips shrink-wrapped their text, so every row was a different width — fill the cell */
 #s21 .cap{font-weight:700;display:block;width:100%;box-sizing:border-box;
-  padding:9px 12px;border-radius:2px;text-align:center}
+  padding:6px 10px;border-radius:2px;text-align:center}
 #s21 .cap.up{background:rgba(127,201,168,.16)}
 #s21 .cap.mid{background:rgba(217,201,140,.14)}
 #s21 .cap.dn{background:rgba(224,138,128,.14)}
 #s21 .cap.up{color:#7FC9A8} #s21 .cap.mid{color:#D9C98C} #s21 .cap.dn{color:#E08A80}
 #s21 .cap small{display:block;font-weight:400;font-size:15px;color:var(--mut-2);margin-top:4px}
-#s21 .src{left:56px;bottom:34px;right:56px}
+#s21 .src{left:48px;bottom:22px;right:48px}
 
 .fl{display:inline-block;width:1.45em;margin-right:.42em;font-family:'Apple Color Emoji';font-size:.94em;line-height:1;vertical-align:-0.06em}
 #s21 .spot{--sx:90%;--sy:86%}
@@ -40,43 +42,43 @@
 <div class="wrap2">
 <table class="tbl">
   <thead><tr>
-    <th style="width:66px">GPCI</th><th style="width:190px">都市</th><th>市場動向インサイト</th>
-    <th style="width:250px">年間取引件数</th><th style="width:210px">年間取引総額</th>
-    <th style="width:130px">インカム</th><th style="width:172px">キャピタル</th>
+    <th style="width:58px">GPCI</th><th style="width:196px">都市</th><th>市場動向インサイト</th>
+    <th style="width:230px">年間取引件数</th><th style="width:196px">年間取引総額</th>
+    <th style="width:118px">インカム</th><th style="width:150px">キャピタル</th>
   </tr></thead>
   <tbody>
   <tr class="hi"><td><span class="rank">9</span></td><td class="city"><span class="fl">🇦🇪</span>ドバイ (UAE)</td><td class="ins">非課税と人口流入。圧倒的な取引規模。</td>
-    <td><div class="scale"><i style="width:100%"></i><span class="n">185,000+</span></div></td>
+    <td><div class="scale"><span class="tr"><i style="width:100%"></i></span><span class="n">185,000+</span></div></td>
     <td class="n">$105.0B（16.6兆円）</td><td class="n">6.0–8.0%</td><td class="cap up">高<small>年 +8.0%〜</small></td></tr>
   <tr><td><span class="rank">8</span></td><td class="city"><span class="fl">🇨🇳</span>上海 (CN)</td><td class="ins">巨大な内需。現在は価格調整局面。</td>
-    <td><div class="scale"><i style="width:64.9%"></i><span class="n">120,000</span></div></td>
+    <td><div class="scale"><span class="tr"><i style="width:64.9%"></i></span><span class="n">120,000</span></div></td>
     <td class="n">$58.0B（9.2兆円）</td><td class="n">1.5–2.5%</td><td class="cap dn">低<small>調整中</small></td></tr>
   <tr><td><span class="rank">3</span></td><td class="city"><span class="fl">🇺🇸</span>ニューヨーク (US)</td><td class="ins">経済力と流動性は世界屈指。</td>
-    <td><div class="scale"><i style="width:31.4%"></i><span class="n">58,000</span></div></td>
+    <td><div class="scale"><span class="tr"><i style="width:31.4%"></i></span><span class="n">58,000</span></div></td>
     <td class="n">$48.0B（7.6兆円）</td><td class="n">4.0–5.5%</td><td class="cap mid">中<small>年 +2.0%〜</small></td></tr>
   <tr><td><span class="rank">1</span></td><td class="city"><span class="fl">🇬🇧</span>ロンドン (UK)</td><td class="ins">金融ハブの地位不変。割安感あり。</td>
-    <td><div class="scale"><i style="width:49.7%"></i><span class="n">92,000</span></div></td>
+    <td><div class="scale"><span class="tr"><i style="width:49.7%"></i></span><span class="n">92,000</span></div></td>
     <td class="n">$42.0B（6.6兆円）</td><td class="n">3.5–5.0%</td><td class="cap mid">中<small>年 +2.0%〜</small></td></tr>
   <tr><td><span class="rank">NEXT</span></td><td class="city"><span class="fl">🇦🇪</span>アブダビ (UAE)</td><td class="ins">ドバイに次ぐ急成長。外国人投資急増。</td>
-    <td><div class="scale"><i style="width:24.3%"></i><span class="n">45,000</span></div></td>
+    <td><div class="scale"><span class="tr"><i style="width:24.3%"></i></span><span class="n">45,000</span></div></td>
     <td class="n">$42.0B（6.6兆円）</td><td class="n">6.0–7.5%</td><td class="cap up">高<small>年 +6.0%〜</small></td></tr>
   <tr><td><span class="rank">2</span></td><td class="city"><span class="fl">🇯🇵</span>東京 (JP)</td><td class="ins">NYを抜き2位。円安と低金利が魅力。</td>
-    <td><div class="scale"><i style="width:42.2%"></i><span class="n">78,000</span></div></td>
+    <td><div class="scale"><span class="tr"><i style="width:42.2%"></i></span><span class="n">78,000</span></div></td>
     <td class="n">$35.0B（5.5兆円）</td><td class="n">3.5–4.5%</td><td class="cap up">高<small>年 +5.0%〜</small></td></tr>
   <tr><td><span class="rank">5</span></td><td class="city"><span class="fl">🇸🇬</span>シンガポール (SG)</td><td class="ins">アジアのハブ。富裕層流入が継続。</td>
-    <td><div class="scale"><i style="width:17.3%"></i><span class="n">32,000</span></div></td>
+    <td><div class="scale"><span class="tr"><i style="width:17.3%"></i></span><span class="n">32,000</span></div></td>
     <td class="n">$28.0B（4.4兆円）</td><td class="n">3.0–4.0%</td><td class="cap mid">中<small>年 +3.0%〜</small></td></tr>
   <tr><td><span class="rank">6</span></td><td class="city"><span class="fl">🇰🇷</span>ソウル (KR)</td><td class="ins">オフィス需要が堅調。主要投資先。</td>
-    <td><div class="scale"><i style="width:35.1%"></i><span class="n">65,000</span></div></td>
+    <td><div class="scale"><span class="tr"><i style="width:35.1%"></i></span><span class="n">65,000</span></div></td>
     <td class="n">$25.0B（4.0兆円）</td><td class="n">3.0–4.0%</td><td class="cap mid">中<small>年 +2.0%〜</small></td></tr>
   <tr><td><span class="rank">4</span></td><td class="city"><span class="fl">🇫🇷</span>パリ (FR)</td><td class="ins">五輪後の整備効果。底堅い需要。</td>
-    <td><div class="scale"><i style="width:22.7%"></i><span class="n">42,000</span></div></td>
+    <td><div class="scale"><span class="tr"><i style="width:22.7%"></i></span><span class="n">42,000</span></div></td>
     <td class="n">$22.0B（3.5兆円）</td><td class="n">3.0–4.0%</td><td class="cap dn">低<small>横ばい</small></td></tr>
   <tr><td><span class="rank">10</span></td><td class="city"><span class="fl">🇩🇪</span>ベルリン (DE)</td><td class="ins">供給不足。スタートアップの拠点。</td>
-    <td><div class="scale"><i style="width:15.1%"></i><span class="n">28,000</span></div></td>
+    <td><div class="scale"><span class="tr"><i style="width:15.1%"></i></span><span class="n">28,000</span></div></td>
     <td class="n">$18.0B（2.8兆円）</td><td class="n">3.0–4.0%</td><td class="cap mid">中<small>年 +3.0%〜</small></td></tr>
   <tr><td><span class="rank">7</span></td><td class="city"><span class="fl">🇳🇱</span>アムステルダム (NL)</td><td class="ins">欧州の戦略拠点。高い居住性。</td>
-    <td><div class="scale"><i style="width:11.9%"></i><span class="n">22,000</span></div></td>
+    <td><div class="scale"><span class="tr"><i style="width:11.9%"></i></span><span class="n">22,000</span></div></td>
     <td class="n">$15.0B（2.4兆円）</td><td class="n">3.5–4.5%</td><td class="cap mid">中<small>年 +3.0%〜</small></td></tr>
   </tbody>
 </table>

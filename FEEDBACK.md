@@ -32,6 +32,15 @@ Running list. Each item: what he said → what I did.
 | 23 | 11 | 3 image cards + freehold as a policy strip, implication lines | **DONE** |
 | 24 | 27 | Distinct divider image | **DONE** |
 
+| 25 | 7 | Don't focus on 96% — make the three stats **equal** (supersedes the brief's "96% dominant") | doing |
+| 26 | 12 | Fix alignment of the conclusion / +67万戸 block | doing |
+| 27 | 17 | Add a 2020–2025 bar chart under the 35.2兆円 figure | doing |
+| 28 | 18 | Text overlay — bar label collides with the rail figure | doing |
+| 29 | maps | Bigger map, more visible lines, labelled accordingly | doing |
+| 30 | 20 | Add the off-plan vs secondary line chart as a faded background | doing |
+| 31 | 21 | Text overlay on 年間取引総額; nothing may overflow the slide | doing |
+| 32 | 28 | Remove the JVC row highlight | doing |
+
 ## Standing rules (apply to every slide, don't re-ask)
 
 - No gold rail across the top of any slide.

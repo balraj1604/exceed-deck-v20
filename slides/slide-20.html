@@ -60,6 +60,16 @@ html,body{height:100%;overflow:hidden}
   font:400 15px/1 'Noto Sans JP',sans-serif;color:var(--mut-2)}
 #s20 .arrow .yr span:first-child{min-width:150px}
 
+/* the 13-year climb, sitting behind the numbers */
+#s20 .bgchart{position:absolute;left:80px;right:80px;top:330px;height:430px;
+  opacity:.20;pointer-events:none;z-index:0}
+#s20 .bgkey{position:absolute;left:80px;bottom:186px;display:flex;gap:26px;align-items:center;
+  z-index:0;opacity:.75}
+#s20 .bgkey span{display:flex;align-items:center;gap:9px;
+  font:400 14px/1 'Noto Sans JP',sans-serif;color:var(--mut-2)}
+#s20 .bgkey i{width:22px;height:4px;display:block}
+#s20 .bgkey .yrs{margin-left:6px}
+#s20 .pair,#s20 .growth,#s20 .concl,#s20 .src{z-index:1}
 #s20 .concl{position:absolute;left:64px;right:64px;bottom:104px;
   background:rgba(201,168,76,.11);border-left:3px solid var(--gold);padding:26px 34px}
 #s20 .concl b{font:700 28px/1.3 'Noto Sans JP',sans-serif;color:#fff}
@@ -70,6 +80,15 @@ html,body{height:100%;overflow:hidden}
 </style>
 
 <div class="dk spot mono">
+<svg class="bgchart" viewBox="0 0 1760 430" preserveAspectRatio="none">
+  <polyline points="0,267 220,197 440,179 660,242 880,238 1100,183 1320,167 1540,147 1760,43" fill="none" stroke="#C9A84C" stroke-width="5"
+            stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="0,272 220,210 440,231 660,267 880,292 1100,224 1320,190 1540,179 1760,145" fill="none" stroke="#4E7FB5" stroke-width="5"
+            stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<div class="bgkey"><span><i style="background:#C9A84C"></i>オフプラン</span>
+  <span><i style="background:#4E7FB5"></i>セカンダリー</span>
+  <span class="yrs">2012 → 2025（万円/㎡）</span></div>
 <div class="eyebrow">01 · なぜ今、海外不動産か</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1">ダウンタウン平米単価は過去最高 171万円。<br>ドバイ平均は5年で +77%</div>
