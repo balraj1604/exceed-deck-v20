@@ -30,24 +30,36 @@ html,body{height:100%;overflow:hidden}
 <style>
 @import url("theme.css");
 #s34 .h1{top:82px} #s34 .urule{top:152px;width:420px} #s34 .sub{top:176px}
-#s34 .three{position:absolute;left:56px;right:56px;top:272px;
+#s34 .three{position:absolute;left:56px;right:56px;top:250px;
   display:grid;grid-template-columns:repeat(3,1fr);column-gap:40px}
-#s34 .c{background:#fff;border:1px solid rgba(11,21,34,.12);padding:0 40px 44px}
+#s34 .c{background:#fff;border:1px solid rgba(11,21,34,.12);padding:0 36px 34px}
 #s34 .c .bar{margin:0 -40px 34px;height:8px;background:var(--gold)}
-#s34 .c .n{font:700 92px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:-.02em}
-#s34 .c .t{margin-top:26px;font:700 34px/1.2 'Noto Sans JP',sans-serif;color:var(--ink)}
+#s34 .c .n{font:700 76px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:-.02em}
+#s34 .c .t{margin-top:20px;font:700 31px/1.2 'Noto Sans JP',sans-serif;color:var(--ink)}
 #s34 .c .r{margin-top:20px;width:56px;height:2px;background:var(--gold)}
 #s34 .c ul{margin-top:26px;list-style:none}
-#s34 .c li{font:400 18px/1.7 'Noto Sans JP',sans-serif;color:var(--ink);
+#s34 .c li{font:400 17px/1.65 'Noto Sans JP',sans-serif;color:var(--ink);
   padding-left:20px;position:relative}
 #s34 .c li+li{margin-top:12px}
 #s34 .c li::before{content:"";position:absolute;left:0;top:13px;width:7px;height:7px;
   border-radius:50%;background:var(--gold)}
 #s34 .c .k{margin-top:30px;padding-top:22px;border-top:1px solid rgba(11,21,34,.12);
   font:700 17px/1.5 'Noto Sans JP',sans-serif;color:var(--gold);font-style:italic}
-#s34 .concl{position:absolute;left:56px;right:56px;bottom:78px;background:var(--ink);
-  padding:30px 40px;text-align:center}
-#s34 .concl b{font:700 32px/1 'Noto Sans JP',sans-serif;color:#fff}
+/* buy -> hold -> exit: how long the capital is actually tied up */
+#s34 .tl2{position:absolute;left:56px;right:56px;bottom:172px}
+#s34 .tl2 .lab{font:700 16px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.12em}
+#s34 .track{margin-top:18px;position:relative;height:8px;background:rgba(11,21,34,.10)}
+#s34 .track i{position:absolute;top:0;bottom:0;background:var(--gold)}
+#s34 .nodes{position:relative;margin-top:-19px;display:grid;grid-template-columns:repeat(4,1fr)}
+#s34 .nd{text-align:center;position:relative}
+#s34 .nd .dot{width:30px;height:30px;border-radius:50%;background:#F4F1EA;
+  border:3px solid var(--gold);margin:0 auto}
+#s34 .nd.on .dot{background:var(--gold)}
+#s34 .nd .ttl{margin-top:14px;font:700 20px/1.25 'Noto Sans JP',sans-serif;color:var(--ink)}
+#s34 .nd .sub2{margin-top:7px;font:400 15px/1.45 'Noto Sans JP',sans-serif;color:var(--mut)}
+#s34 .concl{position:absolute;left:56px;right:56px;bottom:60px;background:var(--ink);
+  padding:22px 40px;text-align:center}
+#s34 .concl b{font:700 28px/1 'Noto Sans JP',sans-serif;color:#fff}
 #s34 .concl b em{color:var(--gold-lt);font-style:normal}
 </style>
 
@@ -96,6 +108,20 @@ html,body{height:100%;overflow:hidden}
   </div>
 </div>
 
+<div class="tl2">
+  <div class="lab">資金が拘束される期間｜購入 → 保有 → 出口</div>
+  <div class="track"><i style="left:0;width:100%"></i></div>
+  <div class="nodes">
+    <div class="nd on"><div class="dot"></div><div class="ttl">購入</div>
+      <div class="sub2">頭金10〜20%<br>出口価格を先に確定</div></div>
+    <div class="nd on"><div class="dot"></div><div class="ttl">保有・運用</div>
+      <div class="sub2">賃料 / Airbnb 収入<br>年6〜8%（非課税）</div></div>
+    <div class="nd on"><div class="dot"></div><div class="ttl">リノベ（任意）</div>
+      <div class="sub2">TAKUMIで<br>賃料・売却価格 +10%以上</div></div>
+    <div class="nd on"><div class="dot"></div><div class="ttl">出口（売却）</div>
+      <div class="sub2">CGT 0%・保有年数の縛りなし<br>いつ売っても税率は同じ</div></div>
+  </div>
+</div>
 <div class="concl"><b>「良い物件に出会ったから買う」では、<em>プロの結果は出ない。</em></b></div>
 </div>
 </div></div></div>

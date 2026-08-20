@@ -51,7 +51,10 @@ html,body{height:100%;overflow:hidden}
 #s36 .col .bar{background:#2E6F63;width:100%}
 #s36 .col.goal .bar{background:repeating-linear-gradient(45deg,
   rgba(216,184,99,.85) 0 12px,rgba(216,184,99,.55) 12px 24px)}
-#s36 .col.goal .v{color:var(--gold-lt)}
+#s36 .col.goal .v{color:var(--gold-lt);position:relative}
+#s36 .col .ref{display:inline-block;margin-left:10px;padding:5px 11px;vertical-align:middle;
+  border:1px solid rgba(216,184,99,.6);border-radius:2px;
+  font:700 15px/1 'Noto Sans JP',sans-serif;color:var(--gold-lt);letter-spacing:.08em}
 #s36 .col .yr{position:absolute;left:0;right:0;bottom:-54px;
   font:700 20px/1 'Noto Sans JP',sans-serif;color:rgba(255,255,255,.72)}
 #s36 .col.goal .yr{color:var(--gold-lt)}
@@ -89,12 +92,12 @@ html,body{height:100%;overflow:hidden}
     <div class="col"><div class="v">47.3</div><div class="bar" style="height:96px"></div><div class="yr">2023</div></div>
     <div class="col"><div class="v">94.6</div><div class="bar" style="height:191px"></div><div class="yr">2024</div></div>
     <div class="col"><div class="v">111</div><div class="bar" style="height:224px"></div><div class="yr">2025</div></div>
-    <div class="col goal"><div class="v">200</div><div class="bar" style="height:404px"></div><div class="yr">2026 目標</div></div>
+    <div class="col goal"><div class="v">200<span class="ref">参考</span></div><div class="bar" style="height:404px"></div><div class="yr">2026 目標（参考値）</div></div>
   </div>
   <div class="base"></div>
 </div>
 
-<div class="flag">出典：EXCEED REAL ESTATE L.L.C 日本チーム実績（2026年1月時点）</div>
+<div class="flag">出典：EXCEED REAL ESTATE L.L.C 日本チーム実績（2026年1月時点）。2026年は目標値であり実績ではありません。</div>
 </div>
 </div></div></div>
 <script>

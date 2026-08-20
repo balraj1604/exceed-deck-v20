@@ -5,8 +5,15 @@
 #s39 .steps{position:absolute;left:56px;right:56px;top:262px;
   display:grid;grid-template-columns:repeat(4,1fr);column-gap:26px}
 #s39 .st{position:relative;background:rgba(255,255,255,.05);
-  border-top:3px solid var(--gold);padding:30px 28px 34px}
+  border-top:3px solid var(--gold);padding:30px 28px 34px;min-height:224px}
 #s39 .st .n{font:700 15px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.20em}
+/* each step carries the brand that actually delivers it */
+#s39 .st .bm{position:absolute;right:24px;top:22px;height:34px;display:flex;align-items:center;
+  gap:9px;opacity:.95}
+#s39 .st .bm img{height:100%;width:auto;display:block}
+#s39 .st .bm .ab{width:30px;height:30px;color:var(--gold-lt)}
+#s39 .st .bm .ab svg{width:100%;height:100%}
+#s39 .st .bm span{font:700 15px/1 'Noto Sans JP',sans-serif;color:var(--gold-lt)}
 #s39 .st .t{margin-top:20px;font:700 27px/1.25 'Noto Sans JP',sans-serif;color:#fff}
 #s39 .st .d{margin-top:18px;font:400 16px/1.7 'Noto Sans JP',sans-serif;color:var(--mut)}
 #s39 .st::after{content:"→";position:absolute;right:-22px;top:50%;transform:translateY(-50%);
@@ -34,13 +41,13 @@
 <div class="sub">購入後こそ差がつく。出口まで自社完結できるのはEXCEEDだけ。</div>
 
 <div class="steps">
-  <div class="st"><div class="n">STEP 1</div><div class="t">購入サポート</div>
+  <div class="st"><div class="bm"><img src="assets/logo/exceed-white.png" alt="EXCEED"></div><div class="n">STEP 1</div><div class="t">購入サポート</div>
     <div class="d">物件選定・DD・交渉<br>ローン・ビザ手続き</div></div>
-  <div class="st"><div class="n">STEP 2</div><div class="t">賃貸管理 / Airbnb</div>
+  <div class="st"><div class="bm"><span class="ab"><svg viewBox='0 0 32 32' fill='none' stroke='currentColor' stroke-width='2.1' stroke-linecap='round' stroke-linejoin='round'><path d='M16,4 C17.4,4 18.3,5 19.1,6.6 C21.6,11.6 26.6,20.4 27.6,23.1 C28.8,26.3 26.7,28.6 24,28.6 C21.6,28.6 19.4,26.7 16,22.6 C12.6,26.7 10.4,28.6 8,28.6 C5.3,28.6 3.2,26.3 4.4,23.1 C5.4,20.4 10.4,11.6 12.9,6.6 C13.7,5 14.6,4 16,4 Z'/><path d='M16,22.6 C13.8,19.9 12.4,17.6 12.4,15.9 C12.4,13.9 14,12.7 16,12.7 C18,12.7 19.6,13.9 19.6,15.9 C19.6,17.6 18.2,19.9 16,22.6 Z'/></svg></span></div><div class="n">STEP 2</div><div class="t">賃貸管理 / Airbnb</div>
     <div class="d">入居者獲得・家賃回収<br>メンテ・Airbnb運用代行</div></div>
-  <div class="st"><div class="n">STEP 3</div><div class="t">TAKUMI Renovation</div>
+  <div class="st"><div class="bm"><img src="assets/logo/takumi-white.png" alt="TAKUMI"></div><div class="n">STEP 3</div><div class="t">TAKUMI Renovation</div>
     <div class="d">日系唯一のリノベ部門<br>賃料／価格 +10%以上 UP</div></div>
-  <div class="st"><div class="n">STEP 4</div><div class="t">セカンダリー売却</div>
+  <div class="st"><div class="bm"><img src="assets/logo/exceed-white.png" alt="EXCEED"></div><div class="n">STEP 4</div><div class="t">セカンダリー売却</div>
     <div class="d">日系No.1の転売実績<br>専門チーム・買い手NWで最高値EXIT</div></div>
 </div>
 
