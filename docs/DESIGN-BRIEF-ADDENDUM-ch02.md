@@ -30,6 +30,25 @@ Do not flatten — it is what gives the deck three legible acts.
   Add a buy → hold → exit timeline across the bottom.
 - **35** Green begins. Chapter progress indicator (3 of 3), matching 6 and 27.
 
+## DAMAC Abu Dhabi research — DONE 2026-08-20
+
+Researched per §B.30. **Only one DAMAC project in Abu Dhabi is verifiable by name:**
+
+| Project | Area | Detail |
+|---|---|---|
+| **Marina Bay** | **Al Reem Island (Najmat)** | 25-storey mixed-use, 350+ units (1/2/3-bed + townhouses), canal-facing, completed 2018. **DAMAC's first Abu Dhabi project.** |
+
+**Al Maryah Island and Al Raha Beach: nothing placeable.** Aggregator sites list DAMAC as
+"active" across Saadiyat / Al Maryah / Al Raha / Yas, but none names an actual building.
+That is SEO boilerplate, not a development — not safe to pin at a DAMAC-hosted event where
+someone in the room will know.
+
+Placed on slide 30 as a ringed gold tower glyph (deliberately unlike the photo landmarks,
+so a *development* does not read as a *tourist attraction*), leader to Al Reem, labelled
+「DAMAC Marina Bay / アブダビ初進出プロジェクト」.
+
+Sources: metropolitan.realestate · psinv.net · constructionweekonline.com · squareyards.ae
+
 ## C. RESOLVED
 **111億円 is correct**; 60億円 is stale. Internal working note deleted.
 

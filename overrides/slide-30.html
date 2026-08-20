@@ -31,6 +31,18 @@
 #s30 .lmk.ferrari{left:876px; top:180px; width:94px}
 #s30 .lmk.sphere {left:986px; top:306px; width:78px}
 #s30 .lmk.disney {left:936px; top:634px; width:78px}
+/* DAMAC Marina Bay — a development, not an attraction, so it gets a ringed glyph
+   rather than a photo. Only DAMAC project in AD that is verifiable by name. */
+#s30 .lmk.damac{left:452px;top:530px;width:auto}
+#s30 .lmk.damac .ring{width:74px;height:74px;border-radius:50%;
+  border:2px solid #A8853B;background:rgba(244,241,234,.88);
+  display:flex;align-items:center;justify-content:center;margin:0 auto;
+  box-shadow:0 4px 14px rgba(11,21,34,.22)}
+#s30 .lmk.damac .ring svg{width:40px;height:40px}
+#s30 .lmk.damac b{color:#7A5F1E}
+#s30 .lmk.damac em{display:block;margin-top:3px;font-style:normal;
+  font:400 13px/1.3 'Noto Sans JP',sans-serif;color:rgba(11,21,34,.60);white-space:nowrap;
+  text-shadow:0 0 6px #F4F1EA,0 0 6px #F4F1EA}
 </style>
 
 <div class="cr">
@@ -64,7 +76,9 @@
     <path class="lead-ln" d="M1050,400 Q1010,320 990,232"/>
     <path class="lead-ln" d="M1180,452 Q1140,404 1116,362"/>
     <path class="lead-ln" d="M1080,552 Q1072,610 1060,674"/>
+    <path class="lead-ln" d="M470,482 Q490,530 504,576"/>
     <g fill="#A8853B">
+      <circle cx="470" cy="482" r="5"/>
       <circle cx="430" cy="242" r="5"/><circle cx="1050" cy="400" r="5"/>
       <circle cx="1180" cy="452" r="5"/><circle cx="1080" cy="552" r="5"/>
     </g>
@@ -74,6 +88,16 @@
   <div class="lmk ferrari"><img src="assets/lm/ferrari.png" alt=""><b>フェラーリ・ワールド</b></div>
   <div class="lmk sphere"><img src="assets/lm/sphere.png" alt=""><b>スフィア</b></div>
   <div class="lmk disney"><img src="assets/lm/disney.png" alt=""><b>ディズニー</b></div>
+  <div class="lmk damac">
+    <div class="ring">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#A8853B" stroke-width="2.2"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8,34 L8,14 L15,10 L15,34 M15,34 L15,6 L23,2 L23,34 M23,34 L23,16 L31,12 L31,34"/>
+        <path d="M4,34 L36,34"/><path d="M4,37.5 C10,35.5 14,39 20,37 C26,35 30,38.5 36,37" opacity=".8"/>
+      </svg>
+    </div>
+    <b>DAMAC Marina Bay</b><em>アブダビ初進出プロジェクト</em>
+  </div>
   </div>
 </div>
 <div class="mapwash"></div>
