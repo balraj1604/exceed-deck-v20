@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EXCEED v20 — 1/41</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+@import url("fonts/noto.css");
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#1a1a1a}
+.slide{position:relative;width:1920.0px;height:1080.0px;background:#fff;overflow:hidden;
+  margin:0 auto;transform-origin:top center}
+.sh{position:absolute;display:flex;flex-direction:column;overflow:visible}
+.sh p{width:100%;font-family:'Noto Sans JP','Hiragino Sans',sans-serif;
+  font-size:28.0px;line-height:1.2;color:#000;word-break:normal;overflow-wrap:normal;white-space:pre-wrap;
+  font-feature-settings:"palt" 1;font-kerning:normal;line-break:strict}
+.sh .bul{position:absolute;left:0}
+.im{position:absolute}
+.ln{position:absolute;pointer-events:none}
+.tb{position:absolute}
+.tb p{font-family:'Noto Sans JP','Hiragino Sans',sans-serif;font-size:28.0px;
+  line-height:1.25;color:#000;white-space:pre-wrap;word-break:normal;overflow-wrap:normal;
+  font-feature-settings:"palt" 1;line-break:strict}
+
+html,body{height:100%;overflow:hidden}
+#stage{position:absolute;inset:0;display:grid;place-items:center}
+#fitbox{position:relative}
+#fitbox .slide{position:absolute;left:0;top:0;transform-origin:0 0;margin:0}
+</style></head><body>
+<div id="stage"><div id="fitbox"><div class="slide" id="s1" style="background:rgb(255,255,255)"><div class="im" data-id="g3ef1ef2f982_0_4" style="left:-8.85px;top:-5.87px;width:1937.51px;height:1091.74px;overflow:hidden"><img src="img/adad99d3490d5ea6.png" alt="" style="width:100%;height:100%;object-fit:fill;display:block" loading="lazy"></div></div></div></div>
+<script>
+(function(){var W=1920.0,H=1080.0,fb=document.getElementById('fitbox'),
+s=fb.firstElementChild;
+function fit(){var k=Math.min(innerWidth/W,innerHeight/H);
+fb.style.width=(W*k)+'px';fb.style.height=(H*k)+'px';
+s.style.transform='scale('+k+')';}
+addEventListener('resize',fit);fit();
+addEventListener('keydown',function(e){var m=location.pathname.match(/slide-(\d+)/);
+if(!m)return;var n=+m[1],t=null;
+if(e.key==='ArrowRight'||e.key===' ')t=Math.min(41,n+1);
+if(e.key==='ArrowLeft')t=Math.max(1,n-1);
+if(t&&t!==n)location.href='slide-'+String(t).padStart(2,'0')+'.html';});})();
+</script></body></html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EXCEED v20 — 7/41</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+@import url("fonts/noto.css");
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#1a1a1a}
+.slide{position:relative;width:1920.0px;height:1080.0px;background:#fff;overflow:hidden;
+  margin:0 auto;transform-origin:top center}
+.sh{position:absolute;display:flex;flex-direction:column;overflow:visible}
+.sh p{width:100%;font-family:'Noto Sans JP','Hiragino Sans',sans-serif;
+  font-size:28.0px;line-height:1.2;color:#000;word-break:normal;overflow-wrap:normal;white-space:pre-wrap;
+  font-feature-settings:"palt" 1;font-kerning:normal;line-break:strict}
+.sh .bul{position:absolute;left:0}
+.im{position:absolute}
+.ln{position:absolute;pointer-events:none}
+.tb{position:absolute}
+.tb p{font-family:'Noto Sans JP','Hiragino Sans',sans-serif;font-size:28.0px;
+  line-height:1.25;color:#000;white-space:pre-wrap;word-break:normal;overflow-wrap:normal;
+  font-feature-settings:"palt" 1;line-break:strict}
+
+html,body{height:100%;overflow:hidden}
+#stage{position:absolute;inset:0;display:grid;place-items:center}
+#fitbox{position:relative}
+#fitbox .slide{position:absolute;left:0;top:0;transform-origin:0 0;margin:0}
+</style></head><body>
+<div id="stage"><div id="fitbox"><div class="slide" id="s7" style="background:#0B1522"><!--bg: #0B1522 -->
+<style>
+@import url("theme.css");
+#s7 .h1{width:1300px}
+#s7 .urule{top:214px;width:700px}
+#s7 .sub{top:238px}
+
+#s7 .left{position:absolute;left:64px;top:318px;width:540px}
+#s7 .body{margin-top:34px;font:400 17px/1.8 'Noto Sans JP',sans-serif;
+  color:rgba(255,255,255,.70)}
+/* the two summary figures now sit under the 96% block, per feedback */
+#s7 .sub2{margin-top:44px;padding-top:38px;border-top:1px solid rgba(255,255,255,.14)}
+#s7 .sub2 .stat+.stat{margin-top:36px}
+#s7 .sub2 .fig{font-size:62px;margin-top:14px}
+#s7 .sub2 .meter{margin-top:16px;height:11px}
+#s7 .sub2 .lab{font-size:16px}
+
+#s7 .mets{position:absolute;left:684px;right:64px;top:318px;
+  display:grid;grid-template-columns:repeat(3,1fr);column-gap:40px}
+
+#s7 table{position:absolute;left:684px;right:64px;top:606px;
+  border-collapse:collapse;width:calc(100% - 748px)}
+#s7 td{padding:30px 0;border-top:1px solid rgba(201,168,76,.26);
+  font:700 26px/1 'Noto Sans JP',sans-serif;color:#fff;text-align:center}
+#s7 tr:last-child td{border-bottom:1px solid rgba(201,168,76,.26)}
+#s7 td.m{text-align:left;width:130px;color:var(--gold);font-size:22px}
+
+#s7 .src{left:64px;bottom:44px;width:520px}
+</style>
+
+<div class="dk">
+
+<div class="eyebrow">02 · なぜドバイか</div>
+<div class="brand">EXCEED REAL ESTATE</div>
+<div class="h1">イラン・アメリカ中東戦争<br>鉄壁の防空体制：イラン情勢下での迎撃実績</div>
+<div class="urule"></div>
+<div class="sub">複数の脅威に対し、多層防空システムが市民生活を守り抜いている</div>
+
+<div class="left stat">
+  <div class="lab">平均迎撃成功率</div>
+  <div class="fig">96<small>%以上</small></div>
+  <div class="meter"><i style="width:96%"></i></div>
+  <div class="body">UAEはTHAAD、Patriot PAC-3、短距離防空網<br>による多層防御を構築。</div>
+
+  <div class="sub2">
+    <div class="stat">
+      <div class="lab">総飛来数（2026年3月〜5月）</div>
+      <div class="fig">2,800<small>発以上</small></div>
+      <div class="meter"><i style="width:100%"></i></div>
+    </div>
+    <div class="stat">
+      <div class="lab">主要インフラ損害</div>
+      <div class="fig">20<small>件程度</small></div>
+      <div class="meter"><i style="width:100%"></i></div>
+    </div>
+  </div>
+</div>
+
+<div class="mets">
+  <div class="met"><div class="lab">弾道ミサイル</div><div class="fig">540発</div><div class="cap">3〜5月 合計</div></div>
+  <div class="met"><div class="lab">巡航ミサイル</div><div class="fig">22発</div><div class="cap">3〜5月 合計</div></div>
+  <div class="met"><div class="lab">ドローン（UAV）</div><div class="fig">2,247発</div><div class="cap">3〜5月 合計</div></div>
+</div>
+
+<table>
+  <tr><td class="m">3月</td><td>425発</td><td>15発</td><td>1,941発</td></tr>
+  <tr><td class="m">4月</td><td>104発</td><td>7発</td><td>279発</td></tr>
+  <tr><td class="m">5月</td><td>11発</td><td>0発</td><td>27発</td></tr>
+</table>
+
+<div class="note src">※出典：UAE国防省（2026年5月10日発表データ等）に基づき作成。</div>
+</div>
+</div></div></div>
+<script>
+(function(){var W=1920.0,H=1080.0,fb=document.getElementById('fitbox'),
+s=fb.firstElementChild;
+function fit(){var k=Math.min(innerWidth/W,innerHeight/H);
+fb.style.width=(W*k)+'px';fb.style.height=(H*k)+'px';
+s.style.transform='scale('+k+')';}
+addEventListener('resize',fit);fit();
+addEventListener('keydown',function(e){var m=location.pathname.match(/slide-(\d+)/);
+if(!m)return;var n=+m[1],t=null;
+if(e.key==='ArrowRight'||e.key===' ')t=Math.min(41,n+1);
+if(e.key==='ArrowLeft')t=Math.max(1,n-1);
+if(t&&t!==n)location.href='slide-'+String(t).padStart(2,'0')+'.html';});})();
+</script></body></html>

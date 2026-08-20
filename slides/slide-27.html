@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EXCEED v20 — 27/41</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+@import url("fonts/noto.css");
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#1a1a1a}
+.slide{position:relative;width:1920.0px;height:1080.0px;background:#fff;overflow:hidden;
+  margin:0 auto;transform-origin:top center}
+.sh{position:absolute;display:flex;flex-direction:column;overflow:visible}
+.sh p{width:100%;font-family:'Noto Sans JP','Hiragino Sans',sans-serif;
+  font-size:28.0px;line-height:1.2;color:#000;word-break:normal;overflow-wrap:normal;white-space:pre-wrap;
+  font-feature-settings:"palt" 1;font-kerning:normal;line-break:strict}
+.sh .bul{position:absolute;left:0}
+.im{position:absolute}
+.ln{position:absolute;pointer-events:none}
+.tb{position:absolute}
+.tb p{font-family:'Noto Sans JP','Hiragino Sans',sans-serif;font-size:28.0px;
+  line-height:1.25;color:#000;white-space:pre-wrap;word-break:normal;overflow-wrap:normal;
+  font-feature-settings:"palt" 1;line-break:strict}
+
+html,body{height:100%;overflow:hidden}
+#stage{position:absolute;inset:0;display:grid;place-items:center}
+#fitbox{position:relative}
+#fitbox .slide{position:absolute;left:0;top:0;transform-origin:0 0;margin:0}
+</style></head><body>
+<div id="stage"><div id="fitbox"><div class="slide" id="s27" style="background:#F4F1EA"><!--bg: #F4F1EA -->
+<style>
+@import url("theme.css");
+#s27 .split{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr}
+#s27 .l{position:relative;background:#F4F1EA;display:flex;flex-direction:column;
+  justify-content:center;padding:0 92px}
+#s27 .r{position:relative;overflow:hidden;background:#0B1522}
+#s27 .r img{width:100%;height:100%;object-fit:cover;object-position:50% 46%;display:block;
+  opacity:.92}
+#s27 .r::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(244,241,234,1) 0%,rgba(244,241,234,0) 22%)}
+#s27 .num{font:700 210px/.84 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:-.03em}
+#s27 .ch{margin-top:34px;font:700 17px/1 'Noto Sans JP',sans-serif;
+  color:var(--gold);letter-spacing:.30em}
+#s27 .ti{margin-top:22px;font:700 74px/1.15 'Noto Sans JP',sans-serif;color:var(--ink)}
+#s27 .en{margin-top:20px;font:700 19px/1 'Noto Sans JP',sans-serif;
+  color:rgba(11,21,34,.42);letter-spacing:.18em}
+#s27 .rule{margin-top:36px;width:96px;height:3px;background:var(--gold)}
+#s27 .lead{margin-top:36px;font:400 21px/1.75 'Noto Sans JP',sans-serif;color:var(--mut);
+  max-width:520px}
+</style>
+
+<div class="cr">
+<div class="split">
+  <div class="l">
+    <div class="num">02</div>
+    <div class="ch">CHAPTER</div>
+    <div class="ti">どう選ぶか</div>
+    <div class="en">HOW TO CHOOSE</div>
+    <div class="rule"></div>
+    <div class="lead">エリア・買い方・出口。<br>出口を先に設計してから買う。</div>
+  </div>
+  <div class="r"><img src="assets/biz-brokerage.webp" alt=""></div>
+</div>
+</div>
+</div></div></div>
+<script>
+(function(){var W=1920.0,H=1080.0,fb=document.getElementById('fitbox'),
+s=fb.firstElementChild;
+function fit(){var k=Math.min(innerWidth/W,innerHeight/H);
+fb.style.width=(W*k)+'px';fb.style.height=(H*k)+'px';
+s.style.transform='scale('+k+')';}
+addEventListener('resize',fit);fit();
+addEventListener('keydown',function(e){var m=location.pathname.match(/slide-(\d+)/);
+if(!m)return;var n=+m[1],t=null;
+if(e.key==='ArrowRight'||e.key===' ')t=Math.min(41,n+1);
+if(e.key==='ArrowLeft')t=Math.max(1,n-1);
+if(t&&t!==n)location.href='slide-'+String(t).padStart(2,'0')+'.html';});})();
+</script></body></html>

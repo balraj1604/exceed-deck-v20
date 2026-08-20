@@ -1,0 +1,114 @@
+<!--bg: #F4F1EA -->
+<style>
+#s4{--gold:#C9A84C;--navy:#0B1A2E}
+#s4 .L{position:absolute;left:0;top:0;width:902px;height:100%;background:var(--navy);overflow:hidden}
+#s4 .R{position:absolute;left:902px;top:0;right:0;height:100%;background:#F4F1EA}
+
+/* ---- left: header ---- */
+#s4 .kick{position:absolute;left:64px;top:44px;
+  font:700 17px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.22em}
+#s4 .ttl{position:absolute;left:64px;top:72px;
+  font:700 44px/1.12 'Noto Sans JP',sans-serif;color:#fff;letter-spacing:.02em}
+#s4 .hr{position:absolute;left:64px;width:764px;top:152px;height:1px;
+  background:rgba(255,255,255,.30)}
+
+/* ---- left: people ---- */
+#s4 .who{position:absolute;top:186px;width:230px;text-align:center}
+#s4 .who.a{left:72px}  #s4 .who.b{left:336px}  #s4 .who.c{left:600px}
+#s4 .who img{width:186px;height:186px;border-radius:50%;object-fit:cover;
+  object-position:50% 20%;display:block;margin:0 auto;
+  box-shadow:0 0 0 4px var(--navy),0 0 0 5.5px rgba(201,168,76,.55)}
+#s4 .role{margin-top:26px;font:700 15px/1 'Noto Sans JP',sans-serif;
+  color:var(--gold);letter-spacing:.17em}
+#s4 .name{margin-top:15px;font:700 27px/1.2 'Noto Sans JP',sans-serif;color:#fff}
+#s4 .cred{margin-top:12px;font:400 15px/1.55 'Noto Sans JP',sans-serif;
+  color:rgba(255,255,255,.60)}
+
+/* ---- left: book ---- */
+#s4 .book{position:absolute;left:26px;top:612px;width:286px;height:394px;
+  object-fit:cover;display:block;box-shadow:0 12px 34px rgba(0,0,0,.42)}
+#s4 .bk{position:absolute;left:348px;right:56px;top:640px}
+#s4 .bk .lab{font:700 15px/1 'Noto Sans JP',sans-serif;color:var(--gold);
+  letter-spacing:.16em}
+#s4 .bk .bt{margin-top:52px;font:700 37px/1.42 'Noto Sans JP',sans-serif;
+  color:#fff;letter-spacing:.01em;text-align:center}
+#s4 .bk .bd{margin-top:44px;font:400 15px/1.7 'Noto Sans JP',sans-serif;
+  color:rgba(255,255,255,.58);text-align:center}
+
+/* ---- right ---- */
+#s4 .rh{position:absolute;left:64px;top:80px;
+  font:700 40px/1.15 'Noto Sans JP',sans-serif;color:var(--navy);letter-spacing:.01em}
+#s4 .rs{position:absolute;left:64px;top:138px;
+  font:700 17px/1 'Noto Sans JP',sans-serif;color:var(--navy)}
+#s4 .rrule{position:absolute;left:64px;top:196px;width:78px;height:3px;background:var(--gold)}
+#s4 .grid{position:absolute;left:56px;right:52px;top:248px;bottom:112px;
+  display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(4,1fr);
+  column-gap:22px;row-gap:14px}
+#s4 .cell{display:flex;align-items:center;justify-content:center}
+/* the source logos are opaque white PNGs — multiply drops the white box onto the cream */
+#s4 .cell img{max-width:168px;max-height:60px;width:auto;height:auto;
+  object-fit:contain;display:block;mix-blend-mode:multiply}
+#s4 .more{font:700 24px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.05em}
+</style>
+
+<div class="L">
+  <div class="kick">COMPANY / 03</div>
+  <div class="ttl">経営陣と提携デベロッパー</div>
+  <div class="hr"></div>
+
+  <div class="who a">
+    <img src="img/cae2d7e37921fc96.jpg" alt="">
+    <div class="role">CEO</div>
+    <div class="name">嶋田 輝雄</div>
+    <div class="cred">2021年ドバイ移住<br>4事業展開</div>
+  </div>
+  <div class="who b">
+    <img src="img/0072cf3d6f330dd3.jpg" alt="">
+    <div class="role">MANAGING DIRECTOR</div>
+    <div class="name">細山 翔矢</div>
+    <div class="cred">RERA認定ブローカー<br>No.60163</div>
+  </div>
+  <div class="who c">
+    <img src="img/0e08ac61a46eac15.jpg" alt="">
+    <div class="role">COO</div>
+    <div class="name">Bu Essah Malik</div>
+    <div class="cred">LSE卒<br>UAE在住15年以上</div>
+  </div>
+
+  <img class="book" src="img/22f5a9fa2617078a.jpg" alt="">
+  <div class="bk">
+    <div class="lab">代表者の著書</div>
+    <div class="bt">『ドバイ不動産<br>資産形成の“裏側”』</div>
+    <div class="bd">累計500億円以上を販売した嶋田輝雄による、海外不動産投資の実践書。</div>
+  </div>
+
+</div>
+
+<div class="R">
+  <div class="rh">提携デベロッパー</div>
+  <div class="rs">UAE全土の全デベロッパーと提携</div>
+  <div class="rrule"></div>
+
+  <div class="grid">
+    <div class="cell"><img src="img/5eaf953423d522f4.png" alt="EMAAR"></div>
+    <div class="cell"><img src="img/b881e9941aa79c76.png" alt="DAMAC"></div>
+    <div class="cell"><img src="img/7b1b79a1d464648d.png" alt="NAKHEEL"></div>
+    <div class="cell"><img src="img/be3272bab376d083.png" alt="SOBHA"></div>
+
+    <div class="cell"><img src="img/f7ad7a306d1f5a30.png" alt="ELLINGTON"></div>
+    <div class="cell"><img src="img/c61fbaffeb32ec27.png" alt="MERAAS"></div>
+    <div class="cell"><img src="img/99d6ab81d71cd7c5.png" alt="DUBAI HOLDING"></div>
+    <div class="cell"><img src="img/ddbe60bfa6bebdb2.png" alt="BINGHATTI"></div>
+
+    <div class="cell"><img src="img/527f91aed7e2db68.png" alt="ARADA"></div>
+    <div class="cell"><img src="img/f63d7ecca85e4b81.png" alt="RAK PROPERTIES"></div>
+    <div class="cell"><img src="img/66661a15c12489af.png" alt="ALDAR"></div>
+    <div class="cell"><img src="img/c3f8c6344307ea95.png" alt="OMNIYAT"></div>
+
+    <div class="cell"><img src="img/5a571063cc2903e9.png" alt="MAG"></div>
+    <div class="cell"><img src="img/47b142874c61c266.png" alt="IMTIAZ"></div>
+    <div class="cell"><img src="img/0357e234ab11424c.png" alt="EXPO CITY DUBAI"></div>
+    <div class="cell"><span class="more">+ more</span></div>
+  </div>
+
+</div>

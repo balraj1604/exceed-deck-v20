@@ -1,0 +1,4 @@
+check/
+source/*.pdf
+compare.py
+.DS_Store

@@ -1,0 +1,77 @@
+<!--bg: #F4F1EA -->
+<style>
+@import url("theme.css");
+#s31 .h1{top:82px} #s31 .urule{top:152px;width:520px} #s31 .sub{top:176px}
+#s31 .map{position:absolute;left:56px;top:246px;width:1040px;height:604px;
+  overflow:hidden;border:1px solid rgba(11,21,34,.14)}
+#s31 .map img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+#s31 .ov{position:absolute;inset:0;width:100%;height:100%}
+  #s31 .ov .zone{fill:rgba(168,133,59,.17);stroke:#A8853B;stroke-width:1.8;
+    stroke-linejoin:round;stroke-linecap:round}
+  #s31 .ov .zone.hq{fill:rgba(11,21,34,.20);stroke:#0B1522;stroke-width:2}
+  #s31 .ov .zone.top{fill:rgba(28,107,90,.20);stroke:#1C6B5A;stroke-width:2.4}
+  #s31 .ov .dot{fill:#A8853B;stroke:#fff;stroke-width:2}
+  #s31 .ov .dot.hq{fill:#0B1522}
+  #s31 .ov .dot.top{fill:#1C6B5A}
+  #s31 .ov text{font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:18px;
+    fill:#0B1522;paint-order:stroke;stroke:rgba(244,241,234,.94);stroke-width:5px}
+#s31 .key{position:absolute;left:56px;top:866px;display:flex;gap:34px;align-items:center}
+#s31 .key span{display:flex;align-items:center;gap:10px;font:400 15px/1 'Noto Sans JP',sans-serif;color:var(--mut)}
+#s31 .key i{width:22px;height:14px;display:block;border:2px solid #A8853B;background:rgba(168,133,59,.20)}
+#s31 .rw{position:absolute;right:56px;top:246px;width:740px}
+#s31 .rt{font:700 20px/1 'Noto Sans JP',sans-serif;color:var(--ink)}
+#s31 .bars{margin-top:30px;--lw:210px;--vw:92px}
+#s31 .bar .bl{font-size:18px} #s31 .bar .bv{font-size:20px} #s31 .bar .bt{height:26px}
+#s31 .bar.all .bt i{background:#0B1522}
+#s31 .bar.all .bl,#s31 .bar.all .bv{color:#0B1522;font-weight:700}
+#s31 .concl{position:absolute;right:56px;top:640px;width:740px;
+  background:rgba(168,133,59,.16);border-left:3px solid var(--gold);padding:22px 28px}
+#s31 .concl b{font:700 23px/1.5 'Noto Sans JP',sans-serif;color:var(--ink)}
+#s31 .src{left:56px;bottom:36px;right:56px}
+</style>
+
+<div class="cr">
+<div class="eyebrow">02 · どう選ぶか</div>
+<div class="brand">EXCEED REAL ESTATE</div>
+<div class="h1 one">アブダビも全エリアが上昇。ヤス島は前年比 +22%</div>
+<div class="urule"></div>
+<div class="sub">ディズニー・文化地区の開発が集中するエリアほど上昇幅が大きい。</div>
+
+<div class="map">
+  <img src="img/ed99cffb6a014ef0.png" alt="アブダビ 地価上昇率">
+  <svg class="ov" viewBox="0 0 1600 931" preserveAspectRatio="xMidYMid slice">
+    <path class="zone" d="M402,246 L470,232 L560,238 L640,254 L662,300 L652,352 L596,388 L510,392 L438,376 L400,332 L392,286 Z"/>
+    <text x="530" y="228" text-anchor="middle">サディヤット島</text>
+    <path class="zone" d="M366,410 L420,402 L474,410 L496,436 L490,472 L456,490 L400,486 L366,464 L358,434 Z"/>
+    <text x="430" y="510" text-anchor="middle">アルリーム島</text>
+    <path class="zone" d="M298,470 L332,464 L360,474 L366,498 L356,520 L322,526 L296,512 L290,488 Z"/>
+    <text x="252" y="500" text-anchor="middle">アルマリヤ島</text>
+    <path class="zone" d="M998,406 L1074,396 L1160,406 L1212,432 L1216,494 L1188,542 L1108,556 L1030,542 L988,498 L984,444 Z"/>
+    <text x="1104" y="392" text-anchor="middle">ヤス島</text>
+    <path class="zone" d="M944,596 L1024,588 L1112,596 L1172,610 L1178,644 L1150,668 L1052,674 L968,664 L936,634 Z"/>
+    <text x="1058" y="694" text-anchor="middle">アルラハ・ビーチ</text>
+
+    <circle class="dot" cx="526" cy="312" r="6"/>
+    <circle class="dot" cx="428" cy="446" r="6"/>
+    <circle class="dot" cx="328" cy="494" r="6"/>
+    <circle class="dot" cx="1100" cy="474" r="6"/>
+    <circle class="dot" cx="1056" cy="630" r="6"/>
+  </svg>
+</div>
+<div class="key"><span><i></i>主要投資エリア（フリーホールド）</span><span>※ 境界は概略表示</span></div>
+
+<div class="rw">
+  <div class="rt">前年比 地価上昇率｜主要エリア</div>
+  <div class="bars">
+    <div class="bar on"><div class="bl">ヤス島</div><div class="bt"><i style="width:100%"></i></div><div class="bv">+22%</div></div>
+    <div class="bar on"><div class="bl">サディヤット島</div><div class="bt"><i style="width:72.7%"></i></div><div class="bv">+16%</div></div>
+    <div class="bar"><div class="bl">アルリーム島</div><div class="bt"><i style="width:40.9%"></i></div><div class="bv">+9%</div></div>
+    <div class="bar all"><div class="bl">アブダビ全体（平均）</div><div class="bt"><i style="width:36.4%"></i></div><div class="bv">+8%</div></div>
+    <div class="bar"><div class="bl">アルラハ・ビーチ</div><div class="bt"><i style="width:27.3%"></i></div><div class="bv">+6%</div></div>
+    <div class="bar"><div class="bl">アルマリヤ島</div><div class="bt"><i style="width:22.7%"></i></div><div class="bv">+5%</div></div>
+  </div>
+</div>
+
+<div class="concl"><b>供給不足で価格上昇が継続。政府系ファンド（SWF）が下支えするため下落リスクが低い。</b></div>
+<div class="note src">※ 地価上昇率は概算（出典：Bayut 2024 等）。地図上の境界は概略表示です。</div>
+</div>

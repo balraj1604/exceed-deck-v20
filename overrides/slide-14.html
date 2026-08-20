@@ -1,0 +1,102 @@
+<!--bg: #0B1522 -->
+<style>
+@import url("theme.css");
+#s14 .bg{position:absolute;inset:0}
+#s14 .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 38%;display:block}
+#s14 .veil{position:absolute;inset:0;background:linear-gradient(180deg,
+  rgba(9,17,28,.72) 0%,rgba(9,17,28,.80) 26%,rgba(9,17,28,.92) 56%,rgba(9,17,28,.97) 100%)}
+#s14 .h1{top:82px;z-index:2} #s14 .urule{top:152px;width:560px;z-index:2}
+#s14 .sub{top:176px;z-index:2} #s14 .eyebrow,#s14 .brand{z-index:2}
+
+/* waterfall: 3.4% -> deductions -> 1.9% */
+#s14 .wf{position:absolute;left:64px;top:296px;width:1000px;z-index:2}
+#s14 .wf .cap{font:700 19px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.10em}
+#s14 .row{display:grid;grid-template-columns:250px 1fr 150px;align-items:center;
+  column-gap:24px;margin-top:40px}
+#s14 .row .l{font:400 19px/1.3 'Noto Sans JP',sans-serif;color:rgba(255,255,255,.86)}
+#s14 .row .t{height:42px;position:relative;background:rgba(255,255,255,.08)}
+#s14 .row .t i{position:absolute;top:0;bottom:0;display:block}
+#s14 .row .v{font:700 27px/1 'Noto Sans JP',sans-serif;text-align:right;
+  font-variant-numeric:tabular-nums;color:#fff}
+#s14 .row.d .v{color:#E58B7B}
+#s14 .row.tot{margin-top:46px;padding-top:46px;border-top:1px solid rgba(201,168,76,.4)}
+#s14 .row.tot .l{font-weight:700;color:#fff;font-size:22px}
+#s14 .row.tot .v{color:var(--gold-lt);font-size:42px}
+#s14 .row .note2{font:400 13px/1.4 'Noto Sans JP',sans-serif;color:var(--mut-2);margin-top:5px}
+
+/* the payoff: 10M JPY invested */
+#s14 .comp{position:absolute;right:64px;top:296px;width:700px;z-index:2}
+#s14 .comp .cap{font:700 19px/1 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:.10em}
+#s14 .cbox{margin-top:32px;border:1px solid rgba(255,255,255,.16);padding:40px 36px}
+#s14 .cbox.gold{border-color:rgba(201,168,76,.55);background:rgba(201,168,76,.08)}
+#s14 .cbox .city{font:700 24px/1 'Noto Sans JP',sans-serif;color:#fff}
+#s14 .cbox .yr{margin-top:20px;font:700 78px/1 'Noto Sans JP',sans-serif;color:#fff}
+#s14 .cbox.gold .yr{color:var(--gold-lt)}
+#s14 .cbox .yr small{font-size:.38em;font-weight:700}
+#s14 .cbox .fm{margin-top:12px;font:400 15px/1 'Noto Sans JP',sans-serif;color:var(--mut)}
+#s14 .delta{margin-top:44px;border-left:3px solid var(--gold);padding:12px 0 12px 26px}
+#s14 .delta b{display:block;font:700 36px/1.3 'Noto Sans JP',sans-serif;color:#fff}
+#s14 .delta span{display:block;margin-top:10px;font:400 16px/1 'Noto Sans JP',sans-serif;color:var(--mut)}
+#s14 .src{left:64px;bottom:40px;z-index:2}
+</style>
+
+<div class="dk">
+<div class="bg"><img src="assets/tokyo-ginza.png" alt=""></div>
+<div class="veil"></div>
+
+<div class="eyebrow">01 · WHY NOW</div>
+<div class="brand">EXCEED REAL ESTATE</div>
+<div class="h1 one">東京ワンルームの実質利回りは、もはや1〜2%台</div>
+<div class="urule"></div>
+<div class="sub">管理費・空室・税を引くと手残りは半分。表面利回りは「見かけの数字」にすぎない。</div>
+
+<div class="wf">
+  <div class="cap">東京ワンルーム｜表面利回りから手残りまで</div>
+
+  <div class="row">
+    <div class="l">表面利回り</div>
+    <div class="t"><i style="left:0;width:100%;background:#3B5877"></i></div>
+    <div class="v">3.4%</div>
+  </div>
+  <div class="row d">
+    <div class="l">△ 管理費・修繕<div class="note2">プロパティ管理・設備修繕費</div></div>
+    <div class="t"><i style="left:79.4%;width:20.6%;background:#8E4A44"></i></div>
+    <div class="v">−0.7%</div>
+  </div>
+  <div class="row d">
+    <div class="l">△ 空室損失<div class="note2">平均入居率85%想定</div></div>
+    <div class="t"><i style="left:64.7%;width:14.7%;background:#8E4A44"></i></div>
+    <div class="v">−0.5%</div>
+  </div>
+  <div class="row d">
+    <div class="l">△ 税金等<div class="note2">固定資産税・所得税など</div></div>
+    <div class="t"><i style="left:55.9%;width:8.8%;background:#8E4A44"></i></div>
+    <div class="v">−0.3%</div>
+  </div>
+  <div class="row tot">
+    <div class="l">実質利回り（手残り）</div>
+    <div class="t"><i style="left:0;width:55.9%;background:#C9A84C"></i></div>
+    <div class="v">≈1.9%</div>
+  </div>
+</div>
+
+<div class="comp">
+  <div class="cap">1,000万円を投資した場合の年間収入</div>
+  <div class="cbox">
+    <div class="city">東京ワンルーム</div>
+    <div class="yr">19<small>万円 / 年</small></div>
+    <div class="fm">実質利回り 1.9% × 1,000万円</div>
+  </div>
+  <div class="cbox gold">
+    <div class="city">ドバイ</div>
+    <div class="yr">72<small>万円 / 年</small></div>
+    <div class="fm">実質利回り 7.2% × 1,000万円・税 0%</div>
+  </div>
+  <div class="delta">
+    <b>差額 年 +53万円 ／ 利回り 約3.8倍</b>
+    <span>同じ元本でも、手元に残る額がこれだけ変わる。</span>
+  </div>
+</div>
+
+<div class="note src">出典：不動産経済研究所 / 国税庁</div>
+</div>

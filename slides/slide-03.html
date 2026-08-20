@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EXCEED v20 — 3/41</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+@import url("fonts/noto.css");
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#1a1a1a}
+.slide{position:relative;width:1920.0px;height:1080.0px;background:#fff;overflow:hidden;
+  margin:0 auto;transform-origin:top center}
+.sh{position:absolute;display:flex;flex-direction:column;overflow:visible}
+.sh p{width:100%;font-family:'Noto Sans JP','Hiragino Sans',sans-serif;
+  font-size:28.0px;line-height:1.2;color:#000;word-break:normal;overflow-wrap:normal;white-space:pre-wrap;
+  font-feature-settings:"palt" 1;font-kerning:normal;line-break:strict}
+.sh .bul{position:absolute;left:0}
+.im{position:absolute}
+.ln{position:absolute;pointer-events:none}
+.tb{position:absolute}
+.tb p{font-family:'Noto Sans JP','Hiragino Sans',sans-serif;font-size:28.0px;
+  line-height:1.25;color:#000;white-space:pre-wrap;word-break:normal;overflow-wrap:normal;
+  font-feature-settings:"palt" 1;line-break:strict}
+
+html,body{height:100%;overflow:hidden}
+#stage{position:absolute;inset:0;display:grid;place-items:center}
+#fitbox{position:relative}
+#fitbox .slide{position:absolute;left:0;top:0;transform-origin:0 0;margin:0}
+</style></head><body>
+<div id="stage"><div id="fitbox"><div class="slide" id="s3" style="background:rgb(8,14,22)"><!--bg: rgb(8,14,22) -->
+<style>
+#s3{--gold:#D2AC53;--ink:8,14,22}
+#s3 .panels{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr)}
+#s3 .pan{position:relative;overflow:hidden}
+#s3 .pan+.pan{box-shadow:inset 1px 0 0 rgba(255,255,255,.22)}
+#s3 .pan>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+#s3 .p1 img{object-position:50% 42%}
+#s3 .p2 img{object-position:52% 50%}
+#s3 .p3 img{object-position:50% 44%}
+
+/* bottom caption band */
+#s3 .band{position:absolute;left:0;right:0;bottom:0;height:268px;
+  background:linear-gradient(180deg,
+    rgba(var(--ink),0) 0%,
+    rgba(var(--ink),.62) 9%,
+    rgba(var(--ink),.80) 30%,
+    rgba(var(--ink),.88) 100%)}
+#s3 .cap{position:absolute;left:52px;right:150px;bottom:56px}
+#s3 .en{font:700 23px/1 'Noto Sans JP',sans-serif;color:var(--gold);
+  letter-spacing:.19em;margin-bottom:20px;white-space:nowrap}
+#s3 .p3 .en{letter-spacing:.15em}
+#s3 .jp{font:700 41px/1.15 'Noto Sans JP',sans-serif;color:#fff;
+  letter-spacing:.02em;margin-bottom:16px}
+#s3 .sub{font:500 21px/1.4 'Noto Sans JP',sans-serif;color:rgba(255,255,255,.86);
+  letter-spacing:.02em}
+/* reserved slot for the logo mark — file dropped in later */
+#s3 .mark{position:absolute;right:44px;bottom:62px;width:96px;height:96px;
+  display:flex;align-items:center;justify-content:center}
+#s3 .mark img{max-width:100%;max-height:100%;display:block}
+
+/* section title over panel 1 */
+#s3 .kicker{position:absolute;left:52px;top:46px;
+  font:700 17px/1 'Noto Sans JP',sans-serif;color:rgba(255,255,255,.72);letter-spacing:.26em}
+#s3 .h1{position:absolute;left:52px;top:80px;
+  font:700 46px/1.1 'Noto Sans JP',sans-serif;color:#fff;letter-spacing:.03em;
+  text-shadow:0 2px 24px rgba(0,0,0,.45)}
+</style>
+
+<div class="panels">
+
+  <div class="pan p1">
+    <img src="assets/biz-brokerage.webp" alt="">
+    <div class="kicker">BUSINESS</div>
+    <div class="h1">事業内容</div>
+    <div class="band"></div>
+    <div class="cap">
+      <div class="en">PROPERTY BROKERAGE</div>
+      <div class="jp">不動産仲介</div>
+      <div class="sub">購入〜売却　ワンストップ</div>
+    </div>
+    <div class="mark"><!-- EXCEED monogram --></div>
+  </div>
+
+  <div class="pan p2">
+    <img src="assets/biz-management.jpg" alt="">
+    <div class="band"></div>
+    <div class="cap">
+      <div class="en">PROPERTY MANAGEMENT</div>
+      <div class="jp">物件管理・Airbnb</div>
+      <div class="sub">入居者獲得・運用代行</div>
+    </div>
+    <div class="mark"><!-- EXCEED monogram --></div>
+  </div>
+
+  <div class="pan p3">
+    <img src="assets/biz-takumi.png" alt="">
+    <div class="band"></div>
+    <div class="cap">
+      <div class="en">JAPANESE CRAFTSMANSHIP</div>
+      <div class="jp">TAKUMI Renovation</div>
+      <div class="sub">日系唯一　賃料 / 価格UP</div>
+    </div>
+    <div class="mark"><!-- TAKUMI mark --></div>
+  </div>
+
+</div>
+</div></div></div>
+<script>
+(function(){var W=1920.0,H=1080.0,fb=document.getElementById('fitbox'),
+s=fb.firstElementChild;
+function fit(){var k=Math.min(innerWidth/W,innerHeight/H);
+fb.style.width=(W*k)+'px';fb.style.height=(H*k)+'px';
+s.style.transform='scale('+k+')';}
+addEventListener('resize',fit);fit();
+addEventListener('keydown',function(e){var m=location.pathname.match(/slide-(\d+)/);
+if(!m)return;var n=+m[1],t=null;
+if(e.key==='ArrowRight'||e.key===' ')t=Math.min(41,n+1);
+if(e.key==='ArrowLeft')t=Math.max(1,n-1);
+if(t&&t!==n)location.href='slide-'+String(t).padStart(2,'0')+'.html';});})();
+</script></body></html>
