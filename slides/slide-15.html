@@ -36,10 +36,15 @@ html,body{height:100%;overflow:hidden}
 #s15 .bars{margin-top:30px;--lw:180px;--vw:126px}
 #s15 .bar .bl{font-size:17px}
 /* two ten-city lists is far too much for a room — let two cities carry the point */
-#s15 .bar{opacity:.42}
+#s15 .bar{opacity:.38}
+#s15 .bar .bt i{background:rgba(255,255,255,.22)}
 #s15 .bar.on,#s15 .bar.jp{opacity:1}
-#s15 .bar.jp .bt i{background:#5B7CA6}
-#s15 .bar.jp .bl,#s15 .bar.jp .bv{color:#BBD2EE}
+/* Dubai: gold and thicker. Tokyo: blue. Everything else is context. */
+#s15 .bar.on .bt,#s15 .bar.jp .bt{height:30px}
+#s15 .bar.on .bt i{background:var(--gold);box-shadow:0 0 26px rgba(201,168,76,.45)}
+#s15 .bar.on .bl,#s15 .bar.on .bv{color:var(--gold-lt);font-size:21px}
+#s15 .bar.jp .bt i{background:#5B7CA6;box-shadow:0 0 22px rgba(91,124,166,.40)}
+#s15 .bar.jp .bl,#s15 .bar.jp .bv{color:#BBD2EE;font-size:21px}
 #s15 .bar .bv{font-size:19px}
 #s15 .bar .bt{height:22px}
 #s15 .concl{position:absolute;left:64px;right:64px;bottom:110px;

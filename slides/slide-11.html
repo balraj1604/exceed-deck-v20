@@ -31,7 +31,7 @@ html,body{height:100%;overflow:hidden}
 @import url("theme.css");
 /* Three photographable places on top; the policy point gets its own band below.
    Forcing "freehold + SWF" into a photo card is why it read weak (brief, s11). */
-#s11 .panels{position:absolute;left:0;right:0;top:0;height:762px;
+#s11 .panels{position:absolute;left:0;right:0;top:0;height:900px;
   display:grid;grid-template-columns:repeat(3,1fr)}
 #s11 .pan{position:relative;overflow:hidden;background:#16212f}
 #s11 .pan+.pan{box-shadow:inset 1px 0 0 rgba(255,255,255,.16)}
@@ -39,10 +39,10 @@ html,body{height:100%;overflow:hidden}
 #s11 .p1 img{object-position:50% 46%}
 #s11 .p2 img{object-position:50% 56%}
 #s11 .p3 img{object-position:50% 48%}
-#s11 .band{position:absolute;left:0;right:0;bottom:0;height:400px;
+#s11 .band{position:absolute;left:0;right:0;bottom:0;height:520px;
   background:linear-gradient(180deg,rgba(8,14,22,0) 0%,rgba(8,14,22,.62) 16%,
     rgba(8,14,22,.86) 46%,rgba(8,14,22,.94) 100%)}
-#s11 .cap{position:absolute;left:38px;right:32px;bottom:34px}
+#s11 .cap{position:absolute;left:38px;right:32px;bottom:342px}
 #s11 .cap h3{font:700 31px/1.24 'Noto Sans JP',sans-serif;color:#fff;letter-spacing:.01em;
   min-height:78px;display:flex;align-items:flex-end}
 #s11 .cap ul{margin-top:16px;list-style:none}
@@ -52,7 +52,9 @@ html,body{height:100%;overflow:hidden}
 
 /* ---- policy / data strip (replaces the 4th photo card) ---- */
 #s11 .strip{position:absolute;left:0;right:0;bottom:0;height:318px;
-  background:#0A1523;border-top:2px solid var(--gold);
+  background:linear-gradient(180deg,rgba(10,21,35,0) 0%,rgba(10,21,35,.72) 18%,
+    rgba(10,21,35,.93) 46%,rgba(9,19,32,.98) 100%);
+  border-top:1px solid rgba(201,168,76,.42);
   display:grid;grid-template-columns:250px 1fr 1fr 1fr;align-items:center;
   column-gap:40px;padding:0 56px}
 #s11 .strip .mark{display:flex;flex-direction:column;align-items:flex-start;gap:16px}

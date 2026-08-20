@@ -1,0 +1,35 @@
+<!--bg: #0B1522 -->
+<style>
+@import url("theme.css");
+/* Chapter 01 divider — same split grammar as the ch02 (cream) and ch03 (green)
+   dividers so the three acts read as one system. */
+#s6 .split{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr}
+#s6 .l{position:relative;display:flex;flex-direction:column;justify-content:center;padding:0 92px}
+#s6 .r{position:relative;overflow:hidden}
+#s6 .r img{width:100%;height:100%;object-fit:cover;object-position:50% 44%;display:block}
+#s6 .r::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,#0B1522 0%,rgba(11,21,34,.45) 34%,rgba(11,21,34,.12) 100%)}
+#s6 .num{font:700 210px/.84 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:-.03em}
+#s6 .ch{margin-top:34px;font:700 17px/1 'Noto Sans JP',sans-serif;
+  color:var(--gold);letter-spacing:.30em}
+#s6 .cti{margin-top:22px;font:700 62px/1.22 'Noto Sans JP',sans-serif;color:#fff}
+#s6 .en{margin-top:20px;font:700 17px/1 'Noto Sans JP',sans-serif;
+  color:rgba(255,255,255,.42);letter-spacing:.16em}
+#s6 .rule{margin-top:36px;width:96px;height:3px;background:var(--gold)}
+#s6 .lead{margin-top:36px;font:400 21px/1.75 'Noto Sans JP',sans-serif;
+  color:var(--mut);max-width:540px}
+</style>
+
+<div class="dk">
+<div class="split">
+  <div class="l">
+    <div class="num">01</div>
+    <div class="ch">CHAPTER</div>
+    <div class="cti">なぜ今、<br>ドバイ・アブダビ不動産か</div>
+    <div class="en">WHY OVERSEAS REAL ESTATE NOW</div>
+    <div class="rule"></div>
+    <div class="lead">円安・国内利回りの限界・世界インフレ。<br>3つのデータが示す『今こそ分散』の理由。</div>
+  </div>
+  <div class="r"><img src="assets/s06-divider-v2.png" alt=""></div>
+</div>
+</div>

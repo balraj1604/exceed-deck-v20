@@ -467,6 +467,8 @@ def page_bg(s):
 
 OVR = os.path.join(ROOT, "overrides")
 
+CHAPNAV_1 = """<div class="chapnav"><div class="cn-st on"><div class="cn-dot"></div><div class="cn-n">01</div><span class="cn-t">なぜ今、海外不動産か</span></div><div class="cn-ln"></div><div class="cn-st "><div class="cn-dot"></div><div class="cn-n">02</div><span class="cn-t">どう選ぶか</span></div><div class="cn-ln"></div><div class="cn-st "><div class="cn-dot"></div><div class="cn-n">03</div><span class="cn-t">なぜEXCEEDか</span></div></div>"""
+
 def override(i):
     """overrides/slide-NN.html replaces the generated body for that slide.
     First line may be   <!--bg: <css-colour> -->   to set the page background."""
@@ -529,6 +531,10 @@ def build():
         if i == 5:
             for old, new in TOC_FIX.items():
                 body = body.replace(old, new)
+        # CHAPNAV — slide 6 is the chapter-1 divider and is still generated from
+        # source, so its progress indicator is injected here rather than in an override.
+        if i == 6 and "chapnav" not in body:
+            body += CHAPNAV_1
         body = fix(body)
         name = f"slide-{i:02d}.html"
         open(os.path.join(OUT, name), "w", encoding="utf-8").write(

@@ -53,8 +53,13 @@ html,body{height:100%;overflow:hidden}
 #s12 .rail .l{margin-top:14px;font:700 16px/1 'Noto Sans JP',sans-serif;color:#fff}
 #s12 .rail .d{margin-top:9px;font:400 15px/1 'Noto Sans JP',sans-serif;color:var(--mut-2)}
 
-#s12 .concl{position:absolute;left:64px;bottom:52px;
-  font:700 30px/1 'Noto Sans JP',sans-serif;color:#fff;letter-spacing:.01em}
+#s12 .concl{position:absolute;left:64px;bottom:118px;
+  font:700 28px/1 'Noto Sans JP',sans-serif;color:#fff;letter-spacing:.01em}
+#s12 .gap{position:absolute;left:64px;bottom:44px;right:560px;
+  border-left:3px solid #4E7FB5;padding:8px 0 8px 22px}
+#s12 .gap b{font:700 30px/1.3 'Noto Sans JP',sans-serif;color:#9FC0E4}
+#s12 .gap span{display:block;margin-top:8px;
+  font:400 15px/1.5 'Noto Sans JP',sans-serif;color:var(--mut-2)}
 #s12 .concl b{color:var(--gold-lt)}
 #s12 .spot{--sx:22%;--sy:26%}
 </style>
@@ -68,8 +73,9 @@ html,body{height:100%;overflow:hidden}
 <div class="hr"></div>
 
 <div class="legend">
-  <span><i style="background:#fff"></i>実績</span>
-  <span><i style="background:#C9A84C"></i>予測</span>
+  <span><i style="background:#fff"></i>人口（実績）</span>
+  <span><i style="background:#C9A84C"></i>人口（予測）</span>
+  <span><i style="background:#4E7FB5"></i>必要住宅ストック（世帯数）</span>
 </div>
 
 <svg class="chart" viewBox="0 0 1190 470" preserveAspectRatio="none">
@@ -101,6 +107,18 @@ html,body{height:100%;overflow:hidden}
   <g fill="#0B1522" stroke="#C9A84C" stroke-width="4">
     <circle cx="890" cy="166" r="9"/><circle cx="1080" cy="106" r="9"/>
   </g>
+  <!-- households = population / 2.7 -->
+  <polyline points="130,438 320,428 510,422 700,412" fill="none" stroke="#4E7FB5"
+            stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="700,412 890,396 1080,388" fill="none" stroke="#4E7FB5"
+            stroke-width="3.4" stroke-dasharray="9,7" stroke-linecap="round"/>
+  <g fill="#0B1522" stroke="#4E7FB5" stroke-width="3.4">
+    <circle cx="700" cy="412" r="7"/><circle cx="1080" cy="388" r="7"/>
+  </g>
+  <text x="700" y="404" fill="#9FC0E4" font-size="20" font-weight="700" text-anchor="middle"
+        font-family="'Noto Sans JP',sans-serif">148万世帯</text>
+  <text x="1080" y="380" fill="#9FC0E4" font-size="20" font-weight="700" text-anchor="middle"
+        font-family="'Noto Sans JP',sans-serif">215万世帯</text>
 </svg>
 
 <div class="axis">
@@ -120,6 +138,8 @@ html,body{height:100%;overflow:hidden}
 </div>
 
 <div class="concl">人口増 <b>→</b> 住宅需要増 <b>→</b> 実需ベースの不動産価値上昇</div>
+<div class="gap"><b>2040年までに +67万戸 の住宅が必要</b>
+  <span>※ 1世帯2.7人と仮定して人口から算出（148万世帯 → 215万世帯）。供給がこの増加に追いつかない限り、価格・賃料の上昇圧力は続く。</span></div>
 </div>
 </div></div></div>
 <script>
