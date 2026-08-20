@@ -50,6 +50,17 @@ Running list. Each item: what he said → what I did.
 | 39 | 39 | Airbnb logo; EXCEED in boxes 1+4; TAKUMI in box 3 | queued (logos now in hand) |
 | 40 | 40 | Add visuals | queued |
 
+| 41 | 28–31 | Addendum map treatment: full-bleed left, cream wash, dotted real geography | **DONE** — shared `.frame` + `.mapwash`; Palm drawn as the Palm |
+| 42 | 30 | DAMAC AD research, propose before drawing | **DONE** — only Marina Bay (Al Reem) verifiable; pinned |
+| 43 | 32 | Row imagery / visual representation | **DONE** — icon per row + illustrated column heads |
+| 44 | 33 | TAKUMI column clarity + promote the 2.2× | **DONE** — BEFORE/AFTER heads, hero strip |
+| 45 | 34 | More visual weight + buy→hold→exit timeline | **DONE** |
+| 46 | 36 | 2026 as a reference | **DONE** — 参考 chip + footnote |
+| 47 | 39 | Airbnb / EXCEED / TAKUMI marks on the steps | **DONE** |
+| 48 | 40 | Add visuals | **DONE** — ringed icons |
+| 49 | ch2/ch3 | Chapter materials | **DONE** — cream leather (multiply .26), green leather (overlay .78) |
+| 50 | alt deck | s7 variant A + s21 presenter version | **DONE** — `slides/alt/index.html` |
+
 ## Standing rules (apply to every slide, don't re-ask)
 
 - No gold rail across the top of any slide.
