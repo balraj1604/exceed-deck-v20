@@ -244,3 +244,26 @@
   filter:drop-shadow(0 6px 18px rgba(11,21,34,.30))}
 .lmk b{display:block;margin-top:8px;font:700 15px/1.3 'Noto Sans JP',sans-serif;
   color:#0B1522;white-space:nowrap;text-shadow:0 0 6px #F4F1EA,0 0 6px #F4F1EA}
+
+/* ============================================================
+   CH2 LEATHER — chosen 2026-08-20. Generated material field (see
+   scripts_gen_cream_tex.py) composited as a multiply wash so the cream
+   stays dominant. Full-frame: no tile seams on a projector.
+   ============================================================ */
+.cr::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background-image:url("assets/tex/leather.png");background-size:cover;
+  mix-blend-mode:multiply;opacity:.26}
+.cr::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:rgba(168,133,59,.05)}
+/* map slides paint their own background layers, so keep the grain off them */
+.cr.nomat::after,.cr.nomat::before{display:none}
+
+/* ============================================================
+   CH3 LEATHER — chosen 2026-08-20 (supplied sample 2, desaturated to pure
+   relief and re-tinted to the deck's own green). On a dark base multiply
+   muddies, so relief comes from overlay.
+   ============================================================ */
+.tl::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background-image:url("assets/tex/leather-supplied2.png");background-size:cover;
+  mix-blend-mode:overlay;opacity:.78}
+.tl.nomat::after{display:none}
