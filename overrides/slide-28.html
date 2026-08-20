@@ -1,94 +1,105 @@
 <!--bg: #F4F1EA -->
 <style>
 @import url("theme.css");
-#s28 .h1{top:82px} #s28 .urule{top:152px;width:480px} #s28 .sub{top:176px}
+#s28 .h1{top:82px;z-index:3} #s28 .urule{top:152px;width:480px;z-index:3}
+#s28 .sub{top:176px;z-index:3} #s28 .eyebrow,#s28 .brand{z-index:3}
+/* bigger map, heavier dotted stroke so the outlines carry from the back of a room */
+#s28 .mapbg{--mw:1330px;--mh:772px;--mx:-150px;--my:200px}
+#s28 .zn{stroke-width:3;stroke-dasharray:9 7;fill:rgba(168,133,59,.18)}
+#s28 .zn.frond{fill:none;stroke-dasharray:6 5;stroke-width:2.4}
+#s28 .zn.acc{stroke-width:3.6;stroke-dasharray:10 6}
+#s28 .zn.hq{stroke-width:3;stroke-dasharray:6 6}
+#s28 .znl{font-size:21px;stroke-width:6px}
 
-#s28 .map{position:absolute;left:56px;top:246px;width:1040px;height:604px;
-  overflow:hidden;border:1px solid rgba(11,21,34,.14)}
-#s28 .map img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-#s28 .ov{position:absolute;inset:0;width:100%;height:100%}
-  #s28 .ov .zone{fill:rgba(168,133,59,.17);stroke:#A8853B;stroke-width:1.8;
-    stroke-linejoin:round;stroke-linecap:round}
-  #s28 .ov .zone.hq{fill:rgba(11,21,34,.20);stroke:#0B1522;stroke-width:2}
-  #s28 .ov .zone.top{fill:rgba(28,107,90,.20);stroke:#1C6B5A;stroke-width:2.4}
-  #s28 .ov .dot{fill:#A8853B;stroke:#fff;stroke-width:2}
-  #s28 .ov .dot.hq{fill:#0B1522}
-  #s28 .ov .dot.top{fill:#1C6B5A}
-  #s28 .ov text{font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:18px;
-    fill:#0B1522;paint-order:stroke;stroke:rgba(244,241,234,.94);stroke-width:5px}
-#s28 .key{position:absolute;left:56px;top:866px;display:flex;gap:34px;align-items:center}
-#s28 .key span{display:flex;align-items:center;gap:10px;
-  font:400 15px/1 'Noto Sans JP',sans-serif;color:var(--mut)}
-#s28 .key i{width:22px;height:14px;display:block;border:2px solid #A8853B;
-  background:rgba(168,133,59,.20)}
-#s28 .key i.hq{border-color:#0B1522;background:rgba(11,21,34,.24)}
-
-#s28 .tw{position:absolute;right:56px;top:246px;width:740px}
+#s28 .tw{position:absolute;right:56px;top:250px;width:800px;z-index:3}
 #s28 .tbl th{font-size:15px;padding:15px 16px}
 #s28 .tbl th.r,#s28 .tbl td.r{text-align:right;font-variant-numeric:tabular-nums}
 #s28 .tbl td{font-size:17px;padding:15px 16px}
 #s28 .tbl td.a{font-weight:700}
-#s28 .src{left:56px;bottom:36px;right:56px}
+/* map colour echoed onto the rows so the two read as one system */
+#s28 .tbl tr.acc td{background:rgba(28,107,90,.14);
+  border-top:1px solid #1C6B5A;border-bottom:1px solid #1C6B5A}
+#s28 .tbl tr.acc td:first-child{box-shadow:inset 4px 0 0 #1C6B5A;color:#14574A}
+#s28 .tbl tr.hq td{background:rgba(11,21,34,.07)}
+#s28 .tbl tr.hq td:first-child{box-shadow:inset 4px 0 0 rgba(11,21,34,.55)}
+#s28 .key{position:absolute;left:56px;bottom:62px;display:flex;gap:28px;align-items:center;z-index:3}
+#s28 .key span{display:flex;align-items:center;gap:10px;
+  font:400 15px/1 'Noto Sans JP',sans-serif;color:var(--mut)}
+#s28 .key i{width:24px;height:15px;display:block;border:2px dashed #A8853B;
+  background:rgba(168,133,59,.18)}
+#s28 .key i.acc{border-color:#1C6B5A;background:rgba(28,107,90,.20)}
+#s28 .key i.hq{border-color:rgba(11,21,34,.62);background:rgba(11,21,34,.16)}
+#s28 .src{left:56px;bottom:34px;right:56px;z-index:3}
 </style>
 
 <div class="cr nomat">
+<div class="mapbg">
+  <div class="frame">
+  <img src="img/cc368d4c0cfd3510.png" alt="ドバイ主要投資エリア">
+  <svg viewBox="0 0 1600 930" preserveAspectRatio="none">
+    <!-- Palm Jumeirah drawn as the palm: crescent + trunk + fronds -->
+    <path class="zn" d="M306,470 C306,404 348,368 398,368 C448,368 490,404 490,470
+      C490,486 484,498 476,504 C470,496 470,486 470,474 C470,420 440,392 398,392
+      C356,392 326,420 326,474 C326,486 326,496 320,504 C312,498 306,486 306,470 Z"/>
+    <path class="zn frond" d="M398,600 L398,516 M332,474 L398,508 M464,474 L398,508
+      M344,446 L398,488 M452,446 L398,488 M358,422 L398,466 M438,422 L398,466
+      M372,404 L398,448 M424,404 L398,448"/>
+    <text class="znl" x="352" y="656" text-anchor="middle">パームジュメイラ</text>
+
+    <path class="zn" d="M344,608 L382,600 L424,614 L444,644 L448,684 L430,706
+      L390,708 L358,694 L342,662 Z"/>
+    <text class="znl" x="392" y="740" text-anchor="middle">マリーナ・JBR</text>
+
+    <path class="zn" d="M452,630 L500,630 L534,648 L536,690 L518,714 L472,712 L450,690 Z"/>
+    <text class="znl" x="520" y="618" text-anchor="middle">JLT</text>
+
+    <path class="zn" d="M494,714 L556,708 L616,716 L634,742 L630,786 L596,802
+      L534,800 L498,782 L488,748 Z"/>
+    <text class="znl" x="562" y="830" text-anchor="middle">エミレーツヒルズ</text>
+
+    <!-- JVC: the accent, echoed on the table row (addendum s28) -->
+    <path class="zn acc" d="M638,702 L700,698 L744,712 L752,750 L742,784 L694,796
+      L648,784 L632,748 Z"/>
+    <text class="znl acc" x="692" y="820" text-anchor="middle">JVC</text>
+
+    <path class="zn" d="M700,610 L756,604 L800,618 L806,652 L796,684 L748,692
+      L706,678 L696,644 Z"/>
+    <text class="znl" x="751" y="594" text-anchor="middle">アルジャン</text>
+
+    <path class="zn" d="M842,532 L920,524 L992,538 L1008,580 L1000,628 L946,652
+      L878,646 L840,608 Z"/>
+    <text class="znl" x="923" y="512" text-anchor="middle">ドバイヒルズ</text>
+
+    <path class="zn" d="M912,28 L978,22 L1042,32 L1054,66 L1044,104 L988,118
+      L928,110 L906,76 Z"/>
+    <text class="znl" x="981" y="142" text-anchor="middle">ダウンタウン</text>
+
+    <path class="zn hq" d="M958,150 L1018,144 L1074,158 L1084,192 L1072,226
+      L1018,238 L964,228 L950,190 Z"/>
+    <text class="znl hq" x="1018" y="262" text-anchor="middle">ビジネスベイ</text>
+
+    <path class="zn" d="M1116,142 L1182,134 L1250,148 L1262,186 L1250,224
+      L1190,238 L1128,226 L1108,186 Z"/>
+    <text class="znl" x="1188" y="258" text-anchor="middle">クリークハーバー</text>
+
+    <g fill="#A8853B">
+      <circle cx="398" cy="470" r="6"/><circle cx="394" cy="655" r="6"/>
+      <circle cx="494" cy="672" r="6"/><circle cx="562" cy="754" r="6"/>
+      <circle cx="751" cy="648" r="6"/><circle cx="923" cy="588" r="6"/>
+      <circle cx="981" cy="70" r="6"/><circle cx="1186" cy="186" r="6"/>
+    </g>
+    <circle cx="692" cy="746" r="7" fill="#1C6B5A"/>
+    <circle cx="1018" cy="190" r="7" fill="#0B1522"/>
+  </svg>
+  </div>
+</div>
+<div class="mapwash"></div>
+
 <div class="eyebrow">02 · どう選ぶか</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1 one">エリアガイド｜どこに買うべきか</div>
 <div class="urule"></div>
 <div class="sub">外国人が完全所有できるフリーホールドエリアと、利回り水準を一覧で把握する。</div>
-
-<div class="map">
-  <img src="img/cc368d4c0cfd3510.png" alt="ドバイ主要投資エリア">
-  <svg class="ov" viewBox="0 0 1600 930" preserveAspectRatio="xMidYMid slice">
-    <!-- Palm Jumeirah -->
-    <path class="zone" d="M330,442 L372,424 L432,424 L474,444 L486,486 L470,536 L436,586 L392,600 L352,586 L322,540 L316,486 Z"/>
-    <text x="398" y="418" text-anchor="middle">パームジュメイラ</text>
-    <!-- Dubai Marina / JBR -->
-    <path class="zone" d="M344,608 L382,600 L424,614 L444,644 L448,684 L430,706 L390,708 L358,694 L342,662 Z"/>
-    <text x="396" y="722" text-anchor="middle">ドバイマリーナ・JBR</text>
-    <!-- JLT -->
-    <path class="zone" d="M452,630 L500,630 L534,648 L536,690 L518,714 L472,712 L450,690 Z"/>
-    <text x="492" y="632" text-anchor="middle">JLT</text>
-    <!-- Emirates Hills / Springs -->
-    <path class="zone" d="M494,714 L556,708 L616,716 L634,742 L630,786 L596,802 L534,800 L498,782 L488,748 Z"/>
-    <text x="562" y="820" text-anchor="middle">エミレーツヒルズ</text>
-    <!-- JVC -->
-    <path class="zone" d="M638,702 L700,698 L744,712 L752,750 L742,784 L694,796 L648,784 L632,748 Z"/>
-    <text x="692" y="810" text-anchor="middle">JVC</text>
-    <!-- Arjan -->
-    <path class="zone" d="M700,610 L756,604 L800,618 L806,652 L796,684 L748,692 L706,678 L696,644 Z"/>
-    <text x="751" y="600" text-anchor="middle">アルジャン</text>
-    <!-- Dubai Hills -->
-    <path class="zone" d="M842,532 L920,524 L992,538 L1008,580 L1000,628 L946,652 L878,646 L840,608 Z"/>
-    <text x="923" y="518" text-anchor="middle">ドバイヒルズ</text>
-    <!-- Downtown -->
-    <path class="zone" d="M912,24 L978,18 L1042,28 L1054,62 L1044,100 L988,114 L928,106 L906,72 Z"/>
-    <text x="981" y="130" text-anchor="middle">ダウンタウン</text>
-    <!-- Business Bay + EXCEED HQ -->
-    <path class="zone hq" d="M958,120 L1018,114 L1074,128 L1084,162 L1072,196 L1018,208 L964,198 L950,160 Z"/>
-    <text x="1020" y="226" text-anchor="middle">ビジネスベイ</text>
-    <!-- Creek Harbour -->
-    <path class="zone" d="M1116,142 L1182,134 L1250,148 L1262,186 L1250,224 L1190,238 L1128,226 L1108,186 Z"/>
-    <text x="1188" y="256" text-anchor="middle">クリークハーバー</text>
-  
-    <circle class="dot" cx="398" cy="505" r="6"/>
-    <circle class="dot" cx="394" cy="655" r="6"/>
-    <circle class="dot" cx="494" cy="672" r="6"/>
-    <circle class="dot" cx="562" cy="754" r="6"/>
-    <circle class="dot" cx="692" cy="746" r="6"/>
-    <circle class="dot" cx="751" cy="648" r="6"/>
-    <circle class="dot" cx="923" cy="588" r="6"/>
-    <circle class="dot" cx="981" cy="66" r="6"/>
-    <circle class="dot" cx="1018" cy="160" r="6"/>
-    <circle class="dot" cx="1186" cy="186" r="6"/>
-  </svg>
-</div>
-<div class="key">
-  <span><i></i>主要投資エリア（フリーホールド）</span>
-  <span><i class="hq"></i>EXCEEDオフィス（Business Bay）</span>
-  <span>※ 境界は概略表示</span>
-</div>
 
 <div class="tw">
   <table class="tbl">
@@ -97,14 +108,20 @@
       <tr><td class="a">ダウンタウン</td><td class="r">126〜171万</td><td class="r">5〜6%</td></tr>
       <tr><td class="a">ドバイマリーナ</td><td class="r">100〜130万</td><td class="r">6〜7%</td></tr>
       <tr><td class="a">パームジュメイラ</td><td class="r">388〜468万</td><td class="r">4〜5%</td></tr>
-      <tr><td class="a">JVC</td><td class="r">60〜80万</td><td class="r">7〜8%</td></tr>
+      <tr class="acc"><td class="a">JVC</td><td class="r">60〜80万</td><td class="r">7〜8%</td></tr>
       <tr><td class="a">ドバイヒルズ</td><td class="r">80〜120万</td><td class="r">5〜7%</td></tr>
-      <tr><td class="a">ビジネスベイ</td><td class="r">90〜120万</td><td class="r">6〜7%</td></tr>
+      <tr class="hq"><td class="a">ビジネスベイ</td><td class="r">90〜120万</td><td class="r">6〜7%</td></tr>
       <tr><td class="a">クリークハーバー</td><td class="r">100〜140万</td><td class="r">5〜6%</td></tr>
       <tr><td class="a">JBR・ビーチフロント</td><td class="r">172〜188万</td><td class="r">5〜6%</td></tr>
     </tbody>
   </table>
 </div>
 
+<div class="key">
+  <span><i></i>主要投資エリア</span>
+  <span><i class="acc"></i>JVC（高利回り）</span>
+  <span><i class="hq"></i>EXCEEDオフィス</span>
+  <span>※ 境界は概略表示</span>
+</div>
 <div class="note src">出典：dxbinteract.com　※ 単価・利回りは市場平均の目安。地図上の境界は視認性のための概略表示です。</div>
 </div>

@@ -29,80 +29,95 @@ html,body{height:100%;overflow:hidden}
 <div id="stage"><div id="fitbox"><div class="slide" id="s29" style="background:#F4F1EA"><!--bg: #F4F1EA -->
 <style>
 @import url("theme.css");
-#s29 .h1{top:82px} #s29 .urule{top:152px;width:560px} #s29 .sub{top:176px}
-#s29 .map{position:absolute;left:56px;top:246px;width:1040px;height:604px;
-  overflow:hidden;border:1px solid rgba(11,21,34,.14)}
-#s29 .map img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-#s29 .ov{position:absolute;inset:0;width:100%;height:100%}
-  #s29 .ov .zone{fill:rgba(168,133,59,.17);stroke:#A8853B;stroke-width:1.8;
-    stroke-linejoin:round;stroke-linecap:round}
-  #s29 .ov .zone.hq{fill:rgba(11,21,34,.20);stroke:#0B1522;stroke-width:2}
-  #s29 .ov .zone.top{fill:rgba(28,107,90,.20);stroke:#1C6B5A;stroke-width:2.4}
-  #s29 .ov .dot{fill:#A8853B;stroke:#fff;stroke-width:2}
-  #s29 .ov .dot.hq{fill:#0B1522}
-  #s29 .ov .dot.top{fill:#1C6B5A}
-  #s29 .ov text{font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:18px;
-    fill:#0B1522;paint-order:stroke;stroke:rgba(244,241,234,.94);stroke-width:5px}
-#s29 .key{position:absolute;left:56px;top:866px;display:flex;gap:34px;align-items:center}
-#s29 .key span{display:flex;align-items:center;gap:10px;font:400 15px/1 'Noto Sans JP',sans-serif;color:var(--mut)}
-#s29 .key i{width:22px;height:14px;display:block;border:2px solid #A8853B;background:rgba(168,133,59,.20)}
-#s29 .key i.top{border-color:#1C6B5A;background:rgba(28,107,90,.26)}
-#s29 .rw{position:absolute;right:56px;top:246px;width:740px}
+#s29 .h1{top:82px;z-index:3} #s29 .urule{top:152px;width:560px;z-index:3}
+#s29 .sub{top:176px;z-index:3} #s29 .eyebrow,#s29 .brand{z-index:3}
+#s29 .mapbg{--mw:1330px;--mh:772px;--mx:-150px;--my:200px}
+/* the map IS the chart: outline weight and fill scale with growth rate */
+#s29 .zn{stroke-dasharray:9 7}
+#s29 .zn.g1{stroke-width:2;  stroke:#9AA6A2; fill:rgba(154,166,162,.10)}
+#s29 .zn.g2{stroke-width:2.8;stroke:#A8853B; fill:rgba(168,133,59,.16)}
+#s29 .zn.g3{stroke-width:3.6;stroke:#8C6F2C; fill:rgba(168,133,59,.26)}
+#s29 .zn.g4{stroke-width:4.6;stroke:#1C6B5A; fill:rgba(28,107,90,.30)}
+#s29 .zn.frond{fill:none;stroke-width:2.4;stroke-dasharray:6 5}
+#s29 .znl{font-size:20px;stroke-width:6px}
+#s29 .znl.g1l{fill:rgba(11,21,34,.55)} #s29 .znl.g2l{fill:#0B1522}
+#s29 .znl.g3l{fill:#7A5F1E} #s29 .znl.g4l{fill:#14574A}
+
+#s29 .rw{position:absolute;right:56px;top:250px;width:800px;z-index:3}
 #s29 .rt{font:700 20px/1 'Noto Sans JP',sans-serif;color:var(--ink)}
-#s29 .bars{margin-top:26px;--lw:190px;--vw:92px}
+#s29 .bars{margin-top:24px;--lw:200px;--vw:92px}
 #s29 .bar .bl{font-size:17px} #s29 .bar .bv{font-size:19px} #s29 .bar .bt{height:22px}
 #s29 .bar.all .bt i{background:#0B1522}
 #s29 .bar.all .bl,#s29 .bar.all .bv{color:#0B1522;font-weight:700}
-#s29 .concl{position:absolute;right:56px;bottom:110px;width:740px;
-  background:rgba(168,133,59,.16);border-left:3px solid var(--gold);padding:22px 28px}
-#s29 .concl b{font:700 24px/1.4 'Noto Sans JP',sans-serif;color:var(--ink)}
-#s29 .src{left:56px;bottom:36px;right:56px}
+#s29 .dtn{position:absolute;right:56px;bottom:150px;width:800px;z-index:3;
+  background:rgba(11,21,34,.06);border-left:3px solid var(--ink);padding:20px 26px}
+#s29 .dtn b{font:700 20px/1.5 'Noto Sans JP',sans-serif;color:var(--ink)}
+#s29 .dtn span{display:block;margin-top:8px;font:400 15px/1.6 'Noto Sans JP',sans-serif;color:var(--mut)}
+#s29 .key{position:absolute;left:56px;bottom:62px;display:flex;gap:26px;align-items:center;z-index:3}
+#s29 .key span{display:flex;align-items:center;gap:9px;font:400 14px/1 'Noto Sans JP',sans-serif;color:var(--mut)}
+#s29 .key i{width:24px;height:14px;display:block;border:2px dashed #A8853B;background:rgba(168,133,59,.16)}
+#s29 .key i.hot{border-color:#1C6B5A;border-width:3px;background:rgba(28,107,90,.30)}
+#s29 .key i.cold{border-color:#9AA6A2;border-width:2px;background:rgba(154,166,162,.10)}
+#s29 .src{left:56px;bottom:30px;right:56px;z-index:3}
 </style>
 
 <div class="cr nomat">
+<div class="mapbg"><div class="frame">
+  <img src="img/cc368d4c0cfd3510.png" alt="ドバイ エリア別 価格上昇率">
+  <svg viewBox="0 0 1600 930" preserveAspectRatio="none">
+    <!-- Palm Jumeirah drawn as the palm: crescent + trunk + fronds -->
+    <path class="zn g3" d="M306,470 C306,404 348,368 398,368 C448,368 490,404 490,470
+      C490,486 484,498 476,504 C470,496 470,486 470,474 C470,420 440,392 398,392
+      C356,392 326,420 326,474 C326,486 326,496 320,504 C312,498 306,486 306,470 Z"/>
+    <path class="zn frond g3" d="M398,600 L398,516 M332,474 L398,508 M464,474 L398,508
+      M344,446 L398,488 M452,446 L398,488 M358,422 L398,466 M438,422 L398,466
+      M372,404 L398,448 M424,404 L398,448"/>
+    <text class="znl g3l" x="300" y="700" text-anchor="middle">パームジュメイラ　+18%</text>
+
+    <path class="zn g2" d="M344,608 L382,600 L424,614 L444,644 L448,684 L430,706
+      L390,708 L358,694 L342,662 Z"/>
+    <text class="znl g2l" x="360" y="770" text-anchor="middle">マリーナ・JBR　+10%</text>
+
+    <path class="zn g3" d="M452,630 L500,630 L534,648 L536,690 L518,714 L472,712 L450,690 Z"/>
+    <text class="znl g3l" x="560" y="606" text-anchor="middle">JLT　+14%</text>
+
+    <path class="zn g4" d="M494,714 L556,708 L616,716 L634,742 L630,786 L596,802
+      L534,800 L498,782 L488,748 Z"/>
+    <text class="znl g4l" x="540" y="856" text-anchor="middle">エミレーツヒルズ　+27%</text>
+
+    <!-- JVC: the accent, echoed on the table row (addendum s28) -->
+    <path class="zn g2" d="M638,702 L700,698 L744,712 L752,750 L742,784 L694,796
+      L648,784 L632,748 Z"/>
+    <text class="znl g2l" x="712" y="796" text-anchor="middle">JVC　+12%</text>
+
+    <path class="zn g4" d="M700,610 L756,604 L800,618 L806,652 L796,684 L748,692
+      L706,678 L696,644 Z"/>
+    <text class="znl g4l" x="751" y="594" text-anchor="middle">アルジャン　+42%</text>
+
+    <path class="zn g2" d="M842,532 L920,524 L992,538 L1008,580 L1000,628 L946,652
+      L878,646 L840,608 Z"/>
+    <text class="znl g2l" x="923" y="512" text-anchor="middle">ドバイヒルズ　+10%</text>
+
+    <path class="zn g1" d="M912,28 L978,22 L1042,32 L1054,66 L1044,104 L988,118
+      L928,110 L906,76 Z"/>
+    <text class="znl g1l" x="981" y="142" text-anchor="middle">ダウンタウン　+2%</text>
+
+    <path class="zn g2" d="M958,150 L1018,144 L1074,158 L1084,192 L1072,226
+      L1018,238 L964,228 L950,190 Z"/>
+    <text class="znl g2l" x="1000" y="292" text-anchor="middle">ビジネスベイ　+9%</text>
+
+    <path class="zn g1" d="M1116,142 L1182,134 L1250,148 L1262,186 L1250,224
+      L1190,238 L1128,226 L1108,186 Z"/>
+    <text class="znl g1l" x="1206" y="212" text-anchor="middle">クリークハーバー　+5%</text>
+  </svg>
+</div></div>
+<div class="mapwash"></div>
+
 <div class="eyebrow">02 · どう選ぶか</div>
 <div class="brand">EXCEED REAL ESTATE</div>
 <div class="h1 one">値崩れしているエリアはほとんどない</div>
 <div class="urule"></div>
 <div class="sub">下落エリアはほぼ無し。全域がプラス圏で推移している。</div>
-
-<div class="map">
-  <img src="img/cc368d4c0cfd3510.png" alt="ドバイ エリア別 価格動向">
-  <svg class="ov" viewBox="0 0 1600 930" preserveAspectRatio="xMidYMid slice">
-    <path class="zone" d="M330,442 L372,424 L432,424 L474,444 L486,486 L470,536 L436,586 L392,600 L352,586 L322,540 L316,486 Z"/>
-    <text x="398" y="418" text-anchor="middle">パームジュメイラ +18%</text>
-    <path class="zone" d="M344,606 L438,624 L446,700 L356,690 Z"/>
-    <text x="392" y="722" text-anchor="middle">マリーナ +10%</text>
-    <path class="zone" d="M452,630 L500,630 L534,648 L536,690 L518,714 L472,712 L450,690 Z"/>
-    <text x="492" y="632" text-anchor="middle">JLT +14%</text>
-    <path class="zone top" d="M494,714 L556,708 L616,716 L634,742 L630,786 L596,802 L534,800 L498,782 L488,748 Z"/>
-    <text x="562" y="820" text-anchor="middle">エミレーツヒルズ +27%</text>
-    <path class="zone" d="M638,702 L700,698 L744,712 L752,750 L742,784 L694,796 L648,784 L632,748 Z"/>
-    <text x="692" y="812" text-anchor="middle">JVC +12%</text>
-    <path class="zone top" d="M700,610 L756,604 L800,618 L806,652 L796,684 L748,692 L706,678 L696,644 Z"/>
-    <text x="751" y="600" text-anchor="middle">アルジャン +42%</text>
-    <path class="zone" d="M842,532 L920,524 L992,538 L1008,580 L1000,628 L946,652 L878,646 L840,608 Z"/>
-    <text x="923" y="518" text-anchor="middle">ドバイヒルズ +10%</text>
-    <path class="zone" d="M912,24 L978,18 L1042,28 L1054,62 L1044,100 L988,114 L928,106 L906,72 Z"/>
-    <text x="981" y="130" text-anchor="middle">ダウンタウン +2%</text>
-    <path class="zone" d="M958,120 L1018,114 L1074,128 L1084,162 L1072,196 L1018,208 L964,198 L950,160 Z"/>
-    <text x="1020" y="226" text-anchor="middle">ビジネスベイ +9%</text>
-  
-    <circle class="dot" cx="398" cy="505" r="6"/>
-    <circle class="dot" cx="394" cy="655" r="6"/>
-    <circle class="dot" cx="494" cy="672" r="6"/>
-    <circle class="dot" cx="562" cy="754" r="6"/>
-    <circle class="dot" cx="692" cy="746" r="6"/>
-    <circle class="dot" cx="751" cy="648" r="6"/>
-    <circle class="dot" cx="923" cy="588" r="6"/>
-    <circle class="dot" cx="981" cy="66" r="6"/>
-    <circle class="dot" cx="1018" cy="160" r="6"/>
-    <circle class="dot" cx="1186" cy="186" r="6"/>
-  </svg>
-</div>
-<div class="key">
-  <span><i></i>主要投資エリア</span><span><i class="top"></i>上昇率トップ</span><span>※ 境界は概略表示</span>
-</div>
 
 <div class="rw">
   <div class="rt">前年比 上昇率｜主要エリア</div>
@@ -120,8 +135,14 @@ html,body{height:100%;overflow:hidden}
   </div>
 </div>
 
-<div class="concl"><b>下落エリアなし。市場全体が押し上がっているため、エリア選定の失敗が致命傷になりにくい。</b></div>
-<div class="note src">出典：dxbinteract.com　※ 地図上の境界は視認性のための概略表示です。</div>
+<div class="dtn"><b>ダウンタウンの +2% は失速ではなく、成熟。</b>
+  <span>単価はすでに市場最高値（→ P.19）。伸び代は新興エリアに移っており、値上がりを狙うならアルジャンやJVC、資産の安定を狙うならダウンタウン、と役割が分かれる。</span></div>
+
+<div class="key">
+  <span><i class="hot"></i>上昇率 高</span><span><i></i>中</span><span><i class="cold"></i>低</span>
+  <span>※ 線の太さ・濃さが上昇率に対応。境界は概略表示</span>
+</div>
+<div class="note src">出典：dxbinteract.com</div>
 </div>
 </div></div></div>
 <script>
